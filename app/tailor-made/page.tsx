@@ -31,7 +31,7 @@ export default function TailorMadePage() {
 				<div className='flex justify-center'>
 					<Button
 						size='lg'
-						className='bg-accent text-white hover:bg-accent/90'
+						className='bg-accent text-white hover:bg-accent/80'
 					>
 						Start Planning With an Expert
 					</Button>
