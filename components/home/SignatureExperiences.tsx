@@ -81,9 +81,9 @@ export function SignatureExperiences() {
 
 			<div className='mt-16 text-center'>
 				<Button
-					variant='outline'
+					// variant='outline'
 					size='lg'
-					className='border-primary text-primary hover:bg-primary hover:text-white'
+					className='bg-accent hover:bg-accent/80 text-white'
 				>
 					View All Experiences
 				</Button>
