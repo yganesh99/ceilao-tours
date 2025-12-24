@@ -62,7 +62,7 @@ export function TailorMadeJourneys() {
 						<div className='pt-6'>
 							<Button
 								size='lg'
-								className='bg-accent text-white hover:bg-accent/90'
+								className='bg-accent text-white hover:bg-accent/80'
 							>
 								Start Planning
 							</Button>

@@ -20,7 +20,7 @@
 :root {
 	/* Luxury Color Palette */
 	/* Deep Jungle Green */
-	--primary: #1a3c34;
+	--primary: #3b5844;
 	--primary-foreground: #ffffff;
 
 	/* Soft Cream/Beige */
@@ -31,7 +31,7 @@
 	--accent: #d4af37;
 	--accent-foreground: #ffffff;
 
-	--background: #f9f9f9;
+	--background: #d0d8c3;
 	--foreground: #2d2d2d;
 }
 

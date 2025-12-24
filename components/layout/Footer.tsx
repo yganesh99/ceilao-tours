@@ -7,6 +7,7 @@ import {
 	Facebook,
 	Twitter,
 } from 'lucide-react';
+import Image from 'next/image';
 
 export function Footer() {
 	return (
@@ -15,9 +16,17 @@ export function Footer() {
 				<div className='grid grid-cols-1 md:grid-cols-4 gap-12 mb-12'>
 					{/* Brand Column */}
 					<div className='space-y-4'>
-						<h2 className='text-2xl font-bold font-[family-name:var(--font-playfair)] tracking-wider'>
-							CEILAO TRAVEL
-						</h2>
+						<div className='relative h-16 md:h-18 lg:h-20 aspect-2/1'>
+							<Link href='/'>
+								<Image
+									src='/assets/ceilao-tours-logo.png'
+									alt='Ceilao Travel'
+									fill
+									className='object-cover'
+									priority
+								/>
+							</Link>
+						</div>
 						<p className='text-primary-foreground/80 text-sm leading-relaxed max-w-xs'>
 							Curating bespoke, ultra-luxury journeys across the
 							timeless landscapes of Sri Lanka. Experience the

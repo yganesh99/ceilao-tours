@@ -41,7 +41,10 @@ export function Header() {
 			// 		: 'bg-transparent py-6'
 			// )}
 			className={cn(
-				'fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-md shadow-sm border-b border-primary/10 py-3'
+				'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
+				isScrolled
+					? 'bg-background/70 backdrop-blur-lg shadow-md border-primary/20'
+					: 'bg-background/95 backdrop-blur-sm shadow-none border-primary/10 py-3'
 			)}
 		>
 			<div className='container mx-auto px-4 md:px-6 flex items-center justify-between'>
@@ -84,7 +87,7 @@ export function Header() {
 						// 		? 'border-white text-white hover:bg-white hover:text-primary'
 						// 		: ''
 						// )}
-						className='bg-accent text-white hover:bg-accent/90'
+						className='bg-accent text-white hover:bg-accent/80'
 					>
 						Plan Now
 					</Button>
@@ -134,7 +137,7 @@ export function Header() {
 						<Button
 							size='lg'
 							onClick={() => setMobileMenuOpen(false)}
-							className='bg-accent text-white hover:bg-accent/90'
+							className='bg-accent text-white hover:bg-accent/80'
 						>
 							Plan Now
 						</Button>
