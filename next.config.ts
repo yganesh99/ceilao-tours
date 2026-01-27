@@ -17,6 +17,12 @@ const nextConfig: NextConfig = {
 				port: '',
 				pathname: '/**', // Allows all paths from this domain
 			},
+			{
+				protocol: 'https',
+				hostname: 'lakpura.com',
+				port: '',
+				pathname: '/**',
+			},
 		],
 	},
 };

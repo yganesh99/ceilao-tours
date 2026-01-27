@@ -23,7 +23,7 @@ export function TailorMadeJourneys() {
 				</div>
 
 				{/* Content Side */}
-				<div className='flex flex-col justify-center px-8 md:px-20 py-16 bg-primary text-secondary'>
+				<div className='flex flex-col justify-center px-8 md:px-20 py-16 bg-[#d0d8c3] text-black'>
 					<motion.div
 						initial={{ opacity: 0, x: 20 }}
 						whileInView={{ opacity: 1, x: 0 }}
@@ -34,18 +34,18 @@ export function TailorMadeJourneys() {
 						<span className='text-accent text-sm font-medium uppercase tracking-widest'>
 							Bespoke Travel
 						</span>
-						<h2 className='text-4xl md:text-5xl font-[family-name:var(--font-playfair)] text-white'>
+						<h2 className='text-4xl md:text-5xl font-[family-name:var(--font-playfair)] text-[#1a2433]'>
 							Crafting Your <br />
 							Perfect Escape
 						</h2>
-						<p className='text-white/80 text-lg leading-relaxed font-light'>
+						<p className='text-black/80 text-lg leading-relaxed font-light'>
 							We believe that true luxury lies in the details. Our
 							travel designers work closely with you to curate a
 							journey that reflects your passions, pace, and
 							preferences. From private villas to exclusive
 							cultural access, every moment is tailored to you.
 						</p>
-						<ul className='space-y-3 py-4 text-white/90'>
+						<ul className='space-y-3 py-4 text-black/90'>
 							<li className='flex items-center space-x-3'>
 								<span className='w-1.5 h-1.5 rounded-full bg-accent' />
 								<span>Personalized Itineraries</span>

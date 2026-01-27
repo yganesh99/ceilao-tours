@@ -26,7 +26,7 @@ export function Hero() {
 			</div>
 
 			{/* Content */}
-			<div className='relative h-full flex flex-col justify-center items-center text-center px-4'>
+			{/* <div className='relative h-full flex flex-col justify-center items-center text-center px-4'>
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					animate={{ opacity: 1, y: 0 }}
@@ -61,7 +61,7 @@ export function Hero() {
 						</Button>
 					</div>
 				</motion.div>
-			</div>
+			</div> */}
 
 			{/* Scroll Indicator */}
 			<motion.div
