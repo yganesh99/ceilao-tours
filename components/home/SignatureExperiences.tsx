@@ -13,7 +13,8 @@ const experiences = [
 		id: 1,
 		title: 'The Tea Country Estate',
 		category: 'Heritage',
-		image: 'https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?q=80&w=2428&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		video: '/assets/video-1.webm',
+		poster: '/assets/thumbnail-1.png',
 		description:
 			'Stay in colonial-era bungalows amidst rolling hills and misty tea plantations.',
 	},
@@ -21,7 +22,8 @@ const experiences = [
 		id: 2,
 		title: 'Wild Coast Luxury',
 		category: 'Wildlife',
-		image: 'https://plus.unsplash.com/premium_photo-1661832611972-b6ee1aba3581?q=80&w=2575&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		video: '/assets/video-2.webm',
+		poster: '/assets/thumbnail-2.png',
 		description:
 			'Experience the thrill of Yala National Park from the comfort of a luxury tented lodge.',
 	},
@@ -29,35 +31,88 @@ const experiences = [
 		id: 3,
 		title: 'Galle Fort Awakening',
 		category: 'Culture',
-		image: 'https://images.unsplash.com/photo-1568843240915-b512cc9b4415?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		video: '/assets/video-3.webm',
+		poster: '/assets/thumbnail-3.png',
 		description:
 			'Walk the cobblestone streets of a living UNESCO World Heritage site.',
 	},
-	{
-		id: 4,
-		title: 'The Royal Cultural Triangle',
-		category: 'Heritage',
-		image: 'https://lakpura.com/cdn/shop/files/LK94909288-02-E.jpg?v=1734631231&width=3840',
-		description:
-			'Climb the ancient rock fortress of Sigiriya, a marvel of ancient engineering.',
-	},
-	{
-		id: 5,
-		title: 'Pristine East Coast',
-		category: 'Beach',
-		image: 'https://plus.unsplash.com/premium_photo-1681223447322-46794b8cdfd5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-		description:
-			'Relax on the untouched white sands of Trincomalee and Nilaveli.',
-	},
-	{
-		id: 6,
-		title: 'Scenic Train Journey',
-		category: 'Adventure',
-		image: 'https://images.unsplash.com/photo-1566976273017-6e6df9bbdbee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-		description:
-			'Embark on one of the most beautiful train rides in the world through lush tea estates.',
-	},
 ];
+
+import { useRef, useEffect } from 'react';
+import { useInView } from 'framer-motion';
+
+function ExperienceCard({
+	exp,
+	index,
+	shouldPlay,
+}: {
+	exp: (typeof experiences)[0];
+	index: number;
+	shouldPlay: boolean;
+}) {
+	const videoRef = useRef<HTMLVideoElement>(null);
+
+	useEffect(() => {
+		let timeoutId: NodeJS.Timeout;
+
+		if (shouldPlay) {
+			timeoutId = setTimeout(() => {
+				videoRef.current?.play().catch(() => {
+					// Autoplay might be blocked
+				});
+			}, 500);
+		} else {
+			videoRef.current?.pause();
+		}
+
+		return () => {
+			clearTimeout(timeoutId);
+		};
+	}, [shouldPlay]);
+
+	return (
+		<motion.div
+			initial={{ opacity: 0, y: 20 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{
+				duration: 0.5,
+				delay: index * 0.1,
+			}}
+			viewport={{ once: true }}
+			className='pl-4 md:pl-8 min-w-[85%] md:min-w-[50%] lg:min-w-[33.33%] relative shrink-0'
+		>
+			<div className='group cursor-pointer h-full'>
+				<div className='relative h-[400px] md:h-[500px] w-full overflow-hidden mb-6 rounded-lg shadow-sm bg-neutral-900'>
+					<video
+						ref={videoRef}
+						muted
+						loop
+						playsInline
+						poster={exp.poster}
+						className='absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105'
+					>
+						<source
+							src={exp.video}
+							type='video/webm'
+						/>
+					</video>
+					<div className='absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 pointer-events-none' />
+				</div>
+				<div className='space-y-2 text-left'>
+					<span className='text-xs font-bold uppercase tracking-widest text-accent'>
+						{exp.category}
+					</span>
+					<h3 className='text-2xl font-[family-name:var(--font-playfair)] text-primary'>
+						{exp.title}
+					</h3>
+					<p className='text-muted-foreground text-sm leading-relaxed max-w-sm'>
+						{exp.description}
+					</p>
+				</div>
+			</div>
+		</motion.div>
+	);
+}
 
 export function SignatureExperiences() {
 	const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -73,6 +128,9 @@ export function SignatureExperiences() {
 	const scrollNext = useCallback(() => {
 		if (emblaApi) emblaApi.scrollNext();
 	}, [emblaApi]);
+
+	const sectionRef = useRef(null);
+	const isSectionInView = useInView(sectionRef, { amount: 1 });
 
 	return (
 		<>
@@ -91,47 +149,22 @@ export function SignatureExperiences() {
 
 			{/* Carousel Section */}
 			<Section className='bg-white pt-12 md:pt-16 -mt-8'>
-				<div className='relative group'>
+				<div
+					className='relative group'
+					ref={sectionRef}
+				>
 					<div
 						className='overflow-hidden'
 						ref={emblaRef}
 					>
 						<div className='flex -ml-4 md:-ml-8 py-4'>
 							{experiences.map((exp, index) => (
-								<motion.div
+								<ExperienceCard
 									key={exp.id}
-									initial={{ opacity: 0, y: 20 }}
-									whileInView={{ opacity: 1, y: 0 }}
-									transition={{
-										duration: 0.5,
-										delay: index * 0.1,
-									}}
-									viewport={{ once: true }}
-									className='pl-4 md:pl-8 min-w-[85%] md:min-w-[50%] lg:min-w-[33.33%] relative shrink-0'
-								>
-									<div className='group cursor-pointer h-full'>
-										<div className='relative h-[400px] md:h-[500px] w-full overflow-hidden mb-6 rounded-lg shadow-sm'>
-											<Image
-												src={exp.image}
-												alt={exp.title}
-												fill
-												className='object-cover transition-transform duration-700 group-hover:scale-105'
-											/>
-											<div className='absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500' />
-										</div>
-										<div className='space-y-2 text-left'>
-											<span className='text-xs font-bold uppercase tracking-widest text-accent'>
-												{exp.category}
-											</span>
-											<h3 className='text-2xl font-[family-name:var(--font-playfair)] text-primary'>
-												{exp.title}
-											</h3>
-											<p className='text-muted-foreground text-sm leading-relaxed max-w-sm'>
-												{exp.description}
-											</p>
-										</div>
-									</div>
-								</motion.div>
+									exp={exp}
+									index={index}
+									shouldPlay={isSectionInView}
+								/>
 							))}
 						</div>
 					</div>
