@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 export function FoundationSection() {
 	return (
 		<Section className='bg-white py-16 md:py-24'>
-			<div className='flex flex-col md:flex-row items-center gap-12 md:gap-20 max-w-6xl mx-auto'>
+			<div className='flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-6xl mx-auto'>
 				{/* Logo Side */}
 				<motion.div
 					initial={{ opacity: 0, x: -20 }}
@@ -25,6 +25,22 @@ export function FoundationSection() {
 						/>
 					</div>
 				</motion.div>
+
+				{/* Separator */}
+				<motion.div
+					initial={{ opacity: 0, scaleY: 0 }}
+					whileInView={{ opacity: 1, scaleY: 1 }}
+					transition={{ duration: 0.6, delay: 0.1 }}
+					viewport={{ once: true }}
+					className='hidden md:block w-px h-48 bg-[#cea263]/40'
+				/>
+				<motion.div
+					initial={{ opacity: 0, scaleX: 0 }}
+					whileInView={{ opacity: 1, scaleX: 1 }}
+					transition={{ duration: 0.6, delay: 0.1 }}
+					viewport={{ once: true }}
+					className='md:hidden w-32 h-px bg-[#cea263]/40'
+				/>
 
 				{/* Text Side */}
 				<motion.div
