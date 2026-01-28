@@ -14,7 +14,7 @@ export default function Home() {
 			{/* <div className='w-full border-t border-white border-40' /> */}
 			<SignatureExperiences />
 			<TailorMadeJourneys />
-			<ConnectSection />
+			{/* <ConnectSection /> */}
 			<TrustLegacy />
 			<FoundationSection />
 		</>
