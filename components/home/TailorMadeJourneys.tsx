@@ -8,17 +8,18 @@ import { motion } from 'framer-motion';
 export function TailorMadeJourneys() {
 	return (
 		<Section
-			className='bg-secondary/30 relative overflow-hidden'
+			className='bg-white relative overflow-hidden'
 			fullWidth
 		>
 			<div className='grid grid-cols-1 md:grid-cols-2 min-h-[600px]'>
 				{/* Image Side */}
 				<div className='relative h-96 md:h-full w-full'>
 					<Image
-						src='https://images.unsplash.com/photo-1540202404-a2f29016b523?q=80&w=2866&auto=format&fit=crop'
+						src='/assets/map.jpg'
 						alt='Tailor Made Journey'
-						fill
-						className='object-cover'
+						width={200}
+						height={200}
+						className='object-cover lg:object-contain w-full h-full'
 					/>
 				</div>
 

@@ -24,7 +24,7 @@ const socialLinks = [
 
 export function ConnectSection() {
 	return (
-		<Section className='bg-background py-12 md:py-24'>
+		<Section className='bg-white py-12 md:py-24'>
 			<div className='flex flex-col md:flex-row items-center justify-between gap-8 max-w-5xl mx-auto px-4'>
 				<div>
 					<h2 className='text-3xl md:text-4xl font-playfair text-[#1f2b44]'>

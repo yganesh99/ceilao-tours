@@ -33,7 +33,7 @@ const features = [
 
 export function TrustLegacy() {
 	return (
-		<Section className='bg-[#d0d8c3]'>
+		<Section className='bg-background'>
 			<div className='text-center max-w-3xl mx-auto mb-16 space-y-4'>
 				<h2 className='text-3xl md:text-4xl font-[family-name:var(--font-playfair)] text-[#1f2b44]'>
 					The Ceilao Promise

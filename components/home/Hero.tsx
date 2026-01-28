@@ -10,7 +10,7 @@ export function Hero() {
 			<div className='absolute inset-0 bg-neutral-900 overflow-hidden'>
 				<iframe
 					className='absolute top-1/2 left-1/2 pointer-events-none'
-					src='https://www.youtube.com/embed/eWJWA9hv4yw?autoplay=1&mute=1&loop=1&playlist=eWJWA9hv4yw&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1'
+					src='https://www.youtube.com/embed/w9tzrtut3Wc?si=KrRAYuhIIw9u4uXD&autoplay=1&mute=1&loop=1&playlist=w9tzrtut3Wc&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1'
 					title='YouTube video player'
 					allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 					style={{
