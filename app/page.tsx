@@ -11,7 +11,7 @@ export default function Home() {
 		<>
 			<Hero />
 			<About />
-			{/* <div className='w-full border-t border-white border-40' /> */}
+			<div className='w-[80%] mx-auto border-t border-accent border-0.5' />
 			<SignatureExperiences />
 			<TailorMadeJourneys />
 			{/* <ConnectSection /> */}
