@@ -1,7 +1,9 @@
 'use client';
+import { Fragment } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Instagram, Facebook, Twitter, Link } from 'lucide-react';
+import { Instagram, Facebook, Twitter } from 'lucide-react';
+import Link from 'next/link';
 
 export default function About() {
 	const socialLinks = [
@@ -70,7 +72,7 @@ export default function About() {
 
 					<div className='py-4 sm:py-20 md:py-16 px-1 sm:px-10 lg:px-20'>
 						<h1 className='text-xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 tracking-wide font-serif text-[#cea263]'>
-							About
+							Our Story
 						</h1>
 
 						<p className='text-[#1f2b44] justify-center px-0.5 sm:px-1 mt-16'>
@@ -80,17 +82,26 @@ export default function About() {
 							nostrud exercitation ullamco laboris nisi ut aliquip
 							ex ea commodo consequat.
 						</p>
-						<div className='flex items-center gap-8'>
-							{socialLinks.map((social) => (
-								<Link
-									key={social.name}
-									href={social.href}
-									className='text-primary/60 hover:text-primary transition-colors duration-300 transform hover:scale-110'
-									aria-label={`Follow us on ${social.name}`}
-								>
-									<social.icon className='w-6 h-6 md:w-8 md:h-8' />
-								</Link>
-							))}
+						<div className='mt-12 flex items-center justify-start gap-12'>
+							<h3 className='text-xl sm:text-2xl font-serif text-[#cea263] tracking-wide'>
+								Connect
+							</h3>
+							<div className='flex justify-center items-center gap-4'>
+								{socialLinks.map((social, index) => (
+									<Fragment key={social.name}>
+										<Link
+											href={social.href}
+											className='text-primary/60 hover:text-accent transition-colors duration-300 transform hover:scale-110'
+											aria-label={`Follow us on ${social.name}`}
+										>
+											<social.icon className='w-6 h-6 md:w-8 md:h-8' />
+										</Link>
+										{index < socialLinks.length - 1 && (
+											<div className='w-[2px] h-6 bg-[#cea263]' />
+										)}
+									</Fragment>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>
