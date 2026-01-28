@@ -34,7 +34,7 @@ export function FoundationSection() {
 					viewport={{ once: true }}
 					className='w-full md:w-2/3 text-center md:text-left space-y-4'
 				>
-					<h3 className='text-2xl md:text-3xl font-playfair text-primary mb-4'>
+					<h3 className='text-2xl md:text-3xl font-playfair text-[#1f2b44] mb-4'>
 						Giving Back
 					</h3>
 					<p className='text-muted-foreground leading-relaxed'>

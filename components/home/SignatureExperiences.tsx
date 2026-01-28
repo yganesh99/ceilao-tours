@@ -82,7 +82,7 @@ export function SignatureExperiences() {
 					<span className='text-accent text-sm font-medium uppercase tracking-widest'>
 						Curated Collections
 					</span>
-					<h2 className='text-4xl md:text-5xl font-[family-name:var(--font-playfair)] text-primary'>
+					<h2 className='text-4xl md:text-5xl font-[family-name:var(--font-playfair)] text-[#1f2b44]'>
 						Signature Experiences
 					</h2>
 					<div className='w-24 h-[1px] bg-accent mx-auto mt-6' />

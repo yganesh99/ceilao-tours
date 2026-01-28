@@ -44,7 +44,7 @@ export function Header() {
 				'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
 				isScrolled
 					? 'bg-background/70 backdrop-blur-lg shadow-md border-primary/20'
-					: 'bg-background/95 backdrop-blur-sm shadow-none border-primary/10 py-3'
+					: 'bg-background/95 backdrop-blur-sm shadow-none border-primary/10 py-3',
 			)}
 		>
 			<div className='container mx-auto px-4 md:px-6 flex items-center justify-between'>
@@ -74,12 +74,12 @@ export function Header() {
 							// 		? 'text-primary'
 							// 		: 'text-white/90 hover:text-white'
 							// )}
-							className='text-primary hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
+							className='text-[#1f2b44] hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
 						>
 							{link.name}
 						</Link>
 					))}
-					<Button
+					{/* <Button
 						// variant={isScrolled || !isHome ? 'solid' : 'outline'}
 						variant='solid'
 						// className={cn(
@@ -90,7 +90,7 @@ export function Header() {
 						className='bg-accent text-white hover:bg-accent/80'
 					>
 						Plan Now
-					</Button>
+					</Button> */}
 				</nav>
 
 				{/* Mobile Menu Toggle */}
@@ -128,19 +128,19 @@ export function Header() {
 							<Link
 								key={link.name}
 								href={link.href}
-								className='text-2xl font-playfair text-primary hover:text-accent'
+								className='text-2xl font-playfair text-[#1f2b44] hover:text-accent'
 								onClick={() => setMobileMenuOpen(false)}
 							>
 								{link.name}
 							</Link>
 						))}
-						<Button
+						{/* <Button
 							size='lg'
 							onClick={() => setMobileMenuOpen(false)}
 							className='bg-accent text-white hover:bg-accent/80'
 						>
 							Plan Now
-						</Button>
+						</Button> */}
 					</div>
 				)}
 			</div>
