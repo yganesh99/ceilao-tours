@@ -50,16 +50,21 @@ export function Header() {
 			<div className='container mx-auto px-4 md:px-6 flex items-center justify-between'>
 				{/* Logo */}
 
-				<div className='relative h-16 md:h-18 lg:h-20 aspect-2/1'>
-					<Link href='/'>
-						<Image
-							src='/assets/ceilao-tours-logo.png'
-							alt='Ceilao Travel'
-							fill
-							className='object-cover'
-							priority
-						/>
-					</Link>
+				<div className='flex items-center gap-y-4 gap-x-0.5'>
+					<div className='relative h-16 md:h-18 lg:h-20 aspect-2/1'>
+						<Link href='/'>
+							<Image
+								src='/assets/ceilao-tours-logo.png'
+								alt='Ceilao Travel'
+								fill
+								className='object-cover'
+								priority
+							/>
+						</Link>
+					</div>
+					<span className='block text-[10px] md:text-sm md:font-medium text-accent italic font-playfair tracking-wide'>
+						Curated Journeys. Heartfelt Hospitality
+					</span>
 				</div>
 
 				{/* Desktop Nav */}

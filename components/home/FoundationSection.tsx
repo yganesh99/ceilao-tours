@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export function FoundationSection() {
 	return (
-		<Section className='bg-background py-16 md:py-24'>
+		<Section className='bg-white py-16 md:py-24'>
 			<div className='flex flex-col md:flex-row items-center gap-12 md:gap-20 max-w-6xl mx-auto'>
 				{/* Logo Side */}
 				<motion.div

@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 export function Footer() {
 	return (
-		<footer className='bg-primary text-primary-foreground pt-16 pb-8'>
+		<footer className='bg-[#d0d8c3] text-[#1f2b44] pt-16 pb-8'>
 			<div className='container mx-auto px-4 md:px-6'>
 				<div className='grid grid-cols-1 md:grid-cols-4 gap-12 mb-12'>
 					{/* Brand Column */}
@@ -27,7 +27,7 @@ export function Footer() {
 								/>
 							</Link>
 						</div>
-						<p className='text-primary-foreground/80 text-sm leading-relaxed max-w-xs'>
+						<p className='text-[#1f2b44] text-sm leading-relaxed max-w-xs'>
 							Curating bespoke, ultra-luxury journeys across the
 							timeless landscapes of Sri Lanka. Experience the
 							extraordinary.
@@ -36,7 +36,7 @@ export function Footer() {
 
 					{/* Quick Links */}
 					<div>
-						<h3 className='text-lg font-medium mb-6 uppercase tracking-widest text-accent'>
+						<h3 className='text-lg font-medium mb-6 uppercase tracking-widest text-[#1f2b44]'>
 							Explore
 						</h3>
 						<ul className='space-y-3'>
@@ -77,26 +77,26 @@ export function Footer() {
 
 					{/* Contact */}
 					<div>
-						<h3 className='text-lg font-medium mb-6 uppercase tracking-widest text-accent'>
+						<h3 className='text-lg font-medium mb-6 uppercase tracking-widest text-[#1f2b44]'>
 							Contact
 						</h3>
 						<ul className='space-y-4'>
 							<li className='flex items-start space-x-3'>
-								<MapPin className='h-5 w-5 text-accent shrink-0' />
-								<span className='text-sm text-primary-foreground/80'>
+								<MapPin className='h-5 w-5 text-[#1f2b44] shrink-0' />
+								<span className='text-sm text-[#1f2b44]'>
 									No. 45, Galle Road,
 									<br /> Colombo 03, Sri Lanka
 								</span>
 							</li>
 							<li className='flex items-center space-x-3'>
-								<Phone className='h-5 w-5 text-accent shrink-0' />
-								<span className='text-sm text-primary-foreground/80'>
+								<Phone className='h-5 w-5 text-[#1f2b44] shrink-0' />
+								<span className='text-sm text-[#1f2b44]'>
 									+94 11 234 5678
 								</span>
 							</li>
 							<li className='flex items-center space-x-3'>
-								<Mail className='h-5 w-5 text-accent shrink-0' />
-								<span className='text-sm text-primary-foreground/80'>
+								<Mail className='h-5 w-5 text-[#1f2b44] shrink-0' />
+								<span className='text-sm text-[#1f2b44]'>
 									concierge@ceilao.com
 								</span>
 							</li>
@@ -105,25 +105,25 @@ export function Footer() {
 
 					{/* Newsletter / Social */}
 					<div>
-						<h3 className='text-lg font-medium mb-6 uppercase tracking-widest text-accent'>
+						<h3 className='text-lg font-medium mb-6 uppercase tracking-widest text-[#1f2b44]'>
 							Follow Us
 						</h3>
 						<div className='flex space-x-4 mb-8'>
 							<Link
 								href='#'
-								className='p-2 bg-white/10 rounded-full hover:bg-accent hover:text-white transition-colors'
+								className='p-2 bg-primary/30 rounded-full hover:bg-accent hover:text-white transition-colors'
 							>
 								<Instagram className='h-5 w-5' />
 							</Link>
 							<Link
 								href='#'
-								className='p-2 bg-white/10 rounded-full hover:bg-accent hover:text-white transition-colors'
+								className='p-2 bg-primary/30 rounded-full hover:bg-accent hover:text-white transition-colors'
 							>
 								<Facebook className='h-5 w-5' />
 							</Link>
 							<Link
 								href='#'
-								className='p-2 bg-white/10 rounded-full hover:bg-accent hover:text-white transition-colors'
+								className='p-2 bg-primary/30 rounded-full hover:bg-accent hover:text-white transition-colors'
 							>
 								<Twitter className='h-5 w-5' />
 							</Link>
@@ -132,7 +132,7 @@ export function Footer() {
 				</div>
 
 				{/* Bottom Bar */}
-				<div className='border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-primary-foreground/60'>
+				<div className='border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-[#1f2b44]'>
 					<p>
 						&copy; {new Date().getFullYear()} Ceilao Travel & Tours.
 						All rights reserved.
