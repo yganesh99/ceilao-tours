@@ -34,7 +34,7 @@ export function TailorMadeJourneys() {
 						<span className='text-accent text-sm font-medium uppercase tracking-widest'>
 							Bespoke Travel
 						</span>
-						<h2 className='text-4xl md:text-5xl font-[family-name:var(--font-playfair)] text-[#1a2433]'>
+						<h2 className='text-4xl md:text-5xl font-[family-name:var(--font-playfair)] text-[#1f2b44]'>
 							Crafting Your <br />
 							Perfect Escape
 						</h2>

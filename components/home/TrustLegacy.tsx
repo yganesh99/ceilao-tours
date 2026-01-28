@@ -35,7 +35,7 @@ export function TrustLegacy() {
 	return (
 		<Section className='bg-[#d0d8c3]'>
 			<div className='text-center max-w-3xl mx-auto mb-16 space-y-4'>
-				<h2 className='text-3xl md:text-4xl font-[family-name:var(--font-playfair)] text-primary'>
+				<h2 className='text-3xl md:text-4xl font-[family-name:var(--font-playfair)] text-[#1f2b44]'>
 					The Ceilao Promise
 				</h2>
 				<p className='text-muted-foreground text-lg font-light leading-relaxed'>
@@ -55,10 +55,10 @@ export function TrustLegacy() {
 						viewport={{ once: true }}
 						className='flex flex-col items-center text-center p-6 rounded-lg hover:bg-secondary/20 transition-colors'
 					>
-						<div className='h-12 w-12 rounded-full bg-secondary flex items-center justify-center mb-4 text-primary'>
+						<div className='h-12 w-12 rounded-full bg-secondary flex items-center justify-center mb-4 text-[#1f2b44]'>
 							<feature.icon className='h-6 w-6' />
 						</div>
-						<h3 className='text-lg font-bold font-[family-name:var(--font-playfair)] text-primary mb-2'>
+						<h3 className='text-lg font-bold font-[family-name:var(--font-playfair)] text-[#1f2b44] mb-2'>
 							{feature.title}
 						</h3>
 						<p className='text-sm text-muted-foreground leading-relaxed'>

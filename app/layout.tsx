@@ -17,9 +17,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-	title: 'Ceilao Travel | Ultra-Luxury Sri Lankan Journeys',
+	title: 'Ceilão Travel | Ultra-Luxury Sri Lankan Journeys',
 	description:
-		'Experience the timeless elegance of Sri Lanka with Ceilao Travel. Curated bespoke journeys, signature experiences, and unparalleled luxury.',
+		'Experience the timeless elegance of Sri Lanka with Ceilão Travel. Curated bespoke journeys, signature experiences, and unparalleled luxury.',
 };
 
 export default function RootLayout({
