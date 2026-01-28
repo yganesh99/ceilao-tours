@@ -3,6 +3,7 @@
 import { Section } from '@/components/ui/Section';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Button } from '../ui/Button';
 
 export function FoundationSection() {
 	return (
@@ -14,7 +15,7 @@ export function FoundationSection() {
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.6 }}
 					viewport={{ once: true }}
-					className='w-full md:w-1/3 flex justify-center md:justify-end'
+					className='w-full md:w-1/3 flex justify-center md:justify-start'
 				>
 					<div className='relative w-48 h-48 md:w-64 md:h-64'>
 						<Image
@@ -62,6 +63,13 @@ export function FoundationSection() {
 						sustainable tourism that preserves our heritage and
 						empowers future generations.
 					</p>
+					<Button
+						type='button'
+						size='sm'
+						className='bg-accent text-white w-[20%]'
+					>
+						Contribute
+					</Button>
 				</motion.div>
 			</div>
 		</Section>
