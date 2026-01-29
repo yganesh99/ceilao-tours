@@ -4,16 +4,16 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/Button';
-import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 const navLinks = [
-	{ name: 'Home', href: '/' },
-	{ name: 'About Us', href: '/about-us' },
-	{ name: 'Tours & Experiences', href: '/tours' },
-	{ name: 'Tailor-Made Journeys', href: '/tailor-made' },
-	// { name: 'Contact', href: '/contact' },
+	{ name: 'Home', href: '/#hero' },
+	{ name: 'Our Story', href: '/#our-story' },
+	{ name: 'Curated Collections', href: '/#curated-collections' },
+	{ name: 'Bespoke Travel', href: '/#bespoke-travel' },
+	{ name: 'The Ceilão Promise', href: '/#promise' },
+	{ name: 'Hopeful Foundation', href: '/#foundation' },
+	{ name: 'Contact', href: '/#contact' },
 ];
 
 export function Header() {
@@ -30,27 +30,22 @@ export function Header() {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
-	const isHome = pathname === '/';
+	const toggleMenu = () => {
+		setMobileMenuOpen(!mobileMenuOpen);
+	};
 
 	return (
-		<header
-			// className={cn(
-			// 	'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-			// 	isScrolled || !isHome
-			// 		? 'bg-background/95 backdrop-blur-md shadow-sm border-b border-primary/10 py-3'
-			// 		: 'bg-transparent py-6'
-			// )}
-			className={cn(
-				'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
-				isScrolled
-					? 'bg-background/70 backdrop-blur-lg shadow-md border-primary/20'
-					: 'bg-background/95 backdrop-blur-sm shadow-none border-primary/10 py-3',
-			)}
-		>
-			<div className='container mx-auto px-4 md:px-6 flex items-center justify-between'>
-				{/* Logo */}
-
-				<div className='flex items-center gap-y-4 gap-x-0.5'>
+		<>
+			<header
+				className={cn(
+					'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
+					isScrolled
+						? 'bg-background/70 backdrop-blur-lg shadow-md border-primary/20'
+						: 'bg-background/95 backdrop-blur-sm shadow-none border-primary/10 py-3',
+				)}
+			>
+				<div className='relative px-4 md:pl-0 md:pr-6 flex items-center justify-between'>
+					{/* Logo */}
 					<div className='relative h-16 md:h-18 lg:h-20 aspect-2/1'>
 						<Link href='/'>
 							<Image
@@ -62,93 +57,66 @@ export function Header() {
 							/>
 						</Link>
 					</div>
-					<span className='block text-[10px] md:text-sm md:font-medium text-accent italic font-playfair tracking-wide'>
-						Curated Journeys. Heartfelt Hospitality
+
+					<span className='absolute left-1/2 -translate-x-1/2 block text-[10px] md:text-sm font-semibold text-accent italic font-playfair tracking-wide text-center whitespace-nowrap'>
+						Curated Journeys. Heartfelt Hospitality.
 					</span>
-				</div>
 
-				{/* Desktop Nav */}
-				<nav className='hidden lg:flex items-center space-x-8'>
-					{navLinks.map((link) => (
-						<Link
-							key={link.name}
-							href={link.href}
-							// className={cn(
-							// 	'text-sm font-medium uppercase tracking-widest hover:text-accent transition-colors',
-							// 	isScrolled || !isHome
-							// 		? 'text-primary'
-							// 		: 'text-white/90 hover:text-white'
-							// )}
-							className='text-[#1f2b44] hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
+					{/* Mobile Menu Toggle */}
+					<div className='z-50'>
+						<button
+							onClick={toggleMenu}
+							className='space-y-1 focus:outline-none text-[#1f2b44]'
+							aria-label='Open Menu'
 						>
-							{link.name}
-						</Link>
-					))}
-					{/* <Button
-						// variant={isScrolled || !isHome ? 'solid' : 'outline'}
-						variant='solid'
-						// className={cn(
-						// 	!isScrolled && isHome
-						// 		? 'border-white text-white hover:bg-white hover:text-primary'
-						// 		: ''
-						// )}
-						className='bg-accent text-white hover:bg-accent/80'
-					>
-						Plan Now
-					</Button> */}
-				</nav>
-
-				{/* Mobile Menu Toggle */}
-				<button
-					className='lg:hidden z-50 p-2'
-					onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-				>
-					{mobileMenuOpen ? (
-						<X
-							// className={cn(
-							// 	'h-6 w-6',
-							// 	isScrolled || !isHome || mobileMenuOpen
-							// 		? 'text-primary'
-							// 		: 'text-white'
-							// )}
-							className='h-6 w-6 text-primary'
-						/>
-					) : (
-						<Menu
-							// className={cn(
-							// 	'h-6 w-6',
-							// 	isScrolled || !isHome
-							// 		? 'text-primary'
-							// 		: 'text-white'
-							// )}
-							className='h-6 w-6 text-primary'
-						/>
-					)}
-				</button>
-
-				{/* Mobile Nav Overlay */}
-				{mobileMenuOpen && (
-					<div className='fixed inset-0 bg-background h-screen z-40 flex flex-col items-center justify-center space-y-8 animate-in fade-in slide-in-from-top-10 duration-200'>
-						{navLinks.map((link) => (
-							<Link
-								key={link.name}
-								href={link.href}
-								className='text-2xl font-playfair text-[#1f2b44] hover:text-accent'
-								onClick={() => setMobileMenuOpen(false)}
-							>
-								{link.name}
-							</Link>
-						))}
-						{/* <Button
-							size='lg'
-							onClick={() => setMobileMenuOpen(false)}
-							className='bg-accent text-white hover:bg-accent/80'
-						>
-							Plan Now
-						</Button> */}
+							<span className='block w-6 h-0.5 bg-current'></span>
+							<span className='block w-6 h-0.5 bg-current'></span>
+							<span className='block w-6 h-0.5 bg-current'></span>
+						</button>
 					</div>
-				)}
+				</div>
+			</header>
+
+			{/* Mobile Menu Backdrop & Drawer */}
+			<div
+				className={`fixed inset-0 z-60 transition-all duration-300 ${
+					mobileMenuOpen
+						? 'opacity-100 visible'
+						: 'opacity-0 invisible delay-300'
+				}`}
+			>
+				{/* Backdrop */}
+				<div
+					className='absolute inset-0 bg-black/50 transition-opacity duration-300'
+					onClick={toggleMenu}
+				/>
+
+				{/* Drawer */}
+				<div
+					className={`absolute top-0 right-0 h-fit w-2/3 max-w-xs bg-navy text-[#cea263] transform transition-transform duration-300 ease-out ${
+						mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+					}`}
+				>
+					<div className='flex flex-col h-full pl-28 pr-0 py-28'>
+						{/* Navigation Links */}
+						<nav>
+							<ul className='flex flex-col space-y-6 uppercase tracking-widest text-xs font-light text-center'>
+								{navLinks.map((link) => (
+									<li key={link.name}>
+										<Link
+											href={link.href}
+											onClick={toggleMenu}
+											className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
+										>
+											{link.name}
+										</Link>
+									</li>
+								))}
+							</ul>
+						</nav>
+					</div>
+				</div>
 			</div>
-		</header>
+		</>
 	);
 }

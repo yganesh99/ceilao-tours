@@ -9,14 +9,26 @@ import About from '@/components/home/About';
 export default function Home() {
 	return (
 		<>
-			<Hero />
-			<About />
+			<div id='hero'>
+				<Hero />
+			</div>
+			<div id='our-story'>
+				<About />
+			</div>
 			<div className='w-[80%] mx-auto border-t border-accent border-0.5' />
-			<SignatureExperiences />
-			<TailorMadeJourneys />
+			<div id='curated-collections'>
+				<SignatureExperiences />
+			</div>
+			<div id='bespoke-travel'>
+				<TailorMadeJourneys />
+			</div>
 			{/* <ConnectSection /> */}
-			<TrustLegacy />
-			<FoundationSection />
+			<div id='promise'>
+				<TrustLegacy />
+			</div>
+			<div id='foundation'>
+				<FoundationSection />
+			</div>
 		</>
 	);
 }
