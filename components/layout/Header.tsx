@@ -34,6 +34,10 @@ export function Header() {
 		setMobileMenuOpen(!mobileMenuOpen);
 	};
 
+	const closeMenu = () => {
+		setMobileMenuOpen(false);
+	};
+
 	return (
 		<>
 			<header
@@ -88,7 +92,7 @@ export function Header() {
 				{/* Backdrop */}
 				<div
 					className='absolute inset-0 bg-black/50 transition-opacity duration-300'
-					onClick={toggleMenu}
+					onClick={closeMenu}
 				/>
 
 				{/* Drawer */}
@@ -96,6 +100,7 @@ export function Header() {
 					className={`absolute top-0 right-0 h-fit w-2/3 max-w-xs bg-navy text-[#cea263] transform transition-transform duration-300 ease-out ${
 						mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
 					}`}
+					onClick={closeMenu}
 				>
 					<div className='flex flex-col h-full pl-28 pr-0 py-28'>
 						{/* Navigation Links */}
@@ -105,7 +110,7 @@ export function Header() {
 									<li key={link.name}>
 										<Link
 											href={link.href}
-											onClick={toggleMenu}
+											onClick={closeMenu}
 											className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
 										>
 											{link.name}
