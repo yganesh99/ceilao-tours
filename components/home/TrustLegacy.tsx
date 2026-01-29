@@ -35,10 +35,11 @@ export function TrustLegacy() {
 	return (
 		<Section className='bg-background'>
 			<div className='text-center max-w-3xl mx-auto mb-16 space-y-4'>
-				<h2 className='text-3xl md:text-4xl font-[family-name:var(--font-playfair)] text-[#1f2b44]'>
-					The Ceilao Promise
+				<h2 className='text-3xl md:text-4xl font-playfair text-accent'>
+					The Ceilão Promise
 				</h2>
-				<p className='text-muted-foreground text-lg font-light leading-relaxed'>
+				<div className='w-24 h-px bg-accent mx-auto mt-6' />
+				<p className='text-[#1f2b44] text-lg font-light leading-relaxed'>
 					Your journey is more than just a vacation; it is a tapestry
 					of memories woven with trust, excellence, and a deep love
 					for our island home.
@@ -55,13 +56,13 @@ export function TrustLegacy() {
 						viewport={{ once: true }}
 						className='flex flex-col items-center text-center p-6 rounded-lg hover:bg-secondary/20 transition-colors'
 					>
-						<div className='h-12 w-12 rounded-full bg-secondary flex items-center justify-center mb-4 text-[#1f2b44]'>
+						<div className='h-12 w-12 rounded-full bg-secondary flex items-center justify-center mb-4 text-accent'>
 							<feature.icon className='h-6 w-6' />
 						</div>
-						<h3 className='text-lg font-bold font-[family-name:var(--font-playfair)] text-[#1f2b44] mb-2'>
+						<h3 className='text-lg font-bold font-playfair text-accent mb-2'>
 							{feature.title}
 						</h3>
-						<p className='text-sm text-muted-foreground leading-relaxed'>
+						<p className='text-sm text-[#1f2b44] leading-relaxed'>
 							{feature.description}
 						</p>
 					</motion.div>

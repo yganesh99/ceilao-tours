@@ -87,9 +87,10 @@ export default function About() {
 					className='w-full md:w-2/3 text-center md:text-left space-y-8'
 				>
 					<div className='space-y-4'>
-						<h1 className='text-3xl md:text-4xl lg:text-5xl font-serif text-[#1f2b44] mb-4'>
+						<h1 className='text-3xl md:text-4xl lg:text-5xl font-serif text-[#1f2b44]'>
 							Our Story
 						</h1>
+						<div className='w-24 h-px bg-accent mt-6 mx-auto md:mx-0' />
 						<p className='text-muted-foreground leading-relaxed'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt ut labore et
