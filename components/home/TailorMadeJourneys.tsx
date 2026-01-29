@@ -8,10 +8,10 @@ import { motion } from 'framer-motion';
 export function TailorMadeJourneys() {
 	return (
 		<Section
-			className='bg-white relative overflow-hidden'
+			className='bg-white relative overflow-hidden '
 			fullWidth
 		>
-			<div className='grid grid-cols-1 md:grid-cols-2 min-h-[600px]'>
+			<div className='grid grid-cols-1 md:grid-cols-2 min-h-[600px] border-accent border-2'>
 				{/* Image Side */}
 				<div className='relative h-96 md:h-full w-full'>
 					<Image
@@ -39,6 +39,7 @@ export function TailorMadeJourneys() {
 							Crafting Your <br />
 							Perfect Escape
 						</h2>
+						<div className='w-24 h-px bg-accent mt-6' />
 						<p className='text-black/80 text-lg leading-relaxed font-light'>
 							We believe that true luxury lies in the details. Our
 							travel designers work closely with you to curate a
@@ -61,12 +62,7 @@ export function TailorMadeJourneys() {
 							</li>
 						</ul>
 						<div className='pt-6'>
-							<Button
-								size='lg'
-								className='bg-accent text-white hover:bg-accent/80'
-							>
-								Start Planning
-							</Button>
+							<Button size='lg'>Start Planning</Button>
 						</div>
 					</motion.div>
 				</div>

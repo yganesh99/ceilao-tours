@@ -5,7 +5,8 @@ import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import useEmblaCarousel from 'embla-carousel-react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import { useCallback } from 'react';
 
 const experiences = [
@@ -126,6 +127,12 @@ function ExperienceCard({
 					<p className='text-muted-foreground text-sm leading-relaxed max-w-sm'>
 						{exp.description}
 					</p>
+					<Link
+						href={`/experiences/${exp.id}`}
+						className='inline-flex items-center gap-2 text-accent uppercase tracking-widest text-xs font-bold pt-4 hover:translate-x-2 transition-transform duration-300'
+					>
+						View Itinerary <ArrowRight className='w-4 h-4' />
+					</Link>
 				</div>
 			</div>
 		</motion.div>
@@ -166,7 +173,7 @@ export function SignatureExperiences() {
 			</Section>
 
 			{/* Carousel Section */}
-			<Section className='bg-white pt-12 md:pt-16 -mt-8'>
+			<Section className='bg-white pt-12 md:pt-16 -mt-8 md:py-0 py-2'>
 				<div
 					className='relative group'
 					ref={sectionRef}
@@ -191,7 +198,7 @@ export function SignatureExperiences() {
 					<Button
 						variant='outline'
 						size='icon'
-						className='absolute left-4 top-1/2 -translate-y-1/2 rounded-full w-12 h-12 bg-[#f7f3ed]/90 backdrop-blur-sm border-none shadow-md hover:bg-[#e6e2db] text-primary transition-all z-10 hidden md:flex'
+						className='absolute left-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex'
 						onClick={scrollPrev}
 					>
 						<ChevronLeft className='h-5 w-5' />
@@ -200,7 +207,7 @@ export function SignatureExperiences() {
 					<Button
 						variant='outline'
 						size='icon'
-						className='absolute right-4 top-1/2 -translate-y-1/2 rounded-full w-12 h-12 bg-[#f7f3ed]/90 backdrop-blur-sm border-none shadow-md hover:bg-[#e6e2db] text-primary transition-all z-10 hidden md:flex'
+						className='absolute right-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex'
 						onClick={scrollNext}
 					>
 						<ChevronRight className='h-5 w-5' />

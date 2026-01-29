@@ -51,9 +51,10 @@ export function FoundationSection() {
 					viewport={{ once: true }}
 					className='w-full md:w-2/3 text-center md:text-left space-y-4'
 				>
-					<h3 className='text-2xl md:text-3xl font-playfair text-[#1f2b44] mb-4'>
+					<h3 className='text-2xl md:text-3xl font-playfair text-[#1f2b44]'>
 						Giving Back
 					</h3>
+					<div className='w-24 h-px bg-accent mt-6 mx-auto md:mx-0' />
 					<p className='text-muted-foreground leading-relaxed'>
 						We believe in the power of travel to transform lives,
 						not just for our guests but for our local communities.
@@ -66,7 +67,6 @@ export function FoundationSection() {
 					<Button
 						type='button'
 						size='sm'
-						className='bg-accent text-white w-[20%]'
 					>
 						Contribute
 					</Button>

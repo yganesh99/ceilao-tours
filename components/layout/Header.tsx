@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
+import { Menu } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
 
 const navLinks = [
 	{ name: 'Home', href: '/#hero' },
@@ -48,7 +50,7 @@ export function Header() {
 						: 'bg-background/95 backdrop-blur-sm shadow-none border-primary/10 py-3',
 				)}
 			>
-				<div className='relative px-4 md:pl-0 md:pr-6 flex items-center justify-between'>
+				<div className='relative pl-0 pr-4 md:pl-0 md:pr-6 flex items-center justify-between'>
 					{/* Logo */}
 					<div className='relative h-16 md:h-18 lg:h-20 aspect-2/1'>
 						<Link href='/'>
@@ -62,21 +64,21 @@ export function Header() {
 						</Link>
 					</div>
 
-					<span className='absolute left-1/2 -translate-x-1/2 block text-[10px] md:text-sm font-semibold text-accent italic font-playfair tracking-wide text-center whitespace-nowrap'>
+					<span className='absolute pl-8 md:pl-0 left-1/2 -translate-x-1/2 block text-[10px] md:text-sm font-semibold text-accent italic font-playfair tracking-wide text-center whitespace-nowrap'>
 						Curated Journeys. Heartfelt Hospitality.
 					</span>
 
 					{/* Mobile Menu Toggle */}
 					<div className='z-50'>
-						<button
+						<Button
+							variant='ghost'
+							size='icon'
 							onClick={toggleMenu}
-							className='space-y-1 focus:outline-none text-[#1f2b44]'
+							className='hover:bg-transparent text-[#1f2b44] hover:text-[#1f2b44]'
 							aria-label='Open Menu'
 						>
-							<span className='block w-6 h-0.5 bg-current'></span>
-							<span className='block w-6 h-0.5 bg-current'></span>
-							<span className='block w-6 h-0.5 bg-current'></span>
-						</button>
+							<Menu className='h-8 w-8' />
+						</Button>
 					</div>
 				</div>
 			</header>
