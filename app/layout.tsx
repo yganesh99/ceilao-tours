@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Inter } from 'next/font/google';
+import { Playfair_Display, Inter, Poiret_One } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import './globals.css';
@@ -16,8 +16,15 @@ const inter = Inter({
 	display: 'swap',
 });
 
+const poiretOne = Poiret_One({
+	subsets: ['latin'],
+	weight: '400',
+	variable: '--font-poiret-one',
+	display: 'swap',
+});
+
 export const metadata: Metadata = {
-	title: 'Ceilão Travel | Ultra-Luxury Sri Lankan Journeys',
+	title: 'Ceilão Travel & Tours',
 	description:
 		'Experience the timeless elegance of Sri Lanka with Ceilão Travel. Curated bespoke journeys, signature experiences, and unparalleled luxury.',
 };
@@ -30,7 +37,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body
-				className={`${playfair.variable} ${inter.variable} antialiased bg-background text-foreground`}
+				className={`${playfair.variable} ${inter.variable} ${poiretOne.variable} antialiased bg-background text-foreground`}
 			>
 				<Header />
 				<main className='min-h-screen'>{children}</main>
