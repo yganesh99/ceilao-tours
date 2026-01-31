@@ -11,7 +11,7 @@ export default function About() {
 	const socialLinks = [
 		{
 			name: 'Instagram',
-			href: '#',
+			href: 'https://www.instagram.com/ceilao.travels?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
 			icon: Instagram,
 		},
 		{
@@ -38,7 +38,7 @@ export default function About() {
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.6 }}
 					viewport={{ once: true }}
-					className='w-full md:w-1/3 flex flex-col items-center justify-center gap-8'
+					className='w-full md:w-1/3 flex flex-row md:flex-col items-center justify-center gap-8'
 				>
 					<div className='w-20 md:w-28'>
 						<Image
@@ -47,7 +47,7 @@ export default function About() {
 							width={0}
 							height={0}
 							sizes='100vw'
-							className='w-full h-auto'
+							className='w-full h-auto mt-4 md:mt-0'
 						/>
 					</div>
 					<div className='w-48 md:w-64'>
@@ -70,13 +70,13 @@ export default function About() {
 					viewport={{ once: true }}
 					className='hidden md:block w-px h-64 bg-[#cea263]/40'
 				/>
-				<motion.div
+				{/* <motion.div
 					initial={{ opacity: 0, scaleX: 0 }}
 					whileInView={{ opacity: 1, scaleX: 1 }}
 					transition={{ duration: 0.6, delay: 0.1 }}
 					viewport={{ once: true }}
 					className='md:hidden w-32 h-px bg-[#cea263]/40'
-				/>
+				/> */}
 
 				{/* Text Side */}
 				<motion.div
@@ -87,7 +87,7 @@ export default function About() {
 					className='w-full md:w-2/3 text-center md:text-left space-y-8'
 				>
 					<div className='space-y-4'>
-						<h1 className='text-3xl md:text-4xl lg:text-5xl font-serif text-[#1f2b44]'>
+						<h1 className='mt-4 text-3xl md:text-4xl lg:text-5xl font-serif text-[#1f2b44]'>
 							Our Story
 						</h1>
 						<div className='w-24 h-px bg-accent mt-6 mx-auto md:mx-0' />

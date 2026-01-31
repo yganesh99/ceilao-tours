@@ -8,54 +8,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { useCallback } from 'react';
-
-const experiences = [
-	{
-		id: 1,
-		title: 'Culture & Heritage',
-		// category: 'Culture & Heritage',
-		video: '/assets/video-1.webm',
-		poster: '/assets/thumbnail-1.png',
-		description:
-			'Stay in colonial-era bungalows amidst rolling hills and misty tea plantations.',
-	},
-	{
-		id: 2,
-		title: 'Nature & Wildlife',
-		// category: 'Wildlife',
-		video: '/assets/video-2.webm',
-		poster: '/assets/thumbnail-2.png',
-		description:
-			'Experience the thrill of Yala National Park from the comfort of a luxury tented lodge.',
-	},
-	{
-		id: 3,
-		title: 'Hill Country & Tea',
-		// category: 'Culture',
-		video: '/assets/video-3.webm',
-		poster: '/assets/thumbnail-3.png',
-		description:
-			'Walk the cobblestone streets of a living UNESCO World Heritage site.',
-	},
-	{
-		id: 4,
-		title: 'Experiences',
-		// category: 'Culture',
-		video: '/assets/video-4.webm',
-		poster: '/assets/thumbnail-3.png',
-		description:
-			'Walk the cobblestone streets of a living UNESCO World Heritage site.',
-	},
-	{
-		id: 5,
-		title: 'Wellness',
-		// category: 'Culture',
-		video: '/assets/video-5.webm',
-		poster: '/assets/thumbnail-3.png',
-		description:
-			'Walk the cobblestone streets of a living UNESCO World Heritage site.',
-	},
-];
+import { experiences } from '@/lib/data';
 
 import { useRef, useEffect } from 'react';
 import { useInView } from 'framer-motion';
