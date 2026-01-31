@@ -4,6 +4,7 @@ import { Section } from '@/components/ui/Section';
 import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export function TailorMadeJourneys() {
 	return (
@@ -13,13 +14,14 @@ export function TailorMadeJourneys() {
 		>
 			<div className='grid grid-cols-1 md:grid-cols-2 min-h-[600px] border-accent border-2'>
 				{/* Image Side */}
-				<div className='relative h-96 md:h-full w-full'>
+				{/* Image Side */}
+				<div className='relative w-full md:h-full'>
 					<Image
-						src='/assets/map.jpg'
+						src='/assets/map.png'
 						alt='Tailor Made Journey'
 						width={200}
 						height={200}
-						className='object-cover lg:object-contain w-full h-full'
+						className='w-full h-auto md:h-full object-cover lg:object-contain'
 					/>
 				</div>
 
@@ -62,7 +64,13 @@ export function TailorMadeJourneys() {
 							</li>
 						</ul>
 						<div className='pt-6'>
-							<Button size='lg'>Start Planning</Button>
+							<Link
+								href={`https://wa.me/94777123456?text=Hi, I am interested in booking the ${''} package.`}
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								<Button size='lg'>Start Planning</Button>
+							</Link>
 						</div>
 					</motion.div>
 				</div>
