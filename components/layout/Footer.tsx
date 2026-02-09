@@ -1,12 +1,5 @@
 import Link from 'next/link';
-import {
-	Mail,
-	MapPin,
-	Phone,
-	Instagram,
-	Facebook,
-	Twitter,
-} from 'lucide-react';
+import { Mail, Phone, Instagram, Facebook, Video } from 'lucide-react';
 import Image from 'next/image';
 
 export function Footer() {
@@ -35,6 +28,57 @@ export function Footer() {
 					landscapes of Sri Lanka. Experience the extraordinary.
 				</p>
 
+				{/* Contact Info */}
+				<div className='flex flex-col items-center gap-3 mb-8 text-[#1f2b44]/80 text-sm'>
+					<div className='flex items-center gap-2 hover:text-[#1f2b44] transition-colors'>
+						<Mail size={16} />
+						<a href='mailto:connect@ceilaotravel.com'>
+							connect@ceilaotravel.com
+						</a>
+					</div>
+					<div className='flex flex-wrap justify-center gap-x-6 gap-y-2'>
+						<div className='flex items-center gap-2 hover:text-[#1f2b44] transition-colors'>
+							<Phone size={16} />
+							<a href='tel:+94771319589'>+94 77 131 9589</a>
+						</div>
+						<div className='flex items-center gap-2 hover:text-[#1f2b44] transition-colors'>
+							<Phone size={16} />
+							<a href='tel:+94112908869'>+94 11 290 8869</a>
+						</div>
+					</div>
+				</div>
+
+				{/* Social Media */}
+				<div className='flex justify-center gap-6 mb-10'>
+					<a
+						href='https://instagram.com/ceilao.travels'
+						target='_blank'
+						rel='noopener noreferrer'
+						className='text-[#1f2b44]/60 hover:text-[#1f2b44] hover:scale-110 transition-all duration-300'
+						aria-label='Instagram'
+					>
+						<Instagram size={20} />
+					</a>
+					<a
+						href='https://tiktok.com/@ceilao.travels'
+						target='_blank'
+						rel='noopener noreferrer'
+						className='text-[#1f2b44]/60 hover:text-[#1f2b44] hover:scale-110 transition-all duration-300'
+						aria-label='TikTok'
+					>
+						<Video size={20} />
+					</a>
+					<a
+						href='https://facebook.com/CeilaoTravelAndTours'
+						target='_blank'
+						rel='noopener noreferrer'
+						className='text-[#1f2b44]/60 hover:text-[#1f2b44] hover:scale-110 transition-all duration-300'
+						aria-label='Facebook'
+					>
+						<Facebook size={20} />
+					</a>
+				</div>
+
 				{/* Navigation Links */}
 				<div className='flex flex-wrap justify-center gap-6 md:gap-8 mb-10 text-xs tracking-widest uppercase text-[#1f2b44]/80 font-medium'>
 					<Link
@@ -58,9 +102,15 @@ export function Footer() {
 				</div>
 
 				{/* Copyright */}
-				<div className='text-[10px] text-[#1f2b44]/50 uppercase tracking-wider'>
-					&copy; {new Date().getFullYear()} Ceilao Travel & Tours. All
-					Rights Reserved.
+				<div className='text-[10px] text-[#1f2b44]/50 uppercase tracking-wider text-center'>
+					<p>
+						&copy; {new Date().getFullYear()} Ceilao Travel & Tours.
+						All Rights Reserved.
+					</p>
+					<p className='mt-2'>
+						Ceilao Travel & Tours (Private) Limited:- PV 00349070 |
+						Registered in Sri Lanka.
+					</p>
 				</div>
 			</div>
 		</footer>

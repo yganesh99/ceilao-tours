@@ -57,7 +57,7 @@ export function FoundationSection() {
 						type='button'
 						size='sm'
 					>
-						Contribute
+						Visit & Contribute
 					</Button>
 				</motion.div>
 			</div>
