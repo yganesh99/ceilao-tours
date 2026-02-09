@@ -36,11 +36,7 @@ export default function TailorMadePage() {
 							</p>
 						</div>
 
-						<Button
-							size='lg'
-							className='bg-accent text-white hover:bg-accent/80 w-fit'
-							asChild
-						>
+						<Button size='lg'>
 							<a
 								href='https://wa.me/94771319589'
 								target='_blank'
@@ -99,7 +95,7 @@ export default function TailorMadePage() {
 
 						<div className='space-y-6'>
 							<h3 className='text-xl font-[family-name:var(--font-playfair)] text-primary mb-4 border-b border-primary/10 pb-2'>
-								Follow Us
+								Connect
 							</h3>
 
 							<div className='space-y-4'>
