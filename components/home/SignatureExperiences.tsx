@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { useCallback } from 'react';
 import { experiences } from '@/lib/data';
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { useInView } from 'framer-motion';
 
 function ExperienceCard({
@@ -34,7 +34,7 @@ function ExperienceCard({
 				});
 			}, 500);
 		} else {
-			// videoRef.current?.pause();
+			videoRef.current?.pause();
 		}
 
 		return () => {
@@ -51,10 +51,10 @@ function ExperienceCard({
 				delay: index * 0.1,
 			}}
 			viewport={{ once: true }}
-			className='pl-4 md:pl-6 lg:pl-8 min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[33.33%] relative shrink-0'
+			className='pl-0 md:pl-6 lg:pl-8 min-w-full md:min-w-[45%] lg:min-w-[33.33%] h-dvh md:h-auto relative shrink-0'
 		>
-			<div className='group cursor-pointer h-full'>
-				<div className='relative h-[300px] sm:h-[400px] md:h-[500px] w-full overflow-hidden mb-6 rounded-lg shadow-sm bg-neutral-900'>
+			<div className='group cursor-pointer h-full relative overflow-hidden'>
+				<div className='absolute inset-0 md:relative h-full md:h-[500px] w-full overflow-hidden mb-0 md:mb-6 rounded-none md:rounded-lg shadow-sm bg-neutral-900'>
 					<video
 						ref={videoRef}
 						muted
@@ -69,15 +69,17 @@ function ExperienceCard({
 						/>
 					</video>
 					<div className='absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 pointer-events-none' />
+					{/* Mobile Overlay Gradient */}
+					<div className='absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent md:hidden pointer-events-none' />
 				</div>
-				<div className='space-y-2 text-left'>
+				<div className='absolute bottom-0 left-0 w-full p-8 md:p-0 z-20 md:static space-y-2 text-left'>
 					{/* <span className='text-xs font-bold uppercase tracking-widest text-accent'>
 						{exp.category}
 					</span> */}
 					<h3 className='text-3xl font-playfair text-accent'>
 						{exp.title}
 					</h3>
-					<p className='text-muted-foreground text-sm leading-relaxed max-w-sm'>
+					<p className='text-gray-200 lg:text-[#1f2b44] text-sm leading-relaxed max-w-sm'>
 						{exp.description}
 					</p>
 					<Link
@@ -99,6 +101,29 @@ export function SignatureExperiences() {
 		dragFree: true,
 	});
 
+	const [visibleIndices, setVisibleIndices] = useState<number[]>([]);
+
+	const onScroll = useCallback(() => {
+		if (!emblaApi) return;
+		const slidesInView = emblaApi.slidesInView();
+		setVisibleIndices(slidesInView);
+	}, [emblaApi]);
+
+	useEffect(() => {
+		if (!emblaApi) return;
+
+		onScroll();
+		emblaApi.on('select', onScroll);
+		emblaApi.on('scroll', onScroll);
+		emblaApi.on('reInit', onScroll);
+
+		return () => {
+			emblaApi.off('select', onScroll);
+			emblaApi.off('scroll', onScroll);
+			emblaApi.off('reInit', onScroll);
+		};
+	}, [emblaApi, onScroll]);
+
 	const scrollPrev = useCallback(() => {
 		if (emblaApi) emblaApi.scrollPrev();
 	}, [emblaApi]);
@@ -108,7 +133,8 @@ export function SignatureExperiences() {
 	}, [emblaApi]);
 
 	const sectionRef = useRef(null);
-	const isSectionInView = useInView(sectionRef, { amount: 1 });
+	// Reduced threshold to 0.3 to ensure it triggers earlier on mobile
+	const isSectionInView = useInView(sectionRef, { amount: 0.3 });
 
 	return (
 		<>
@@ -126,22 +152,28 @@ export function SignatureExperiences() {
 			</Section>
 
 			{/* Carousel Section */}
-			<Section className='bg-white pt-12 md:pt-16 -mt-8 md:py-0 py-2'>
+			<Section
+				className='bg-white pt-0 md:pt-16 -mt-8 md:py-0 py-0'
+				containerClassName='px-0 md:px-6 lg:px-8'
+			>
 				<div
-					className='relative group'
+					className='relative group h-dvh md:h-auto'
 					ref={sectionRef}
 				>
 					<div
-						className='overflow-hidden'
+						className='overflow-hidden h-full'
 						ref={emblaRef}
 					>
-						<div className='flex -ml-4 md:-ml-8 py-4'>
+						<div className='flex ml-0 md:-ml-8 py-0 md:py-4 h-full'>
 							{experiences.map((exp, index) => (
 								<ExperienceCard
 									key={exp.id}
 									exp={exp}
 									index={index}
-									shouldPlay={isSectionInView}
+									shouldPlay={
+										isSectionInView &&
+										visibleIndices.includes(index)
+									}
 								/>
 							))}
 						</div>
@@ -168,10 +200,10 @@ export function SignatureExperiences() {
 					</Button>
 
 					{/* Mobile Swipe Hint (Optional visual cue) */}
-					<div className='md:hidden flex justify-center mt-6 gap-2'>
-						<div className='w-1.5 h-1.5 rounded-full bg-primary/20' />
-						<div className='w-1.5 h-1.5 rounded-full bg-primary/40' />
-						<div className='w-1.5 h-1.5 rounded-full bg-primary/20' />
+					<div className='md:hidden absolute bottom-4 left-0 right-0 z-30 flex justify-center gap-2'>
+						<div className='w-1.5 h-1.5 rounded-full bg-white/40' />
+						<div className='w-1.5 h-1.5 rounded-full bg-white/80' />
+						<div className='w-1.5 h-1.5 rounded-full bg-white/40' />
 					</div>
 				</div>
 
