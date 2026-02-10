@@ -43,25 +43,50 @@ export function TailorMadeJourneys() {
 						</h2>
 						<div className='w-24 h-px bg-accent mt-6' />
 						<p className='text-black/80 text-lg leading-relaxed font-light'>
-							We believe that true luxury lies in the details. Our
-							travel designers work closely with you to curate a
-							journey that reflects your passions, pace, and
-							preferences. From private villas to exclusive
-							cultural access, every moment is tailored to you.
+							No two travelers are the same, and neither should
+							their journeys be. Our travel designers curate every
+							detail to your passions, pace, and preferences.
+							Beyond the standard itinerary, we handcraft personal
+							experiences as individual as you are.
 						</p>
-						<ul className='space-y-3 py-4 text-black/90'>
-							<li className='flex items-center space-x-3'>
-								<span className='w-1.5 h-1.5 rounded-full bg-accent' />
-								<span>Personalized Itineraries</span>
-							</li>
-							<li className='flex items-center space-x-3'>
-								<span className='w-1.5 h-1.5 rounded-full bg-accent' />
-								<span>Private Chauffeur & Guide</span>
-							</li>
-							<li className='flex items-center space-x-3'>
-								<span className='w-1.5 h-1.5 rounded-full bg-accent' />
-								<span>24/7 Concierge Support</span>
-							</li>
+						<ul className='space-y-4 py-4 text-black/90'>
+							{[
+								{
+									title: 'Handcrafted Itineraries',
+									desc: 'Meticulously designed to reflect your unique spirit.',
+								},
+								{
+									title: 'Seamless Arrival',
+									desc: 'VIP fast-track and meet-and-greet for an elegant transition.',
+								},
+								{
+									title: 'Private Chauffeur-Guide',
+									desc: 'Seamless travel led by the island’s most expert storytellers.',
+								},
+								{
+									title: 'Anticipatory Concierge',
+									desc: 'Discrete, 24/7 support for a truly effortless journey.',
+								},
+								{
+									title: 'Exclusive Access',
+									desc: 'Private "key-holder" entry to Sri Lanka’s most storied hidden gems.',
+								},
+							].map((item, index) => (
+								<li
+									key={index}
+									className='flex items-start space-x-3'
+								>
+									<span className='w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0' />
+									<div className='flex flex-col'>
+										<span className='font-medium text-[#1f2b44]'>
+											{item.title}
+										</span>
+										<p className='text-sm text-black/70 leading-relaxed font-light'>
+											{item.desc}
+										</p>
+									</div>
+								</li>
+							))}
 						</ul>
 						<div className='pt-6'>
 							<Link
@@ -69,7 +94,7 @@ export function TailorMadeJourneys() {
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								<Button size='lg'>Start Planning</Button>
+								<Button size='lg'>Start Your Journey</Button>
 							</Link>
 						</div>
 					</motion.div>

@@ -2,6 +2,7 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { Section } from '@/components/ui/Section';
 import { Button } from '@/components/ui/Button';
 import { Instagram, Video, Facebook, Mail, Phone } from 'lucide-react';
+import { TikTokIcon } from '@/components/ui/TikTokIcon';
 
 export default function TailorMadePage() {
 	return (
@@ -47,99 +48,103 @@ export default function TailorMadePage() {
 						</Button>
 					</div>
 
-					{/* Right Segment - Contact Details */}
-					<div className='flex-1 bg-secondary/10 rounded-2xl p-8 md:p-12 flex flex-col justify-center space-y-10 border border-primary/5'>
-						<div className='space-y-6'>
-							<h3 className='text-xl font-[family-name:var(--font-playfair)] text-primary mb-4 border-b border-primary/10 pb-2'>
-								Contact Details
-							</h3>
+					{/* Right Segment - Contact Details & Connect */}
+					<div className='flex-1 bg-secondary/10 rounded-2xl p-8 md:p-12 flex flex-col justify-center border border-primary/5'>
+						<div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
+							{/* Contact Details */}
+							<div className='space-y-6'>
+								<h3 className='text-xl font-[family-name:var(--font-playfair)] text-primary mb-4 border-b border-primary/10 pb-2'>
+									Contact Details
+								</h3>
 
-							<div className='flex items-start gap-4'>
-								<Mail className='w-6 h-6 text-accent mt-1 shrink-0' />
-								<div>
-									<p className='text-xs uppercase tracking-widest text-muted-foreground mb-1'>
-										Email
-									</p>
+								<div className='flex items-start gap-4'>
+									<Mail className='w-6 h-6 text-accent mt-1 shrink-0' />
+									<div>
+										<p className='text-xs uppercase tracking-widest text-muted-foreground mb-1'>
+											Email
+										</p>
+										<a
+											href='mailto:connect@ceilaotravel.com'
+											className='text-lg font-medium text-primary hover:text-accent transition-colors'
+										>
+											connect@ceilaotravel.com
+										</a>
+									</div>
+								</div>
+
+								<div className='flex items-start gap-4'>
+									<Phone className='w-6 h-6 text-accent mt-1 shrink-0' />
+									<div>
+										<p className='text-xs uppercase tracking-widest text-muted-foreground mb-1'>
+											Phone
+										</p>
+										<div className='flex flex-col gap-1'>
+											<a
+												href='tel:+94771319589'
+												className='text-lg font-medium text-primary hover:text-accent transition-colors'
+											>
+												+94 77 131 9589
+											</a>
+											<a
+												href='tel:+94112908869'
+												className='text-lg font-medium text-primary hover:text-accent transition-colors'
+											>
+												+94 11 290 8869
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							{/* Connect */}
+							<div className='space-y-6'>
+								<h3 className='text-xl font-[family-name:var(--font-playfair)] text-primary mb-4 border-b border-primary/10 pb-2'>
+									Connect
+								</h3>
+
+								<div className='space-y-4'>
 									<a
-										href='mailto:connect@ceilaotravel.com'
-										className='text-lg font-medium text-primary hover:text-accent transition-colors'
+										href='https://instagram.com/ceilao.travels'
+										target='_blank'
+										rel='noopener noreferrer'
+										className='flex items-center gap-4 group'
 									>
-										connect@ceilaotravel.com
+										<div className='w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm group-hover:text-accent transition-colors'>
+											<Instagram size={20} />
+										</div>
+										<span className='text-primary font-medium group-hover:text-accent transition-colors'>
+											@ceilao.travels
+										</span>
+									</a>
+
+									<a
+										href='https://tiktok.com/@ceilao.travels'
+										target='_blank'
+										rel='noopener noreferrer'
+										className='flex items-center gap-4 group'
+									>
+										<div className='w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm group-hover:text-accent transition-colors'>
+											<TikTokIcon size={20} />
+										</div>
+										<span className='text-primary font-medium group-hover:text-accent transition-colors'>
+											@ceilao.travels
+										</span>
+									</a>
+
+									<a
+										href='https://facebook.com/CeilaoTravelAndTours'
+										target='_blank'
+										rel='noopener noreferrer'
+										className='flex items-center gap-4 group'
+									>
+										<div className='w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm group-hover:text-accent transition-colors'>
+											<Facebook size={20} />
+										</div>
+										<span className='text-primary font-medium group-hover:text-accent transition-colors'>
+											Ceilao Travel & Tours
+										</span>
 									</a>
 								</div>
-							</div>
-
-							<div className='flex items-start gap-4'>
-								<Phone className='w-6 h-6 text-accent mt-1 shrink-0' />
-								<div>
-									<p className='text-xs uppercase tracking-widest text-muted-foreground mb-1'>
-										Phone
-									</p>
-									<div className='flex flex-col gap-1'>
-										<a
-											href='tel:+94771319589'
-											className='text-lg font-medium text-primary hover:text-accent transition-colors'
-										>
-											+94 77 131 9589
-										</a>
-										<a
-											href='tel:+94112908869'
-											className='text-lg font-medium text-primary hover:text-accent transition-colors'
-										>
-											+94 11 290 8869
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div className='space-y-6'>
-							<h3 className='text-xl font-[family-name:var(--font-playfair)] text-primary mb-4 border-b border-primary/10 pb-2'>
-								Connect
-							</h3>
-
-							<div className='space-y-4'>
-								<a
-									href='https://instagram.com/ceilao.travels'
-									target='_blank'
-									rel='noopener noreferrer'
-									className='flex items-center gap-4 group'
-								>
-									<div className='w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm group-hover:text-accent transition-colors'>
-										<Instagram size={20} />
-									</div>
-									<span className='text-primary font-medium group-hover:text-accent transition-colors'>
-										@ceilao.travels
-									</span>
-								</a>
-
-								<a
-									href='https://tiktok.com/@ceilao.travels'
-									target='_blank'
-									rel='noopener noreferrer'
-									className='flex items-center gap-4 group'
-								>
-									<div className='w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm group-hover:text-accent transition-colors'>
-										<Video size={20} />
-									</div>
-									<span className='text-primary font-medium group-hover:text-accent transition-colors'>
-										@ceilao.travels
-									</span>
-								</a>
-
-								<a
-									href='https://facebook.com/CeilaoTravelAndTours'
-									target='_blank'
-									rel='noopener noreferrer'
-									className='flex items-center gap-4 group'
-								>
-									<div className='w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm group-hover:text-accent transition-colors'>
-										<Facebook size={20} />
-									</div>
-									<span className='text-primary font-medium group-hover:text-accent transition-colors'>
-										Ceilao Travel & Tours
-									</span>
-								</a>
 							</div>
 						</div>
 					</div>

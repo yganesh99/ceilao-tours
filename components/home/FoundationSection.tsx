@@ -45,19 +45,18 @@ export function FoundationSection() {
 					className='w-full md:w-2/3 text-center md:text-left space-y-4'
 				>
 					<p className='text-[#1f2b44] leading-relaxed'>
-						We believe in <strong>giving back</strong> the power of
-						travel to transform lives, not just for our guests but
-						for our local communities. Through the Hopeful
-						Foundation, a portion of every journey contributes to
-						education and healthcare initiatives in rural Sri Lanka.
-						We are committed to sustainable tourism that preserves
-						our heritage and empowers future generations.
+						<strong>A commitment to our people.</strong> Every
+						journey supports grassroots programs that empower the
+						next generation and preserve our island’s heritage. We
+						work directly with our community to ensure every impact
+						reaches the source, creating a purposeful and lasting
+						change.
 					</p>
 					<Button
 						type='button'
 						size='sm'
 					>
-						Visit & Contribute
+						Explore the Impact
 					</Button>
 				</motion.div>
 			</div>

@@ -7,27 +7,26 @@ import { motion } from 'framer-motion';
 const features = [
 	{
 		icon: Star,
-		title: 'Unrivaled Expertise',
+		title: 'Refined Curation',
 		description:
-			'Over 20 years of crafting intimate, high-end journeys across Sri Lanka.',
+			'A lifetime of island secrets, edited for the exceptional.',
 	},
 	{
 		icon: ShieldCheck,
 		title: 'Peace of Mind',
-		description:
-			'From arrival to departure, every detail is managed with precision and care.',
+		description: 'We manage the complexity. You stay in the moment.',
 	},
 	{
 		icon: Leaf,
-		title: 'Sustainable Luxury',
+		title: 'Mindful Luxury',
 		description:
-			'We partner with eco-conscious properties and support local communities.',
+			'Sanctuaries that honor the land, preserving the heritage of our people and places.',
 	},
 	{
 		icon: HeartHandshake,
-		title: 'Authentic Connections',
+		title: 'Intimate Encounters',
 		description:
-			'Exclusive access to local artisans, historians, and private estates.',
+			'Private moments with the artisans, historians, and estates that define our island.',
 	},
 ];
 

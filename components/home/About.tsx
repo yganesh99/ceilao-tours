@@ -68,7 +68,7 @@ export default function About() {
 					whileInView={{ opacity: 1, scaleY: 1 }}
 					transition={{ duration: 0.6, delay: 0.1 }}
 					viewport={{ once: true }}
-					className='hidden md:block w-px h-64 bg-[#cea263]/40'
+					className='hidden md:block w-px h-96 bg-[#cea263]/40'
 				/>
 				{/* <motion.div
 					initial={{ opacity: 0, scaleX: 0 }}
@@ -91,12 +91,29 @@ export default function About() {
 							Our Story
 						</h1>
 						<div className='w-24 h-px bg-accent mt-6 mx-auto md:mx-0' />
-						<p className='text-muted-foreground leading-relaxed'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis
-							nostrud exercitation ullamco laboris nisi ut aliquip
-							ex ea commodo consequat.
+						<p className='text-black/80 text-lg leading-relaxed font-light'>
+							Ceilao Travel &amp; Tours was founded on the belief
+							that the true essence of Sri Lanka lies beyond the
+							standard itinerary. It is found in the
+							&quot;unseen&quot; moments—the raw beauty of our
+							landscapes and the incomparable warmth of our
+							people.
+						</p>
+						<p className='text-black/80 text-lg leading-relaxed font-light'>
+							As part of the Ceilao Collection, we curate bespoke
+							journeys for the traveler who seeks depth over
+							distance. We approach every itinerary as a
+							handcrafted work of art, bridging the gap between
+							world-class luxury and the authentic soul of our
+							home.
+						</p>
+						<p className='text-black/80 text-lg leading-relaxed font-light'>
+							Our story is inseparable from the land we love.
+							Through our partnership with the Hopeful Foundation,
+							every journey contributes to our local communities,
+							turning your discovery of the island into a lasting
+							legacy for its people. We invite you to experience a
+							Sri Lanka that is not just seen, but truly felt.
 						</p>
 					</div>
 
