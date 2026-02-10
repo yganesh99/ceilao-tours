@@ -22,7 +22,7 @@ export function Section({
 				className={cn(
 					'mx-auto px-4 md:px-6 lg:px-8',
 					fullWidth ? 'w-full' : 'max-w-7xl',
-					containerClassName
+					containerClassName,
 				)}
 			>
 				{children}

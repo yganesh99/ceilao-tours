@@ -51,10 +51,10 @@ function ExperienceCard({
 				delay: index * 0.1,
 			}}
 			viewport={{ once: true }}
-			className='pl-0 md:pl-6 lg:pl-8 min-w-full md:min-w-[45%] lg:min-w-[33.33%] h-dvh md:h-auto relative shrink-0'
+			className='pl-0 md:pl-6 lg:pl-8 min-w-full md:min-w-[50%] lg:min-w-[50%] h-dvh md:h-auto relative shrink-0'
 		>
 			<div className='group cursor-pointer h-full relative overflow-hidden'>
-				<div className='absolute inset-0 md:relative h-full md:h-[500px] w-full overflow-hidden mb-0 md:mb-6 rounded-none md:rounded-lg shadow-sm bg-neutral-900'>
+				<div className='absolute inset-0 md:relative h-full md:h-[500px] lg:h-[700px] w-full overflow-hidden mb-0 md:mb-6 rounded-none md:rounded-lg shadow-sm bg-neutral-900'>
 					<video
 						ref={videoRef}
 						muted
