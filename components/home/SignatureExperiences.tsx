@@ -29,9 +29,12 @@ function ExperienceCard({
 
 		if (shouldPlay) {
 			timeoutId = setTimeout(() => {
-				videoRef.current?.play().catch(() => {
-					// Autoplay might be blocked
-				});
+				if (videoRef.current) {
+					videoRef.current.muted = true; // Ensure muted for autoplay
+					videoRef.current.play().catch(() => {
+						// Autoplay might be blocked
+					});
+				}
 			}, 500);
 		} else {
 			videoRef.current?.pause();
@@ -79,7 +82,7 @@ function ExperienceCard({
 					<h3 className='text-3xl font-playfair text-accent'>
 						{exp.title}
 					</h3>
-					<p className='text-gray-200 lg:text-[#1f2b44] text-sm leading-relaxed max-w-sm'>
+					<p className='text-gray-200 lg:text-[#1f2b44] text-sm leading-relaxed max-w-md'>
 						{exp.description}
 					</p>
 					<Link
@@ -133,8 +136,10 @@ export function SignatureExperiences() {
 	}, [emblaApi]);
 
 	const sectionRef = useRef(null);
-	// Reduced threshold to 0.3 to ensure it triggers earlier on mobile
-	const isSectionInView = useInView(sectionRef, { amount: 0.3 });
+	// Always use 0.2 as per user adjustment
+	const triggerAmount = 0.2;
+
+	const isSectionInView = useInView(sectionRef, { amount: triggerAmount });
 
 	return (
 		<>
@@ -159,6 +164,7 @@ export function SignatureExperiences() {
 				<div
 					className='relative group h-dvh md:h-auto'
 					ref={sectionRef}
+					key={triggerAmount} // Force re-mount to update observer options
 				>
 					<div
 						className='overflow-hidden h-full'

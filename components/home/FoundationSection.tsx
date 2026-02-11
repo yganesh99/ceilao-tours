@@ -1,11 +1,14 @@
 'use client';
+import { useState } from 'react';
 
 import { Section } from '@/components/ui/Section';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '../ui/Button';
+import ImpactStoryModal from '../ui/ImpactStoryModal';
 
 export function FoundationSection() {
+	const [isModalOpen, setIsModalOpen] = useState(false);
 	return (
 		<Section className='bg-white py-16 md:py-24'>
 			<div className='flex flex-col md:flex-row items-center gap-x-8 gap-y-2 md:gap-12 max-w-6xl mx-auto'>
@@ -53,6 +56,7 @@ export function FoundationSection() {
 						change.
 					</p>
 					<Button
+						onClick={() => setIsModalOpen(true)}
 						type='button'
 						size='sm'
 					>
@@ -60,6 +64,10 @@ export function FoundationSection() {
 					</Button>
 				</motion.div>
 			</div>
+			<ImpactStoryModal
+				isOpen={isModalOpen}
+				onClose={() => setIsModalOpen(false)}
+			/>
 		</Section>
 	);
 }
