@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
 interface PageHeaderProps {
-	title: string;
+	title?: string;
 	subtitle?: string;
 	image: string;
 	className?: string;
@@ -27,7 +27,7 @@ export function PageHeader({
 				{!isVideo && (
 					<Image
 						src={image}
-						alt={title}
+						alt={title || ''}
 						fill
 						className='object-cover'
 						priority

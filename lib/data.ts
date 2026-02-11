@@ -34,7 +34,7 @@ export const experiences: Tour[] = [
 				day: 'Day 1',
 				title: 'Arrival & Negombo',
 				description:
-					'Arrive at Bandaranaike International Airport where you will be warmly greeted by Ceilao Travel and Tours representative. Transfer to your hotel in Negombo and unwind after your journey. In the evening, enjoy a relaxed visit around the Negombo lagoon, Dutch canal and the iconic fishing village.',
+					'Arrive at Bandaranaike International Airport where you will be warmly greeted by Ceilão Travel and Tours representative. Transfer to your hotel in Negombo and unwind after your journey. In the evening, enjoy a relaxed visit around the Negombo lagoon, Dutch canal and the iconic fishing village.',
 			},
 			{
 				day: 'Day 2',
@@ -102,7 +102,7 @@ export const experiences: Tour[] = [
 				day: 'Day 1',
 				title: 'Arrival & Negombo',
 				description:
-					'Arrive at Bandaranaike International Airport where your Ceilao Travels representative will warmly welcome you. Transfer to Negombo and relax after your journey, enjoying the coastal atmosphere. If time permits, take an optional boat ride through the biodiverse Muthurajawela marsh, home to birds and mangrove wildlife.',
+					'Arrive at Bandaranaike International Airport where your Ceilão Travels representative will warmly welcome you. Transfer to Negombo and relax after your journey, enjoying the coastal atmosphere. If time permits, take an optional boat ride through the biodiverse Muthurajawela marsh, home to birds and mangrove wildlife.',
 			},
 			{
 				day: 'Day 2',
@@ -306,7 +306,7 @@ export const experiences: Tour[] = [
 				day: 'Day 1',
 				title: 'Arrival & Negombo',
 				description:
-					'Arrive at Bandaranaike International Airport where your Ceilao Travels representative will warmly welcome you. Transfer to your beachfront hotel in Negombo and unwind in a calming coastal atmosphere. End the day with a gentle sunset meditation session to begin your wellness retreat.',
+					'Arrive at Bandaranaike International Airport where your Ceilão Travels representative will warmly welcome you. Transfer to your beachfront hotel in Negombo and unwind in a calming coastal atmosphere. End the day with a gentle sunset meditation session to begin your wellness retreat.',
 			},
 			{
 				day: 'Day 2',
