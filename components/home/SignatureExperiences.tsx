@@ -63,6 +63,7 @@ function ExperienceCard({
 						muted
 						loop
 						playsInline
+						preload='none'
 						poster={exp.poster}
 						className='absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105'
 					>

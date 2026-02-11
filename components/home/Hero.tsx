@@ -10,7 +10,7 @@ export function Hero() {
 			<div className='absolute inset-0 bg-neutral-900 overflow-hidden'>
 				{/* Desktop Video */}
 				<video
-					className='hidden md:block absolute top-0 left-0 w-full h-full object-cover pointer-events-none'
+					className='absolute top-0 left-0 w-full h-full object-cover pointer-events-none'
 					autoPlay
 					muted
 					loop
@@ -18,20 +18,12 @@ export function Hero() {
 				>
 					<source
 						src='/assets/hero.webm'
+						media='(min-width: 768px)'
 						type='video/webm'
 					/>
-				</video>
-
-				{/* Mobile Video */}
-				<video
-					className='block md:hidden absolute top-0 left-0 w-full h-full object-cover pointer-events-none'
-					autoPlay
-					muted
-					loop
-					playsInline
-				>
 					<source
 						src='/assets/hero-m.webm'
+						media='(max-width: 767px)'
 						type='video/webm'
 					/>
 				</video>
