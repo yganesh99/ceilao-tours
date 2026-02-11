@@ -56,7 +56,7 @@ export function Header() {
 						<Link href='/'>
 							<Image
 								src='/assets/ceilao-tours-logo.png'
-								alt='Ceilao Travel'
+								alt='Ceilão Travel'
 								fill
 								className='object-cover'
 								priority

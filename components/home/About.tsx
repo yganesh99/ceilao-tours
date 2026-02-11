@@ -96,7 +96,7 @@ export default function About() {
 						</h1>
 						<div className='w-24 h-px bg-accent mt-6 mx-auto md:mx-0' />
 						<p className='text-black/80 text-md lg:text-lg leading-relaxed font-light'>
-							Ceilao Travel &amp; Tours was founded on the belief
+							Ceilão Travel &amp; Tours was founded on the belief
 							that the true essence of Sri Lanka lies beyond the
 							standard itinerary. It is found in the
 							&quot;unseen&quot; moments, the raw beauty of our
@@ -104,7 +104,7 @@ export default function About() {
 							people.
 						</p>
 						<p className='text-black/80 text-md lg:text-lg leading-relaxed font-light'>
-							As part of the Ceilao Collection, we curate bespoke
+							As part of the Ceilão Collection, we curate bespoke
 							journeys for the traveler who seeks depth over
 							distance. We approach every itinerary as a
 							handcrafted work of art, bridging the gap between

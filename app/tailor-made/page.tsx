@@ -14,9 +14,9 @@ export default function TailorMadePage() {
 	return (
 		<>
 			<PageHeader
-				title='Tailor-Made Journeys'
-				subtitle='Designed Around You'
-				image='https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=2938&auto=format&fit=crop'
+				// title='Tailor-Made Journeys'
+				// subtitle='Designed Around You'
+				image='/assets/tailor1.png'
 			/>
 
 			<Section className='bg-background'>
