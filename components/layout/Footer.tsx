@@ -1,8 +1,14 @@
+'use client';
+
 import Link from 'next/link';
-import { Mail, Phone, Instagram, Facebook, Video } from 'lucide-react';
 import Image from 'next/image';
+import { useState } from 'react';
+import InfoModal from '../ui/InfoModal';
 
 export function Footer() {
+	const [isLegalModalOpen, setIsLegalModalOpen] = useState(false);
+	const [isCommitmentModalOpen, setIsCommitmentModalOpen] = useState(false);
+
 	return (
 		<footer
 			id='contact'
@@ -23,99 +29,27 @@ export function Footer() {
 				</div>
 
 				{/* Brand Statement */}
-				<p className='text-center text-[#1f2b44]/80 text-sm max-w-md mb-8 font-light leading-relaxed'>
-					Curating bespoke, ultra-luxury journeys across the timeless
-					landscapes of Sri Lanka. Experience the extraordinary.
+				<p className='text-center text-[#1f2b44]/80 text-sm max-w-3xl mb-8 font-light leading-relaxed'>
+					Ceilão Travel & Tours specializes in refined, effortless
+					journeys that honor the soul of Sri Lanka. Merging luxury
+					with impact, we preserve our heritage and empower our
+					community through purposeful journeys.
 				</p>
-
-				{/* Contact Info & Socials */}
-				{/* <div className='flex flex-col md:flex-row items-center gap-8 md:gap-16 mb-12'>
-					<div className='flex flex-col md:flex-row items-center gap-6 md:gap-8 text-[#1f2b44]/80 text-sm'>
-						<a
-							href='mailto:connect@ceilaotravel.com'
-							className='flex items-center gap-3 hover:text-accent transition-colors group'
-						>
-							<Mail
-								size={16}
-								className='text-accent group-hover:scale-110 transition-transform'
-							/>
-							<span className='tracking-wide'>
-								connect@ceilaotravel.com
-							</span>
-						</a>
-						<a
-							href='tel:+94771319589'
-							className='flex items-center gap-3 hover:text-accent transition-colors group'
-						>
-							<Phone
-								size={16}
-								className='text-accent group-hover:scale-110 transition-transform'
-							/>
-							<span className='tracking-wide'>
-								+94 77 131 9589
-							</span>
-						</a>
-						<a
-							href='tel:+94112908869'
-							className='flex items-center gap-3 hover:text-accent transition-colors group'
-						>
-							<Phone
-								size={16}
-								className='text-accent group-hover:scale-110 transition-transform'
-							/>
-							<span className='tracking-wide'>
-								+94 11 290 8869
-							</span>
-						</a>
-					</div>
-
-					<div className='w-px h-12 bg-[#1f2b44]/10 hidden md:block' />
-
-					<div className='flex items-center gap-8'>
-						<a
-							href='https://instagram.com/ceilao.travels'
-							target='_blank'
-							rel='noopener noreferrer'
-							className='text-[#1f2b44]/60 hover:text-accent hover:scale-110 transition-all duration-300'
-							aria-label='Instagram'
-						>
-							<Instagram size={20} />
-						</a>
-						<a
-							href='https://tiktok.com/@ceilao.travels'
-							target='_blank'
-							rel='noopener noreferrer'
-							className='text-[#1f2b44]/60 hover:text-accent hover:scale-110 transition-all duration-300'
-							aria-label='TikTok'
-						>
-							<Video size={20} />
-						</a>
-						<a
-							href='https://facebook.com/CeilaoTravelAndTours'
-							target='_blank'
-							rel='noopener noreferrer'
-							className='text-[#1f2b44]/60 hover:text-accent hover:scale-110 transition-all duration-300'
-							aria-label='Facebook'
-						>
-							<Facebook size={20} />
-						</a>
-					</div>
-				</div> */}
 
 				{/* Navigation Links */}
 				<div className='flex flex-wrap justify-center gap-6 md:gap-8 mb-10 text-xs tracking-widest uppercase text-[#1f2b44]/80 font-medium'>
-					<Link
-						href='/about'
-						className='hover:text-accent transition-colors'
+					<button
+						onClick={() => setIsLegalModalOpen(true)}
+						className='hover:text-accent transition-colors uppercase tracking-widest'
 					>
 						Legal
-					</Link>
-					<Link
-						href='/tours'
-						className='hover:text-accent transition-colors'
+					</button>
+					<button
+						onClick={() => setIsCommitmentModalOpen(true)}
+						className='hover:text-accent transition-colors uppercase tracking-widest'
 					>
 						Commitment
-					</Link>
+					</button>
 					<Link
 						href='/tailor-made'
 						className='hover:text-accent transition-colors'
@@ -123,6 +57,26 @@ export function Footer() {
 						Contact
 					</Link>
 				</div>
+
+				{/* Modals */}
+				<InfoModal
+					isOpen={isLegalModalOpen}
+					onClose={() => setIsLegalModalOpen(false)}
+					title='Legal'
+				>
+					We are currently refining our terms to better protect your
+					journey and ensure absolute excellence. Our updated
+					framework will be available here soon.
+				</InfoModal>
+
+				<InfoModal
+					isOpen={isCommitmentModalOpen}
+					onClose={() => setIsCommitmentModalOpen(false)}
+					title='Commitment'
+				>
+					We are currently refining our formal charters of trust and
+					excellence. Our core commitments will be shared here soon.
+				</InfoModal>
 
 				{/* Copyright */}
 				<div className='text-[10px] text-[#1f2b44]/50 uppercase tracking-wider text-center'>

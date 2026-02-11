@@ -1,10 +1,16 @@
+'use client';
+
 import { PageHeader } from '@/components/ui/PageHeader';
 import { Section } from '@/components/ui/Section';
 import { Button } from '@/components/ui/Button';
-import { Instagram, Video, Facebook, Mail, Phone } from 'lucide-react';
+import { Instagram, Facebook, Mail, Phone } from 'lucide-react';
 import { TikTokIcon } from '@/components/ui/TikTokIcon';
+import { useState } from 'react';
+import LaunchingSoonModal from '@/components/ui/LaunchingSoonModal';
 
 export default function TailorMadePage() {
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
 	return (
 		<>
 			<PageHeader
@@ -22,28 +28,20 @@ export default function TailorMadePage() {
 								Plan Your Journey
 							</h2>
 							<p className='text-muted-foreground leading-relaxed text-lg mb-6'>
-								Our experts are ready to help you design your
-								dream journey. Connect now to start planning
-								your adventure.
-							</p>
-							<p className='text-muted-foreground leading-relaxed'>
-								At Ceilao, we understand that no two travelers
-								are alike. That is why we do not offer
-								pre-packaged deals. Instead, we start with a
-								blank canvas and your inspiration. Whether you
-								want to charter a private yacht, enjoy a sunrise
-								breakfast atop a rock fortress, or retreat to a
-								secluded tea bungalow, we make it happen.
+								To explore the possibilities of the island or
+								for refined inquiries and collaborations, we
+								invite you to engage with our curators for
+								immediate guidance to start planning your
+								adventure.
 							</p>
 						</div>
-
 						<Button size='lg'>
 							<a
 								href='https://wa.me/94771319589'
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								Start Planning With an Expert
+								Engage With Us
 							</a>
 						</Button>
 					</div>
@@ -104,7 +102,8 @@ export default function TailorMadePage() {
 
 								<div className='space-y-4'>
 									<a
-										href='https://instagram.com/ceilao.travels'
+										// href='https://instagram.com/ceilao.travels'
+										onClick={() => setIsModalOpen(true)}
 										target='_blank'
 										rel='noopener noreferrer'
 										className='flex items-center gap-4 group'
@@ -118,7 +117,8 @@ export default function TailorMadePage() {
 									</a>
 
 									<a
-										href='https://tiktok.com/@ceilao.travels'
+										// href='https://tiktok.com/@ceilao.travels'
+										onClick={() => setIsModalOpen(true)}
 										target='_blank'
 										rel='noopener noreferrer'
 										className='flex items-center gap-4 group'
@@ -132,7 +132,8 @@ export default function TailorMadePage() {
 									</a>
 
 									<a
-										href='https://facebook.com/CeilaoTravelAndTours'
+										// href='https://facebook.com/CeilaoTravelAndTours'
+										onClick={() => setIsModalOpen(true)}
 										target='_blank'
 										rel='noopener noreferrer'
 										className='flex items-center gap-4 group'
@@ -149,6 +150,10 @@ export default function TailorMadePage() {
 						</div>
 					</div>
 				</div>
+				<LaunchingSoonModal
+					isOpen={isModalOpen}
+					onClose={() => setIsModalOpen(false)}
+				/>
 			</Section>
 		</>
 	);

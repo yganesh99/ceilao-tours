@@ -19,8 +19,8 @@ export function PageHeader({
 	return (
 		<section
 			className={cn(
-				'relative h-[60vh] min-h-[400px] w-full flex items-center justify-center overflow-hidden',
-				className
+				'relative h-[90vh] min-h-[400px] w-full flex items-center justify-center overflow-hidden',
+				className,
 			)}
 		>
 			<div className='absolute inset-0 z-0'>

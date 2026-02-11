@@ -1,13 +1,17 @@
 'use client';
 
-import { Fragment } from 'react';
+import { useState, Fragment } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Instagram, Facebook, Twitter } from 'lucide-react';
-import Link from 'next/link';
+import { Instagram, Facebook } from 'lucide-react';
+import { TikTokIcon } from '@/components/ui/TikTokIcon';
+// import Link from 'next/link';
 import { Section } from '@/components/ui/Section';
+import LaunchingSoonModal from '@/components/ui/LaunchingSoonModal';
 
 export default function About() {
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
 	const socialLinks = [
 		{
 			name: 'Instagram',
@@ -20,9 +24,9 @@ export default function About() {
 			icon: Facebook,
 		},
 		{
-			name: 'Twitter',
+			name: 'TikTok',
 			href: '#',
-			icon: Twitter,
+			icon: TikTokIcon,
 		},
 	];
 
@@ -91,15 +95,15 @@ export default function About() {
 							Our Story
 						</h1>
 						<div className='w-24 h-px bg-accent mt-6 mx-auto md:mx-0' />
-						<p className='text-black/80 text-lg leading-relaxed font-light'>
+						<p className='text-black/80 text-md lg:text-lg leading-relaxed font-light'>
 							Ceilao Travel &amp; Tours was founded on the belief
 							that the true essence of Sri Lanka lies beyond the
 							standard itinerary. It is found in the
-							&quot;unseen&quot; moments—the raw beauty of our
+							&quot;unseen&quot; moments, the raw beauty of our
 							landscapes and the incomparable warmth of our
 							people.
 						</p>
-						<p className='text-black/80 text-lg leading-relaxed font-light'>
+						<p className='text-black/80 text-md lg:text-lg leading-relaxed font-light'>
 							As part of the Ceilao Collection, we curate bespoke
 							journeys for the traveler who seeks depth over
 							distance. We approach every itinerary as a
@@ -107,7 +111,7 @@ export default function About() {
 							world-class luxury and the authentic soul of our
 							home.
 						</p>
-						<p className='text-black/80 text-lg leading-relaxed font-light'>
+						<p className='text-black/80 text-md lg:text-lg leading-relaxed font-light'>
 							Our story is inseparable from the land we love.
 							Through our partnership with the Hopeful Foundation,
 							every journey contributes to our local communities,
@@ -124,13 +128,13 @@ export default function About() {
 						<div className='flex items-center gap-4'>
 							{socialLinks.map((social, index) => (
 								<Fragment key={social.name}>
-									<Link
-										href={social.href}
+									<button
+										onClick={() => setIsModalOpen(true)}
 										className='text-primary/60 hover:text-accent transition-colors duration-300 transform hover:scale-110'
 										aria-label={`Follow us on ${social.name}`}
 									>
 										<social.icon className='w-5 h-5 md:w-6 md:h-6' />
-									</Link>
+									</button>
 									{index < socialLinks.length - 1 && (
 										<div className='w-px h-4 bg-[#cea263]' />
 									)}
@@ -140,6 +144,11 @@ export default function About() {
 					</div>
 				</motion.div>
 			</div>
+
+			<LaunchingSoonModal
+				isOpen={isModalOpen}
+				onClose={() => setIsModalOpen(false)}
+			/>
 		</Section>
 	);
 }

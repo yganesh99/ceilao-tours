@@ -55,7 +55,7 @@ export default async function ExperiencePage({ params }: Props) {
 							Overview
 						</h2>
 						<p className='text-muted-foreground text-lg leading-relaxed'>
-							{tour.description}
+							{tour.overview}
 						</p>
 						<div className='flex flex-wrap gap-4 mt-6 justify-center md:justify-start'>
 							{tour.duration && (
@@ -63,11 +63,11 @@ export default async function ExperiencePage({ params }: Props) {
 									Duration: {tour.duration}
 								</div>
 							)}
-							{tour.category && (
+							{/* {tour.category && (
 								<div className='px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold uppercase tracking-wide'>
 									Category: {tour.category}
 								</div>
-							)}
+							)} */}
 						</div>
 					</div>
 
@@ -102,24 +102,18 @@ export default async function ExperiencePage({ params }: Props) {
 					</div>
 
 					{/* CTA */}
-					<div className='text-center p-8 md:p-12 bg-transparent rounded-2xl text-[#1f2b44] border-accent border-1'>
-						{/* <span className='text-accent uppercase tracking-widest text-sm font-bold block mb-4'>
-							Ready to Book?
-						</span> */}
-						<h2 className='text-3xl md:text-4xl font-playfair mb-6'>
-							Start Your Journey
-						</h2>
-						<p className=' mb-8 max-w-lg mx-auto'>
-							Contact our travel specialists to customize this
-							itinerary or book as is. We are available on
-							WhatsApp to assist you immediately.
+					<div className='text-center p-8 md:p-12 bg-transparent rounded-2xl text-[#1f2b44] border-accent border-2 md:w-xl md:mx-auto'>
+						<p className='mb-8 max-w-lg mx-auto text-lg'>
+							Our curators are at your service to refine the finer
+							details of this experience. Connect with us to
+							tailor this journey to your rhythm.
 						</p>
 						<Link
 							href={`https://wa.me/94777123456?text=Hi, I am interested in booking the ${tour.title} package.`}
 							target='_blank'
 							rel='noopener noreferrer'
 						>
-							<Button size='lg'>Make a Booking</Button>
+							<Button size='lg'> Refine Your Journey</Button>
 						</Link>
 					</div>
 				</div>

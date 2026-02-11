@@ -94,7 +94,7 @@ export function TailorMadeJourneys() {
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								<Button size='lg'>Start Your Journey</Button>
+								<Button size='lg'>Begin Your Curation</Button>
 							</Link>
 						</div>
 					</motion.div>

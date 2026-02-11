@@ -8,20 +8,18 @@ export function Hero() {
 		<section className='relative h-screen min-h-[800px] w-full overflow-hidden'>
 			{/* Background Image/Video Placeholder */}
 			<div className='absolute inset-0 bg-neutral-900 overflow-hidden'>
-				<iframe
-					className='absolute top-1/2 left-1/2 pointer-events-none'
-					src='https://www.youtube.com/embed/w9tzrtut3Wc?si=KrRAYuhIIw9u4uXD&autoplay=1&mute=1&loop=1&playlist=w9tzrtut3Wc&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1'
-					title='YouTube video player'
-					allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-					style={{
-						border: 'none',
-						width: '100vw',
-						height: '56.25vw', // 16:9 aspect ratio
-						minHeight: '100vh',
-						minWidth: '177.78vh', // 16:9 aspect ratio
-						transform: 'translate(-50%, -50%)',
-					}}
-				></iframe>
+				<video
+					className='absolute top-0 left-0 w-full h-full object-cover pointer-events-none'
+					autoPlay
+					muted
+					loop
+					playsInline
+				>
+					<source
+						src='/assets/hero.webm'
+						type='video/webm'
+					/>
+				</video>
 				<div className='absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent' />
 			</div>
 
