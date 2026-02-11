@@ -17,7 +17,7 @@ export function TailorMadeJourneys() {
 				{/* Image Side */}
 				<div className='relative w-full md:h-full'>
 					<Image
-						src='/assets/map.png'
+						src='/assets/map.webp'
 						alt='Tailor Made Journey'
 						width={200}
 						height={200}

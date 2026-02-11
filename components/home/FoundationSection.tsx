@@ -22,7 +22,7 @@ export function FoundationSection() {
 				>
 					<div className='relative w-48 h-20 md:w-64 md:h-64'>
 						<Image
-							src='/assets/hopeful-foundation.png'
+							src='/assets/hopeful-foundation.webp'
 							alt='Hopeful Foundation Logo'
 							fill
 							className='object-contain'

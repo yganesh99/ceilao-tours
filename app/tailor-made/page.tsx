@@ -16,7 +16,7 @@ export default function TailorMadePage() {
 			<PageHeader
 				// title='Tailor-Made Journeys'
 				// subtitle='Designed Around You'
-				image='/assets/tailor1.png'
+				image='/assets/tailor1.webp'
 			/>
 
 			<Section className='bg-background'>
