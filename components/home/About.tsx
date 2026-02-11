@@ -46,16 +46,17 @@ export default function About() {
 				>
 					<div className='w-20 md:w-28'>
 						<Image
-							src='/assets/collection-logo.png'
-							alt='Collection Logo'
-							width={250}
-							height={250}
-							className='w-full h-auto object-contain brightness-0 invert'
+							src='/assets/collection-logo.webp'
+							alt='Ceilão Collection Logo'
+							width={0}
+							height={0}
+							sizes='100vw'
+							className='w-full h-auto mt-4 md:mt-0'
 						/>
 					</div>
 					<div className='w-48 md:w-64'>
 						<Image
-							src='/assets/logo.png'
+							src='/assets/logo.webp'
 							alt='Ceilão Logo'
 							width={0}
 							height={0}
