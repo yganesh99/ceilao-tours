@@ -46,7 +46,7 @@ export default function About() {
 				>
 					<div className='w-20 md:w-28'>
 						<Image
-							src='/assets/collection-logo.webp'
+							src='/assets/collection-logo.png'
 							alt='Collection Logo'
 							width={250}
 							height={250}
@@ -55,7 +55,7 @@ export default function About() {
 					</div>
 					<div className='w-48 md:w-64'>
 						<Image
-							src='/assets/logo.webp'
+							src='/assets/logo.png'
 							alt='Ceilão Logo'
 							width={0}
 							height={0}
