@@ -24,7 +24,7 @@ export const experiences: Tour[] = [
 		title: 'Culture & Heritage',
 		category: 'Culture & Heritage',
 		video: '/assets/culture.webm',
-		poster: '/assets/thumbnail-1.png',
+		poster: '/assets/thumbnail-1.webp',
 		description:
 			'Trace 2,600 years of history through ancient kingdoms and mist-veiled hills. A journey into the timeless rhythm and colonial grace of our island home.',
 		overview:
@@ -92,7 +92,7 @@ export const experiences: Tour[] = [
 		title: 'Nature & Wildlife',
 		category: 'Wildlife',
 		video: '/assets/nature.webm',
-		poster: '/assets/thumbnail-2.png',
+		poster: '/assets/thumbnail-2.webp',
 		description:
 			'Venture where the wild still reigns. Encounter leopards and untamed peaks from the refined comfort of a luxury tented lodge.',
 		overview:
@@ -166,7 +166,7 @@ export const experiences: Tour[] = [
 		title: 'Hill Country & Tea',
 		category: 'Culture',
 		video: '/assets/hill.webm',
-		poster: '/assets/thumbnail-3.png',
+		poster: '/assets/thumbnail-3.webp',
 		description:
 			'An odyssey of scent and taste. Reside in colonial bungalows amidst emerald plantations while discovering the rich culinary traditions of our heritage.',
 		overview:
@@ -228,7 +228,7 @@ export const experiences: Tour[] = [
 		title: 'Experiences',
 		category: 'Culture',
 		video: '/assets/experiences.webm',
-		poster: '/assets/thumbnail-5.png',
+		poster: '/assets/thumbnail-5.webp',
 		description:
 			'Beyond the map lies a world of motion. From hidden waterfalls to mountain summits, embrace the pulse of Sri Lanka’s most thrilling landscapes.',
 		overview:
@@ -296,7 +296,7 @@ export const experiences: Tour[] = [
 		title: 'Wellness',
 		category: 'Culture',
 		video: '/assets/wellness.webm',
-		poster: '/assets/thumbnail-4.png',
+		poster: '/assets/thumbnail-4.webp',
 		description:
 			'A sanctuary for the senses. Reconnect through the wisdom of Ayurveda and coastal stillness in a journey designed to align body, mind, and soul.',
 		overview:
