@@ -83,7 +83,7 @@ function ExperienceCard({
 					<h3 className='text-3xl font-playfair text-accent'>
 						{exp.title}
 					</h3>
-					<p className='text-gray-200 lg:text-[#1f2b44] text-sm leading-relaxed max-w-md'>
+					<p className='text-gray-200 md:text-[#1f2b44] text-sm leading-relaxed max-w-md'>
 						{exp.description}
 					</p>
 					<Link

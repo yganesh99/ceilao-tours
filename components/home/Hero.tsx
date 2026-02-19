@@ -2,41 +2,58 @@
 
 export function Hero() {
 	return (
-		<section className='relative w-full md:aspect-auto h-screen min-h-auto overflow-hidden'>
-			<div className='absolute inset-0 bg-neutral-900 overflow-hidden'>
-				{/* Mobile / Tablet Video (4:3) — hidden on md+ screens */}
+		<section className='relative w-full h-[36vh] lg:h-screen overflow-hidden'>
+			<div className='absolute inset-0 overflow-hidden'>
+				{/* Mobile (9:16) */}
 				<video
-					className='absolute top-0 left-0 w-full h-full object-cover object-center pointer-events-none md:hidden'
+					className='absolute inset-0 w-full h-full object-[20%_100%] sm:hidden bg-black'
 					autoPlay
 					muted
 					loop
 					playsInline
 					preload='metadata'
+					poster='/assets/hero-m-poster.jpg'
 				>
-					{/* MP4 fallback — place your compressed hero-m.mp4 in /public/assets/ */}
-					<source
-						src='/assets/hero-m.mp4'
-						type='video/mp4'
-					/>
-				</video>
-
-				{/* Desktop Video (16:9) — hidden below md breakpoint */}
-				<video
-					className='absolute top-0 left-0 w-full h-full object-cover object-center pointer-events-none hidden md:block'
-					autoPlay
-					muted
-					loop
-					playsInline
-					preload='metadata'
-				>
-					{/* MP4 fallback — place your compressed hero.mp4 in /public/assets/ */}
 					<source
 						src='/assets/hero.mp4'
 						type='video/mp4'
 					/>
 				</video>
 
-				<div className='absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent' />
+				{/* Tablet (3:4) */}
+				<video
+					className='absolute inset-0 w-full h-full object-cover hidden sm:block md:hidden'
+					autoPlay
+					muted
+					loop
+					playsInline
+					preload='metadata'
+					poster='/assets/hero-t-poster.jpg'
+				>
+					<source
+						src='/assets/hero-m.mp4'
+						type='video/mp4'
+					/>
+				</video>
+
+				{/* Desktop (16:9) */}
+				<video
+					className='absolute inset-0 w-full h-full object-cover hidden md:block'
+					autoPlay
+					muted
+					loop
+					playsInline
+					preload='metadata'
+					poster='/assets/hero-d-poster.jpg'
+				>
+					<source
+						src='/assets/hero.mp4'
+						type='video/mp4'
+					/>
+				</video>
+
+				{/* Optional overlay */}
+				<div className='absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent' />
 			</div>
 		</section>
 	);
