@@ -16,6 +16,7 @@ const navLinks = [
 	{ name: 'The Ceilão Promise', href: '/#promise' },
 	{ name: 'Hopeful Foundation', href: '/#foundation' },
 	{ name: 'Contact', href: '/tailor-made' },
+	// { name: 'About Us', href: '/about-us' },
 ];
 
 export function Header() {

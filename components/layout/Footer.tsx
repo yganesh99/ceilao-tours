@@ -3,11 +3,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import InfoModal from '../ui/InfoModal';
 
 export function Footer() {
-	const [isLegalModalOpen, setIsLegalModalOpen] = useState(false);
-	const [isCommitmentModalOpen, setIsCommitmentModalOpen] = useState(false);
+	const [showLegalMenu, setShowLegalMenu] = useState(false);
 
 	return (
 		<footer
@@ -37,46 +35,57 @@ export function Footer() {
 				</p>
 
 				{/* Navigation Links */}
-				<div className='flex flex-wrap justify-center gap-6 md:gap-8 mb-10 text-xs tracking-widest uppercase text-[#1f2b44]/80 font-medium'>
-					<button
-						onClick={() => setIsLegalModalOpen(true)}
-						className='hover:text-accent transition-colors uppercase tracking-widest'
-					>
-						Legal
-					</button>
-					<button
-						onClick={() => setIsCommitmentModalOpen(true)}
-						className='hover:text-accent transition-colors uppercase tracking-widest'
-					>
-						Commitment
-					</button>
-					<Link
-						href='/tailor-made'
-						className='hover:text-accent transition-colors'
-					>
-						Contact
-					</Link>
+				<div className='min-h-[24px] flex flex-wrap justify-center gap-6 md:gap-8 mb-10 text-xs tracking-widest uppercase text-[#1f2b44]/80 font-medium'>
+					{!showLegalMenu ? (
+						<>
+							<a
+								onClick={() => setShowLegalMenu(true)}
+								className='hover:text-accent transition-colors uppercase tracking-widest focus:outline-none'
+							>
+								Legal
+							</a>
+							<Link
+								href='/commitment'
+								className='hover:text-accent transition-colors uppercase tracking-widest'
+							>
+								Commitment
+							</Link>
+							<Link
+								href='/about-us'
+								className='hover:text-accent transition-colors uppercase tracking-widest'
+							>
+								About Us
+							</Link>
+							<Link
+								href='/tailor-made'
+								className='hover:text-accent transition-colors'
+							>
+								Contact
+							</Link>
+						</>
+					) : (
+						<>
+							<Link
+								href='/privacy-policy'
+								className='hover:text-accent transition-colors uppercase tracking-widest'
+							>
+								Privacy Policy
+							</Link>
+							<Link
+								href='/terms-and-conditions'
+								className='hover:text-accent transition-colors uppercase tracking-widest'
+							>
+								Terms & Conditions
+							</Link>
+							<a
+								onClick={() => setShowLegalMenu(false)}
+								className='hover:text-accent transition-colors uppercase tracking-widest focus:outline-none'
+							>
+								Close
+							</a>
+						</>
+					)}
 				</div>
-
-				{/* Modals */}
-				<InfoModal
-					isOpen={isLegalModalOpen}
-					onClose={() => setIsLegalModalOpen(false)}
-					title='Legal'
-				>
-					We are currently refining our terms to better protect your
-					journey and ensure absolute excellence. Our updated
-					framework will be available here soon.
-				</InfoModal>
-
-				<InfoModal
-					isOpen={isCommitmentModalOpen}
-					onClose={() => setIsCommitmentModalOpen(false)}
-					title='Commitment'
-				>
-					We are currently refining our formal charters of trust and
-					excellence. Our core commitments will be shared here soon.
-				</InfoModal>
 
 				{/* Copyright */}
 				<div className='text-[10px] text-[#1f2b44]/50 uppercase tracking-wider text-center'>
