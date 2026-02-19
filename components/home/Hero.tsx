@@ -12,7 +12,7 @@ export function Hero() {
 					loop
 					playsInline
 					preload='metadata'
-					poster='/assets/hero-m-poster.jpg'
+					// poster='/assets/hero-m-poster.jpg'
 				>
 					<source
 						src='/assets/hero-s.mp4'
@@ -28,7 +28,7 @@ export function Hero() {
 					loop
 					playsInline
 					preload='metadata'
-					poster='/assets/hero-t-poster.jpg'
+					// poster='/assets/hero-t-poster.jpg'
 				>
 					<source
 						src='/assets/hero-s.mp4'
@@ -44,7 +44,7 @@ export function Hero() {
 					loop
 					playsInline
 					preload='metadata'
-					poster='/assets/hero-d-poster.jpg'
+					// poster='/assets/hero-d-poster.jpg'
 				>
 					<source
 						src='/assets/hero-s.mp4'
