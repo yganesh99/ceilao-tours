@@ -52,7 +52,7 @@ export function Hero() {
 					/>
 				</video>
 
-				{/* Optional overlay */}
+				{/* Optional overlays */}
 				<div className='absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent' />
 			</div>
 		</section>
