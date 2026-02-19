@@ -15,7 +15,7 @@ export function Hero() {
 					// poster='/assets/hero-m-poster.jpg'
 				>
 					<source
-						src='/assets/hero-s.mp4'
+						src='/assets/hero-c.mp4'
 						type='video/mp4'
 					/>
 				</video>
@@ -31,7 +31,7 @@ export function Hero() {
 					// poster='/assets/hero-t-poster.jpg'
 				>
 					<source
-						src='/assets/hero-s.mp4'
+						src='/assets/hero-c.mp4'
 						type='video/mp4'
 					/>
 				</video>
@@ -47,7 +47,7 @@ export function Hero() {
 					// poster='/assets/hero-d-poster.jpg'
 				>
 					<source
-						src='/assets/hero-s.mp4'
+						src='/assets/hero-c.mp4'
 						type='video/mp4'
 					/>
 				</video>
