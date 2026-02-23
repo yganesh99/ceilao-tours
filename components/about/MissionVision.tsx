@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export function MissionVision() {
 	return (
-		<section className='py-20 md:py-32 bg-background relative overflow-hidden'>
+		<section className='py-10 md:py-32 bg-background relative overflow-hidden'>
 			<div className='container mx-auto px-4 md:px-6'>
 				<div className='grid md:grid-cols-2 gap-12 md:gap-20 items-stretch'>
 					{/* Mission Statement */}
@@ -15,11 +15,11 @@ export function MissionVision() {
 						transition={{ duration: 0.6 }}
 						className='flex flex-col space-y-6'
 					>
-						<h2 className='text-3xl md:text-4xl font-playfair text-[#1f2b44]'>
+						<h2 className='text-2xl md:text-4xl font-playfair text-[#1f2b44]'>
 							Mission Statement
 						</h2>
 						<div className='w-20 h-0.5 bg-accent'></div>
-						<p className='text-lg md:text-xl text-foreground/80 leading-relaxed font-light font-inter'>
+						<p className='text-sm md:text-lg text-foreground/80 leading-relaxed font-light font-inter'>
 							At Ceilão Travel & Tours, we craft journeys that go
 							beyond luxury to reveal the raw, authentic soul of
 							Sri Lanka. We curate heartfelt experiences that
@@ -38,11 +38,11 @@ export function MissionVision() {
 						transition={{ duration: 0.6, delay: 0.2 }}
 						className='flex flex-col space-y-6'
 					>
-						<h2 className='text-3xl md:text-4xl font-playfair text-[#1f2b44]'>
+						<h2 className='text-2xl md:text-4xl font-playfair text-[#1f2b44]'>
 							Vision Statement
 						</h2>
 						<div className='w-20 h-0.5 bg-accent'></div>
-						<p className='text-lg md:text-xl text-foreground/80 leading-relaxed font-light font-inter'>
+						<p className='text-sm md:text-lg text-foreground/80 leading-relaxed font-light font-inter'>
 							To be Sri Lanka’s premier curator of luxury
 							journeys, where every experience reveals the
 							island’s soul and fosters a lasting legacy for its

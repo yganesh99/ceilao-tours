@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { ItineraryAccordion } from '@/components/ui/ItineraryAccordion';
 
 type Props = {
 	params: Promise<{ id: string }>;
@@ -45,6 +46,8 @@ export default async function ExperiencePage({ params }: Props) {
 				title={tour.title}
 				subtitle={tour.subtitle || tour.category || 'Experience'}
 				image={headerImage}
+				videoSrc={tour.video}
+				className='h-[36vh] min-h-0 lg:h-screen lg:min-h-screen'
 			/>
 
 			<Section className='bg-background'>
@@ -63,11 +66,6 @@ export default async function ExperiencePage({ params }: Props) {
 									Duration: {tour.duration}
 								</div>
 							)}
-							{/* {tour.category && (
-								<div className='px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold uppercase tracking-wide'>
-									Category: {tour.category}
-								</div>
-							)} */}
 						</div>
 					</div>
 
@@ -76,30 +74,47 @@ export default async function ExperiencePage({ params }: Props) {
 						<h2 className='text-3xl font-playfair text-[#1f2b44] mb-8 text-center md:text-left'>
 							Itinerary
 						</h2>
-						<div className='space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent'>
-							{tour.itinerary.map((item, index) => (
-								<div
-									key={index}
-									className='relative flex items-start group'
-								>
-									{/* Timeline Dot */}
-									<div className='absolute left-0 mt-1.5 ml-3 w-4 h-4 rounded-full border-2 border-accent bg-background z-10 group-hover:bg-accent transition-colors' />
-
-									<div className='ml-12 w-full'>
-										<span className='inline-block px-3 py-1 mb-2 text-xs font-bold tracking-wider text-accent uppercase border border-accent/20 rounded-sm bg-accent/5'>
-											{item.day}
-										</span>
-										<h3 className='text-xl font-bold text-[#1f2b44] mb-2'>
-											{item.title}
-										</h3>
-										<p className='text-muted-foreground'>
-											{item.description}
-										</p>
-									</div>
-								</div>
-							))}
-						</div>
+						<ItineraryAccordion itinerary={tour.itinerary} />
 					</div>
+
+					{/* Excursions */}
+					{tour.excursions && tour.excursions.items.length > 0 && (
+						<div className='mb-16'>
+							<h2 className='text-3xl font-playfair text-[#1f2b44] mb-6 text-center md:text-left'>
+								Excursions
+							</h2>
+							{tour.excursions.theme && (
+								<p className='text-accent font-semibold text-lg mb-8 text-center md:text-left'>
+									Theme: {tour.excursions.theme}
+								</p>
+							)}
+							<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+								{tour.excursions.items.map((item, index) => (
+									<div
+										key={index}
+										className='bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-accent/30 hover:shadow-md transition-all duration-300'
+									>
+										<div className='flex items-start gap-4'>
+											<div className='shrink-0 w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-sm'>
+												{String(index + 1).padStart(
+													2,
+													'0',
+												)}
+											</div>
+											<div>
+												<h3 className='text-[#1f2b44] font-bold text-lg mb-2'>
+													{item.title}
+												</h3>
+												<p className='text-muted-foreground leading-relaxed text-sm'>
+													{item.description}
+												</p>
+											</div>
+										</div>
+									</div>
+								))}
+							</div>
+						</div>
+					)}
 
 					{/* Pricing */}
 					{tour.pricing && tour.pricing.length > 0 && (

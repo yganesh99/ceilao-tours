@@ -10,6 +10,16 @@ export interface PricingOption {
 	usd: string;
 }
 
+export interface ExcursionItem {
+	title: string;
+	description: string;
+}
+
+export interface TourExcursions {
+	theme?: string;
+	items: ExcursionItem[];
+}
+
 export interface Tour {
 	id: string | number;
 	title: string;
@@ -21,6 +31,7 @@ export interface Tour {
 	video?: string;
 	poster?: string;
 	itinerary: ItineraryItem[];
+	excursions?: TourExcursions;
 	duration?: string;
 	pricingNote?: string;
 	pricing?: PricingOption[];
@@ -31,7 +42,7 @@ export const experiences: Tour[] = [
 		id: 1,
 		title: 'SOUL OF CEYLON',
 		category: 'Culture & Heritage',
-		video: '/assets/culture.webm',
+		video: '/assets/culture-small.mp4',
 		poster: '/assets/thumbnail-1.webp',
 		description:
 			'Trace 2,600 years of history through ancient kingdoms and mist-veiled hills. A journey into the timeless rhythm and colonial grace of our island home.',
@@ -93,6 +104,41 @@ export const experiences: Tour[] = [
 					'Your journey concludes with a scenic drive along the coast to the vibrant capital of Colombo. You enjoy a final sensory exploration of the city, visiting the neon-lit Lotus Tower and the bustling Pettah Market for some last-minute gift shopping—perhaps some Ceylon sapphires or premium spices. After a final farewell lunch of hoppers, you are transferred to the airport via the expressway, carrying with you the sights, sounds, and spirit of the "Soul of Ceylon."',
 			},
 		],
+		excursions: {
+			theme: 'History, Local Life, and High-Tech Heritage',
+			items: [
+				{
+					title: 'Sigiriya VR "Time Machine" Experience',
+					description:
+						'A 15-minute immersive Virtual Reality session at the museum/resort that reconstructs the 5th-century palace in its prime.',
+				},
+				{
+					title: 'Sunrise Hot Air Ballooning (Dambulla)',
+					description:
+						'A 60-minute flight over the Cultural Triangle, ending with a champagne toast in the jungle.',
+				},
+				{
+					title: 'Anuradhapura Ancient City Cycling',
+					description:
+						'Exploring the vast monastic complexes on high-quality mountain bikes with a specialized history guide.',
+				},
+				{
+					title: 'Mihintale Sunset Meditation',
+					description:
+						'A private, guided mindfulness session atop the "Cradle of Buddhism" as the sun sets over the reservoirs.',
+				},
+				{
+					title: 'Traditional Mask Carving Workshop (Kandy)',
+					description:
+						'A 2-hour hands-on session with a master artisan to carve and paint your own "Raksha" mask.',
+				},
+				{
+					title: 'Pettah "Hidden Gems" Walk (Colombo)',
+					description:
+						'A curated walk through the secret colonial architecture and street markets of Colombo’s oldest district.',
+				},
+			],
+		},
 		duration: '9 Days',
 		pricingNote: 'TOTAL PER PERSON (with a 10% markup)',
 		pricing: [
@@ -112,7 +158,7 @@ export const experiences: Tour[] = [
 		id: 2,
 		title: 'WILD CEYLON',
 		category: 'Wildlife',
-		video: '/assets/nature.webm',
+		video: '/assets/nature-small.mp4',
 		poster: '/assets/thumbnail-2.webp',
 		description:
 			'Venture where the wild still reigns. Encounter leopards and untamed peaks from the refined comfort of a luxury tented lodge.',
@@ -180,13 +226,48 @@ export const experiences: Tour[] = [
 					'Your journey concludes with a drive along the southern coast toward Colombo. You enjoy a final sensory exploration of the capital, visiting the colonial grandeur of the Fort district and the bustling Pettah Market for some last-minute gift shopping—perhaps some premium Ceylon tea or handcrafted local crafts.\n\nAfter taking in the skyline from the Lotus Tower, you are transferred to the airport via the expressway, carrying with you the wild spirit of Ceylon.',
 			},
 		],
+		excursions: {
+			theme: 'Conservation, Photography, and Hidden Trekking',
+			items: [
+				{
+					title: 'Wilpattu Photographic Safari',
+					description:
+						'A private jeep tour with a professional wildlife photographer to help you capture the perfect leopard or sloth bear shot.',
+				},
+				{
+					title: '"Cloud Safari" in Belihul Oya',
+					description:
+						'A full-day 4x4 expedition through the mist-covered mountains and hidden waterfalls of the Sabaragamuwa region.',
+				},
+				{
+					title: 'Knuckles Survival Workshop',
+					description:
+						'Learn mountain navigation and how to identify medicinal plants from a local "Vedda" (indigenous) guide.',
+				},
+				{
+					title: 'Riverston "Mini World’s End" Trek',
+					description:
+						'A guided hike to one of the most scenic (and least crowded) viewpoints in the central highlands.',
+				},
+				{
+					title: 'Night Ranger Walk (Sigiriya/Habarana)',
+					description:
+						'A guided nocturnal trek using thermal optics to spot the Slender Loris and rare Civet cats.',
+				},
+				{
+					title: 'Sea Turtle Conservation Participation',
+					description:
+						'Visit a hatchery in the South and participate in a supervised sunset release of baby turtles into the ocean.',
+				},
+			],
+		},
 		duration: '10 Days',
 	},
 	{
 		id: 3,
 		title: 'CEYLON FLAVOURS & TEA TRAILS',
 		category: 'Culture',
-		video: '/assets/hill.webm',
+		video: '/assets/hill-small.mp4',
 		poster: '/assets/thumbnail-3.webp',
 		description:
 			'An odyssey of scent and taste. Reside in colonial bungalows amidst emerald plantations while discovering the rich culinary traditions of our heritage.',
@@ -242,13 +323,33 @@ export const experiences: Tour[] = [
 					'After a final breakfast of fresh tropical fruits and buffalo curd, you are transferred to the airport via the expressway, carrying the rich flavors and aromas of Ceylon home with you.',
 			},
 		],
+		excursions: {
+			theme: 'Farm-to-Table, Artisanal Spirits, and Tea Connoisseurship',
+			items: [
+				{
+					title: 'Tea Sommelier Masterclass (Nuwara Eliya)',
+					description:
+						'A professional "cupping" session to learn the sensory differences between Silver Tips, BOP, and Dust grades.',
+				},
+				{
+					title: 'Pettah Food "Safari" (Colombo)',
+					description:
+						"An evening tuk-tuk tour tasting the city's most iconic street eats (Kottu, Hoppers, and Saravita).",
+				},
+				{
+					title: 'Toddy Tapping Observation',
+					description:
+						'A rare chance to watch traditional tappers navigate high-wire ropes between coconut trees to harvest sap.',
+				},
+			],
+		},
 		duration: '8 Days',
 	},
 	{
 		id: 4,
 		title: 'ISLAND OF ADVENTURE',
 		category: 'Culture',
-		video: '/assets/experiences.webm',
+		video: '/assets/experiences-small.mp4',
 		poster: '/assets/thumbnail-5.webp',
 		description:
 			'Beyond the map lies a world of motion. From hidden waterfalls to mountain summits, embrace the pulse of Sri Lanka’s most thrilling landscapes.',
@@ -310,13 +411,48 @@ export const experiences: Tour[] = [
 					'After a final breakfast by the ocean, you return to Colombo for your transfer to the airport. Your thrilling adventure concludes as you check in, carrying the adrenaline and spirit of the island with you.',
 			},
 		],
+		excursions: {
+			theme: 'Adrenaline, High-Altitude, and Water Sports',
+			items: [
+				{
+					title: 'Waterfall Abseiling (Kitulgala)',
+					description:
+						'A 105ft controlled descent down the face of the Saman Ella waterfall.',
+				},
+				{
+					title: 'Flying Ravana Mega-Zipline (Ella)',
+					description:
+						'Experience South Asia’s longest zipline, flying at 80km/h over the emerald tea estates.',
+				},
+				{
+					title: 'Sunrise Paragliding (Ella/Bandarawela)',
+					description:
+						"A tandem flight over the Ella Gap for a bird's-eye view of the central mountains.",
+				},
+				{
+					title: 'Devil’s Staircase 4x4 Challenge',
+					description:
+						'A rugged off-road drive through one of the most difficult and scenic mountain passes in Sri Lanka.',
+				},
+				{
+					title: 'Mirissa "Aerial" Whale Watching',
+					description:
+						"A luxury 2026 addition—spotting Blue Whales from a light aircraft for a view that doesn't disturb the giants.",
+				},
+				{
+					title: 'Surfing Masterclass (Weligama)',
+					description:
+						'A private, video-analyzed session with a pro-surfer to perfect your technique on the southern swells.',
+				},
+			],
+		},
 		duration: '9 Days',
 	},
 	{
 		id: 5,
 		title: 'WELLNESS ESCAPE',
 		category: 'Culture',
-		video: '/assets/wellness.webm',
+		video: '/assets/wellness-small.mp4',
 		poster: '/assets/thumbnail-4.webp',
 		description:
 			'A sanctuary for the senses. Reconnect through the wisdom of Ayurveda and coastal stillness in a journey designed to align body, mind, and soul.',
@@ -372,6 +508,36 @@ export const experiences: Tour[] = [
 					'You wake up feeling lighter, clearer, and deeply rested. After a final nourishing meal, you are transferred to the airport.\n\nYou depart Sri Lanka not just with photographs, but with a renewed sense of balance and a toolkit of mindfulness to take back into your daily life.',
 			},
 		],
+		excursions: {
+			theme: 'Deep Healing, Vibration, and Organic Living',
+			items: [
+				{
+					title: 'Tibetan Singing Bowl Sound Healing',
+					description:
+						'A private vibrational therapy session designed to realign your energy centers (chakras).',
+				},
+				{
+					title: 'Forest Bathing (Shinrin-yoku) in Kandy',
+					description:
+						'A guided, silent walk through the Udawattakele / Narampanawa sanctuary to reduce cortisol and connect with nature.',
+				},
+				{
+					title: 'Mandala Art Therapy on the Beach',
+					description:
+						'Using shells, sand, and petals to create a geometric mandala—a meditative exercise in focus and impermanence.',
+				},
+				{
+					title: '"Metta" (Loving-Kindness) Meditation with a Monk',
+					description:
+						'A private audience with a resident monk to learn heart-centered meditation techniques.',
+				},
+				{
+					title: 'Seema Malaka Floating Meditation (Colombo)',
+					description:
+						'A serene sunrise session on the Beira Lake in a temple designed by the legendary Geoffrey Bawa.',
+				},
+			],
+		},
 		duration: '8 Days',
 	},
 ];

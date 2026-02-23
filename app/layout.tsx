@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, Inter, Poiret_One } from 'next/font/google';
+import localFont from 'next/font/local';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import './globals.css';
@@ -23,6 +24,12 @@ const poiretOne = Poiret_One({
 	display: 'swap',
 });
 
+const bilgie = localFont({
+	src: '../public/bilgie.ttf',
+	variable: '--font-bilgie',
+	display: 'swap',
+});
+
 export const metadata: Metadata = {
 	title: 'Ceilão Travel & Tours',
 	description:
@@ -37,10 +44,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body
-				className={`${playfair.variable} ${inter.variable} ${poiretOne.variable} antialiased bg-background text-foreground`}
+				className={`${playfair.variable} ${inter.variable} ${poiretOne.variable} ${bilgie.variable} antialiased bg-background text-foreground`}
 			>
 				<Header />
-				<main className='min-h-screen'>{children}</main>
+				<main className='min-h-fit'>{children}</main>
 				<Footer />
 			</body>
 		</html>

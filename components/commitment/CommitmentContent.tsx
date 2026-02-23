@@ -58,7 +58,7 @@ const sections = [
 				</ul>
 			</>
 		),
-		image: '/assets/hopeful-foundation.webp',
+		// image: '/assets/hopeful-foundation.webp',
 	},
 	{
 		title: 'Environmental Responsibility',
@@ -113,7 +113,7 @@ const sections = [
 
 export function CommitmentContent() {
 	return (
-		<section className='py-20 md:py-32 bg-background relative'>
+		<section className='pb-20 pt-14 md:py-20 bg-background relative'>
 			<div className='container mx-auto px-4 md:px-6'>
 				<div className='flex flex-col space-y-20 md:space-y-32'>
 					{sections.map((section, index) => (
@@ -126,16 +126,14 @@ export function CommitmentContent() {
 							className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-10 md:gap-16 items-center`}
 						>
 							{/* Text Section */}
-							<div
-								className={`flex-1 ${section.image ? '' : 'md:max-w-3xl md:mx-auto text-center'}`}
-							>
-								<h2 className='text-3xl md:text-4xl font-playfair text-[#1f2b44] mb-6'>
+							<div className={`flex-1 md:mx-auto text-left`}>
+								<h2 className='text-2xl md:text-4xl font-playfair text-[#1f2b44] mb-6'>
 									{section.title}
 								</h2>
 								<div
-									className={`w-20 h-0.5 bg-accent mb-6 ${section.image ? '' : 'mx-auto'}`}
+									className={`w-20 h-0.5 bg-accent mb-6`}
 								></div>
-								<div className='text-lg text-foreground/80 leading-relaxed font-light font-inter'>
+								<div className='text-sm md:text-lg text-foreground/80 leading-relaxed font-light font-inter'>
 									{section.content}
 								</div>
 							</div>

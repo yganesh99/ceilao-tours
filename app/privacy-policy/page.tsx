@@ -44,54 +44,25 @@ export default function PrivacyPolicyPage() {
 			ref={containerRef}
 			className='bg-background min-h-screen'
 		>
-			{/* Hero Section */}
-			<section className='relative h-[60vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden'>
-				<motion.div
-					style={{ y, opacity }}
-					className='absolute inset-0 z-0'
-				>
-					<Image
-						src='/assets/thumbnail-4.webp'
-						alt='Privacy Policy Background'
-						fill
-						className='object-cover brightness-[0.3]'
-						priority
-					/>
-				</motion.div>
-
-				<div className='relative z-10 text-center px-4 max-w-4xl mx-auto'>
+			<div className='container mx-auto px-4 md:px-6 py-16 md:py-24 mt-20'>
+				<div className='relative z-10 text-center px-4 max-w-4xl mx-auto border-accent border mb-12'>
 					<motion.h1
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, ease: 'easeOut' }}
-						className='text-5xl md:text-7xl font-playfair text-white mb-6 tracking-wide'
+						className='text-4xl md:text-7xl font-playfair text-[#1f2b44] tracking-wide'
 					>
 						Privacy Policy
 					</motion.h1>
-					<motion.p
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{
-							duration: 0.8,
-							delay: 0.2,
-							ease: 'easeOut',
-						}}
-						className='text-lg md:text-xl text-white/90 font-light max-w-2xl mx-auto font-poiret-one tracking-widest uppercase'
-					>
-						Your Trust, Our Commitment
-					</motion.p>
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ delay: 0.5, duration: 1 }}
-						className='mt-8 text-white/60 text-sm font-inter'
+						className='mt-2 text-[#1f2b44]/60 text-xs font-inter'
 					>
 						Last Updated: February 2026
 					</motion.div>
 				</div>
-			</section>
-
-			<div className='container mx-auto px-4 md:px-6 py-16 md:py-24'>
 				<div className='flex flex-col lg:flex-row gap-12 lg:gap-20'>
 					{/* Sticky Sidebar Navigation */}
 					<aside className='hidden lg:block w-64 shrink-0'>

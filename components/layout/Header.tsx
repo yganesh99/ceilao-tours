@@ -65,7 +65,7 @@ export function Header() {
 						</Link>
 					</div>
 
-					<span className='absolute pl-8 md:pl-0 left-1/2 -translate-x-1/2 block text-[10px] md:text-sm font-semibold text-accent italic font-playfair tracking-wide text-center whitespace-nowrap'>
+					<span className='absolute pl-8 md:pl-0 left-1/2 -translate-x-1/2 block text-[9px] md:text-sm font-semibold text-accent italic font-playfair tracking-wide text-center whitespace-nowrap'>
 						Curated Journeys. Heartfelt Experiences.
 					</span>
 

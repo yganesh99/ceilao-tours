@@ -7,6 +7,7 @@ interface PageHeaderProps {
 	image: string;
 	className?: string;
 	isVideo?: boolean;
+	videoSrc?: string;
 }
 
 export function PageHeader({
@@ -15,6 +16,7 @@ export function PageHeader({
 	image,
 	className,
 	isVideo = false,
+	videoSrc,
 }: PageHeaderProps) {
 	return (
 		<section
@@ -24,7 +26,7 @@ export function PageHeader({
 			)}
 		>
 			<div className='absolute inset-0 z-0'>
-				{!isVideo && (
+				{!isVideo && !videoSrc && (
 					<Image
 						src={image}
 						alt={title || ''}
@@ -32,6 +34,21 @@ export function PageHeader({
 						className='object-cover'
 						priority
 					/>
+				)}
+				{videoSrc && (
+					<video
+						className='absolute inset-0 w-full h-full object-cover bg-black'
+						autoPlay
+						muted
+						loop
+						playsInline
+						preload='metadata'
+					>
+						<source
+							src={videoSrc}
+							type='video/mp4'
+						/>
+					</video>
 				)}
 				{isVideo && (
 					<div className='absolute inset-0 bg-neutral-900 overflow-hidden'>
@@ -55,13 +72,13 @@ export function PageHeader({
 				<div className='absolute inset-0 bg-black/40' />
 			</div>
 
-			<div className='relative z-10 text-center text-white px-4 space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-700'>
+			<div className='relative z-10 text-center text-white px-4 space-y-4 mt-20 animate-in fade-in slide-in-from-bottom-8 duration-700'>
 				{subtitle && (
-					<span className='block text-accent text-sm md:text-base font-medium uppercase tracking-[0.2em] mb-2'>
+					<span className='block text-accent text-xs md:text-base font-medium uppercase tracking-[0.2em] mb-2'>
 						{subtitle}
 					</span>
 				)}
-				<h1 className='text-4xl md:text-6xl font-bold font-[family-name:var(--font-playfair)]'>
+				<h1 className='text-2xl md:text-6xl font-bold font-playfair'>
 					{title}
 				</h1>
 			</div>

@@ -10,16 +10,16 @@ export default function TermsAndConditionsPage() {
 	return (
 		<main className='py-16 md:py-24 bg-background min-h-screen text-foreground'>
 			<div className='container mx-auto px-6 max-w-4xl'>
-				<div className='mb-12 text-center'>
-					<h1 className='text-4xl md:text-5xl font-playfair text-[#1f2b44] mb-4'>
+				<div className='mb-12 text-center mt-20 border-accent border'>
+					<h1 className='text-3xl md:text-5xl font-playfair text-[#1f2b44] mb-2'>
 						Terms and Conditions
 					</h1>
-					<p className='text-foreground/60 font-playfair text-lg uppercase tracking-widest'>
+					<p className='text-[#1f2b44]/60 font-playfair text-xs uppercase tracking-widest'>
 						Last Updated: February 2026
 					</p>
 				</div>
 
-				<div className='bg-white/50 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-sm border border-[#1f2b44]/10 text-foreground/80 font-[family-name:var(--font-inter)] leading-relaxed space-y-8'>
+				<div className='bg-white/50 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-sm text-foreground/80 font-inter leading-relaxed space-y-8 border-accent border'>
 					<section>
 						<h2 className='text-2xl font-playfair text-[#1f2b44] mb-4'>
 							1. Registration and Licensing

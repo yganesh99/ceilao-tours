@@ -54,7 +54,7 @@ function ExperienceCard({
 				delay: index * 0.1,
 			}}
 			viewport={{ once: true }}
-			className='pl-0 md:pl-6 lg:pl-8 min-w-full md:min-w-[50%] lg:min-w-[50%] h-dvh md:h-auto relative shrink-0'
+			className='pl-0 md:pl-6 lg:pl-8 min-w-full md:min-w-[50%] lg:min-w-[50%] h-[75vh] md:h-auto relative shrink-0'
 		>
 			<div className='group cursor-pointer h-full relative overflow-hidden'>
 				<div className='absolute inset-0 md:relative h-full md:h-[500px] lg:h-[700px] w-full overflow-hidden mb-0 md:mb-6 rounded-none md:rounded-lg shadow-sm bg-neutral-900'>
@@ -153,7 +153,7 @@ export function SignatureExperiences() {
 					<h2 className='text-4xl md:text-5xl lg:text-5xl font-playfair text-[#1f2b44]'>
 						Signature Experiences
 					</h2>
-					<div className='w-24 h-[1px] bg-accent mx-auto mt-6' />
+					<div className='w-24 h-px bg-accent mx-auto mt-6' />
 				</div>
 			</Section>
 
@@ -163,7 +163,7 @@ export function SignatureExperiences() {
 				containerClassName='px-0 md:px-6 lg:px-8'
 			>
 				<div
-					className='relative group h-dvh md:h-auto'
+					className='relative group h-[75vh] md:h-auto'
 					ref={sectionRef}
 					key={triggerAmount} // Force re-mount to update observer options
 				>

@@ -54,7 +54,7 @@ export default function About() {
 							className='w-full h-auto mt-4 md:mt-0'
 						/>
 					</div>
-					<div className='w-48 md:w-64'>
+					<div className='w-32 md:w-64'>
 						<Image
 							src='/assets/logo.webp'
 							alt='Ceilão Logo'
@@ -91,11 +91,11 @@ export default function About() {
 					className='w-full md:w-2/3 text-center md:text-left space-y-8'
 				>
 					<div className='space-y-4'>
-						<h1 className='mt-4 text-3xl md:text-4xl lg:text-5xl font-serif text-[#1f2b44]'>
+						<h1 className='mt-4 text-2xl md:text-4xl lg:text-5xl font-serif text-[#1f2b44]'>
 							Our Story
 						</h1>
 						<div className='w-24 h-px bg-accent mt-6 mx-auto md:mx-0' />
-						<p className='text-black/80 text-md lg:text-lg leading-relaxed font-light'>
+						<p className='text-black/80 text-sm lg:text-lg leading-relaxed font-light'>
 							Ceilão Travel &amp; Tours was founded on the belief
 							that the true essence of Sri Lanka lies beyond the
 							standard itinerary. It is found in the
@@ -103,7 +103,7 @@ export default function About() {
 							landscapes and the incomparable warmth of our
 							people.
 						</p>
-						<p className='text-black/80 text-md lg:text-lg leading-relaxed font-light'>
+						<p className='text-black/80 text-sm lg:text-lg leading-relaxed font-light'>
 							As part of the Ceilão Collection, we curate bespoke
 							journeys for the traveler who seeks depth over
 							distance. We approach every itinerary as a
@@ -111,7 +111,7 @@ export default function About() {
 							world-class luxury and the authentic soul of our
 							home.
 						</p>
-						<p className='text-black/80 text-md lg:text-lg leading-relaxed font-light'>
+						<p className='text-black/80 text-sm lg:text-lg leading-relaxed font-light'>
 							Our story is inseparable from the land we love.
 							Through our partnership with the Hopeful Foundation,
 							every journey contributes to our local communities,

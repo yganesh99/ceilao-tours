@@ -13,20 +13,22 @@ export default function TailorMadePage() {
 
 	return (
 		<>
-			<PageHeader
-				// title='Tailor-Made Journeys'
-				// subtitle='Designed Around You'
-				image='/assets/tailor1.webp'
-			/>
-
+			<section className='relative h-fit w-full flex items-center justify-center overflow-hidden mt-32'>
+				{/* Content */}
+				<div className='relative z-10 text-center px-4 max-w-4xl mx-auto border-accent border py-2'>
+					<h1 className='text-4xl md:text-5xl lg:text-6xl font-playfair text-[#1f2b44] tracking-wide'>
+						Contact
+					</h1>
+				</div>
+			</section>
 			<Section className='bg-background'>
 				<div className='flex flex-col lg:flex-row gap-12 lg:gap-20 items-stretch'>
 					{/* Left Segment - Consultation / Planning */}
 					<div className='flex-1 flex flex-col justify-center space-y-8'>
 						<div>
-							<h2 className='text-3xl font-[family-name:var(--font-playfair)] text-primary mb-6'>
+							{/* <h2 className='text-3xl font-[family-name:var(--font-playfair)] text-primary mb-6'>
 								Plan Your Journey
-							</h2>
+							</h2> */}
 							<p className='text-muted-foreground leading-relaxed text-lg mb-6'>
 								To explore the possibilities of the island or
 								for refined inquiries and collaborations, we
