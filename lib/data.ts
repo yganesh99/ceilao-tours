@@ -4,6 +4,12 @@ export interface ItineraryItem {
 	description: string;
 }
 
+export interface PricingOption {
+	title: string;
+	lkr: string;
+	usd: string;
+}
+
 export interface Tour {
 	id: string | number;
 	title: string;
@@ -16,12 +22,14 @@ export interface Tour {
 	poster?: string;
 	itinerary: ItineraryItem[];
 	duration?: string;
+	pricingNote?: string;
+	pricing?: PricingOption[];
 }
 
 export const experiences: Tour[] = [
 	{
 		id: 1,
-		title: 'Culture & Heritage',
+		title: 'SOUL OF CEYLON',
 		category: 'Culture & Heritage',
 		video: '/assets/culture.webm',
 		poster: '/assets/thumbnail-1.webp',
@@ -32,64 +40,77 @@ export const experiences: Tour[] = [
 		itinerary: [
 			{
 				day: 'Day 1',
-				title: 'Arrival & Negombo',
+				title: 'Arrival - Negombo',
 				description:
-					'Arrive at Bandaranaike International Airport where you will be warmly greeted by Ceilão Travel and Tours representative. Transfer to your hotel in Negombo and unwind after your journey. In the evening, enjoy a relaxed visit around the Negombo lagoon, Dutch canal and the iconic fishing village.',
+					'You step out of the terminal into the warm, tropical embrace of Sri Lanka, where your Ceilao Travel and Tours representative greets you with a traditional "Ayubowan." As you drive toward the coastal town of Negombo, the scent of the salt air fills the breeze. You check into your hotel and shed the fatigue of your flight.\n\nBy evening, you are gliding through the Negombo Lagoon on a private boat; you watch local fishermen casting nets against a purple sunset. To make the evening truly special, you enjoy a "Lagoon-to-Table" culinary demonstration on board, where a local chef prepares fresh ginger-infused lagoon prawns right before your eyes as you drift past the mangroves.',
 			},
 			{
 				day: 'Day 2',
-				title: 'Negombo → Sigiriya',
+				title: 'Negombo - Anuradhapura',
 				description:
-					'Enjoy breakfast at the hotel before departing towards Sri Lanka’s Cultural Triangle. En route, visit the magnificent Dambulla Cave Temple, a UNESCO World Heritage Site filled with ancient murals and Buddha statues. In the evening, climb the iconic Sigiriya Rock Fortress and witness a breathtaking sunset over the surrounding forests.',
+					'The journey north begins after a fresh tropical breakfast. You watch the landscape shift from coastal palms to the dry-zone forests of the Cultural Triangle. You arrive in Anuradhapura, the island’s first ancient capital, where time seems to stand still. You walk barefoot on the sun-warmed stone surrounding the Jaya Sri Maha Bodhi, feeling the spiritual energy of the world\'s oldest human-planted tree.\n\nYour spiritual immersion deepens as you participate in a private "Pirith" chanting ceremony, where a resident monk ties a sacred saffron thread around your wrist, offering a traditional blessing for a safe and enlightened journey.',
 			},
 			{
 				day: 'Day 3',
-				title: 'Sigiriya → Polonnaruwa',
+				title: 'Anuradhapura - Hiriwadunna - Sigiriya',
 				description:
-					'After breakfast, enjoy a peaceful morning with an optional village experience in Hiriwadunna, exploring rural life by cart ride, catamaran and local homes. Later, journey to Polonnaruwa, the medieval kingdom of Sri Lanka, and explore its impressive ruins, including Gal Viharaya and the Royal Palace complex. Spend the evening wandering around the ancient reservoir built by King Parakramabahu.',
+					'This morning, you immerse yourself in the soul of the Sri Lankan countryside at Hiriwadunna. You climb into a traditional bullock cart, the wooden wheels creaking as you pass through lush paddy fields. You board a catamaran to cross a lotus-filled lake, with the Sigiriya rock looming in the distance.\n\nAfter enjoying a "Kamatha" lunch—spicy curries cooked in clay pots—you join a village woman for a hands-on "Kurakkan" (millet) grinding session, learning the rhythmic labor that has sustained rural families for generations.',
 			},
 			{
 				day: 'Day 4',
-				title: 'Polonnaruwa → Anuradhapura',
+				title: 'Sigiriya - Polonnaruwa - Sigiriya',
 				description:
-					'Begin your day with breakfast at the hotel, followed by a scenic drive to Anuradhapura, the first capital of ancient Sri Lanka. Explore sacred landmarks such as the revered Sri Maha Bodhi Tree, the majestic Ruwanweliseya Stupa, and the historic monastic complex of Abhayagiriya. Learn about the island’s rich 2,600-year-old Buddhist heritage as you walk through this UNESCO site.',
+					'At dawn, you begin your ascent of the Sigiriya Rock Fortress, passing between the massive stone Lion’s Paws and the vibrant frescoes. In the afternoon, you explore the medieval capital of Polonnaruwa by bicycle.\n\nAs night falls, you embark on the highlight of the day: The Sigiriya Night Tour under the Full Moon. Guided by a naturalist, you trek through the moonlit jungle trails at the base of the fortress, searching for the reflective eyes of the elusive Gray Slender Loris. The sight of the massive Lion Rock silhouetted against a bright, silver sky is a hauntingly beautiful experience that few travelers ever witness.',
 			},
 			{
 				day: 'Day 5',
-				title: 'Anuradhapura → Kandy',
+				title: 'Sigiriya - Dambulla - Kandy',
 				description:
-					'After breakfast, proceed to Kandy, the last royal kingdom of Sri Lanka surrounded by lush mountains. En route, stop at a spice garden and batik workshop for an immersive cultural encounter. In Kandy, witness a vibrant cultural dance show before attending the evening ceremony at the sacred Temple of the Tooth Relic.',
+					'You leave the plains behind and head into the misty hills. Your first stop is the Dambulla Cave Temple, where you step into cool, dark caverns filled with golden Buddha statues. After a fragrant stop at a Matale Spice Garden, you reach Kandy.\n\nBefore the evening ceremonies, you enjoy an exclusive backstage meeting with a master craftsman of traditional Kandyan masks, discovering the hidden symbolism behind the vibrant designs. As night falls, you witness the flickering oil lamps during the "Pooja" ceremony at the Temple of the Sacred Tooth Relic.',
 			},
 			{
 				day: 'Day 6',
-				title: 'Kandy → Nuwara Eliya (Train Ride)',
+				title: 'Kandy - Nuwara Eliya',
 				description:
-					'Enjoy breakfast and board the scenic train from Kandy to Nanu Oya, one of the most beautiful rail journeys in the world. Visit a tea plantation and factory to learn the art of Ceylon tea-making, followed by a relaxing visit to Gregory Lake and highlights of colonial Nuwara Eliya.',
+					'You board the iconic blue train at Kandy station. As the train winds through the mountains, you lean out of the door to feel the cool mist and see endless carpets of emerald-green tea estates.\n\nArriving in Nuwara Eliya, you enter a world of colonial charm. You walk through a Tea Factory, breathing in the rich aroma of fermenting leaves, and participate in a "Tea Sommelier" masterclass, where you learn to identify the subtle flavor profiles of Silver Tips and Broken Orange Pekoe like a true connoisseur.',
 			},
 			{
 				day: 'Day 7',
-				title: 'Nuwara Eliya → Galle',
+				title: 'Nuwara Eliya - Galle',
 				description:
-					'After breakfast, descend from the misty hills towards the southern coast. Explore the historic Galle Dutch Fort, a UNESCO-listed fortress blending colonial charm and coastal beauty. Conclude the evening with an immersive storytelling walk through its cobblestone lanes.',
+					'You descend from the highlands, watching the tea bushes give way to the turquoise Indian Ocean. Along the coast, you stop to witness the iconic Stilt Fishermen of Weligama and even try your hand at balancing on the "Petta" (perch) yourself.\n\nYou then enter the gates of the Galle Dutch Fort, a living UNESCO world heritage site. As the sun sets, you join a local storyteller on the Fort Ramparts, listening to tales of shipwrecks and spice traders while the waves crash against the coral bastions.',
 			},
 			{
 				day: 'Day 8',
-				title: 'Galle → Colombo',
+				title: 'Galle',
 				description:
-					'Enjoy a leisurely morning by the beach before departing for Colombo. On arrival, embark on a panoramic city tour covering colonial landmarks, modern highlights and shopping districts.',
+					'Today is dedicated to the timeless rhythm of the South. You spend your morning wandering the narrow cobblestone lanes of the Fort, perhaps popping into an artisan boutique or a jewelry workshop. For a more relaxed afternoon, you head to the nearby Jungle Beach for a private picnic, enjoying the calm waters tucked away from the main tourist strips.\n\nYou return to the Fort for a final evening, enjoying the vibrant atmosphere of the "Old Dutch Hospital" precinct, now a hub for world-class dining.',
 			},
 			{
 				day: 'Day 9',
-				title: 'Departure',
+				title: 'Galle - Colombo - Airport - Departure',
 				description:
-					'After breakfast, transfer to Bandaranaike International Airport for your onward journey with unforgettable memories of Sri Lanka.',
+					'Your journey concludes with a scenic drive along the coast to the vibrant capital of Colombo. You enjoy a final sensory exploration of the city, visiting the neon-lit Lotus Tower and the bustling Pettah Market for some last-minute gift shopping—perhaps some Ceylon sapphires or premium spices. After a final farewell lunch of hoppers, you are transferred to the airport via the expressway, carrying with you the sights, sounds, and spirit of the "Soul of Ceylon."',
 			},
 		],
 		duration: '9 Days',
+		pricingNote: 'TOTAL PER PERSON (with a 10% markup)',
+		pricing: [
+			{
+				title: 'Luxury Car + English Guide',
+				lkr: '602,113',
+				usd: '1945',
+			},
+			{
+				title: 'Luxury SUV + English Guide',
+				lkr: '703,862.50',
+				usd: '2275',
+			},
+		],
 	},
 	{
 		id: 2,
-		title: 'Nature & Wildlife',
+		title: 'WILD CEYLON',
 		category: 'Wildlife',
 		video: '/assets/nature.webm',
 		poster: '/assets/thumbnail-2.webp',
@@ -100,70 +121,70 @@ export const experiences: Tour[] = [
 		itinerary: [
 			{
 				day: 'Day 1',
-				title: 'Arrival & Negombo',
+				title: 'Arrival - Negombo',
 				description:
-					'Arrive at Bandaranaike International Airport where your Ceilão Travels representative will warmly welcome you. Transfer to Negombo and relax after your journey, enjoying the coastal atmosphere. If time permits, take an optional boat ride through the biodiverse Muthurajawela marsh, home to birds and mangrove wildlife.',
+					'You step out of the terminal into the warm, tropical breeze of Sri Lanka, where your representative greets you with a traditional "Ayubowan." After a short drive to Negombo, you settle into your hotel to shed the fatigue of travel. By late afternoon, you are gliding through the Muthurajawela Marsh on a private boat; you watch purple heron and crocodiles lurking in the mangroves as the sun dips below the horizon.\n\nTo welcome you to the island, you enjoy a "Lagoon-to-Table" seafood tasting right by the water, sampling fresh lagoon crabs prepared with local black pepper.',
 			},
 			{
 				day: 'Day 2',
-				title: 'Negombo → Wilpattu',
+				title: 'Negombo - Wilpattu',
 				description:
-					'After breakfast, travel north to Wilpattu National Park, the largest and one of the most scenic wildlife reserves in Sri Lanka. In the evening, embark on your first safari adventure in search of leopards, sloth bears, spotted deer and wetland birds. Return to your lodge or glamping site and unwind amidst true wilderness.',
+					'The journey north begins after breakfast, heading toward Wilpattu National Park, the island\'s largest and most mysterious wilderness. In the evening, you embark on your first safari, weaving through the "Willus" (natural lakes) in search of the elusive Sri Lankan leopard and the shaggy-coated sloth bear.\n\nYour experience is elevated by a private "Bush Sundowner" at a secluded clearing inside the park, where you can sip a chilled drink while listening to the evening chorus of the jungle before returning to your safari lodge.',
 			},
 			{
 				day: 'Day 3',
-				title: 'Wilpattu → Sigiriya',
+				title: 'Wilpattu - Sigiriya',
 				description:
-					'Begin the morning with another safari, offering the chance to observe wildlife during their most active hours. Afterward, proceed to Sigiriya, arriving at your hotel set against the backdrop of the Cultural Triangle. Spend the evening at leisure or join an optional nature photography workshop.',
+					'After a final sunrise safari in Wilpattu, you drive toward the heart of the Cultural Triangle. Along the way, you stop to witness the Avukana Buddha, a magnificent 12-meter statue carved from a single rock face in the 5th century, which remains one of the finest examples of ancient standing sculpture.\n\nYou arrive in Sigiriya by late afternoon, just as the evening light begins to soften the landscape around the massive monolith.',
 			},
 			{
 				day: 'Day 4',
 				title: 'Sigiriya Exploration',
 				description:
-					'Enjoy breakfast before climbing the majestic Sigiriya Rock Fortress, an ancient royal citadel rising dramatically from the plains. Visit the Mirror Wall, the Water Gardens and the frescoes of the heavenly maidens. In the afternoon, explore rural life on a Hiriwadunna village tour and enjoy relaxed bird-watching around the lakes at dusk.',
+					'At dawn, you ascend the Sigiriya Rock Fortress, passing the massive Lion’s Paws and the vibrant "Cloud Maiden" frescoes. From the summit, you look out over a sea of green forest as the sun rises. In the afternoon, you immerse yourself in rural life at Hiriwadunna, enjoying a "Kamatha" lunch cooked over an open fire.\n\nAs night falls, you embark on the highlight of your stay: the Sigiriya Night Trek under the Full Moon, searching for the reflective eyes of the Red Slender Loris in the forest canopy. The sight of the massive rock bathed in silver moonlight creates a hauntingly beautiful silhouette you will never forget.',
 			},
 			{
 				day: 'Day 5',
-				title: 'Sigiriya → Knuckles Mountain Range',
+				title: 'Sigiriya - Riverston',
 				description:
-					'After breakfast, drive toward the Knuckles Mountain Range, a UNESCO-listed natural reserve filled with forest trails and cloud-kissed peaks. Begin a light hike to discover waterfalls, hidden viewpoints and endemic flora. End the day at an eco-lodge or campsite surrounded by pristine mountain nature.',
+					'Today you head into the "Mist-Clad Mountains" of Riverston. The drive takes you through winding roads where the air grows noticeably cooler. You hike to the Pitawala Pathana plains, a unique montane grassland that ends abruptly at a sheer cliff known as "Mini World’s End."\n\nTo fully embrace the wilderness, you enjoy a refreshing dip in the crystal-clear Thelgamu Oya, a natural river pool surrounded by dense forest, before settling into your eco-lodge for a quiet evening in the mountains.',
 			},
 			{
 				day: 'Day 6',
-				title: 'Knuckles → Kandy',
+				title: 'Riverston - Kandy',
 				description:
-					'Start the morning with a refreshing forest trek through the Knuckles foothills. Later, proceed to Kandy, the hill capital, and settle into your hotel. Spend the evening relaxing by the scenic Kandy Lake or exploring the charming city streets.',
+					'After a misty morning walk through the Knuckles foothills, you descend toward the hill capital of Kandy. You stop at a fragrant Spice Garden in Matale to see how Ceylon cinnamon and vanilla are grown. In Kandy, you visit the Temple of the Sacred Tooth Relic during the evening "Pooja." To see a different side of the city\'s heritage, you attend a private performance of Kandyan Drumming, where you meet the musicians afterward to learn about the rhythmic traditions that have echoed through these hills for centuries.',
 			},
 			{
 				day: 'Day 7',
-				title: 'Kandy → Ella (Train Journey)',
+				title: 'Kandy - Ella',
 				description:
-					'Enjoy breakfast before boarding the iconic train journey from Kandy to Ella, renowned as one of the most scenic rail experiences in the world. On arrival, visit the famous Nine Arch Bridge and the picturesque Ravana viewpoints. Settle into your hotel overlooking misty mountains and lush valleys.',
+					'Today, you embark on a breathtaking scenic drive toward Ella. You have the freedom to stop at Ramboda Falls and panoramic viewpoints overlooking the tea country. As you wind through the mountains, the landscape transforms into endless carpets of emerald-green tea estates. You arrive in Ella and walk across the architectural marvel of the Nine Arch Bridge just as the mist begins to roll in. For a unique touch, you participate in a "Tea Leaf to Cup" experience at a small-hold plantation, plucking your own leaves before seeing them withered and dried.',
 			},
 			{
 				day: 'Day 8',
-				title: 'Ella Adventure Day',
+				title: 'Ella - Belihul Oya',
 				description:
-					'Begin your day with a rewarding hike up Little Adam’s Peak, offering panoramic vistas of surrounding peaks and tea estates. Continue to Ella zipline for an exhilarating adventure over the valleys. Visit a nearby waterfall to cool off and spend the rest of the day at leisure.',
+					'Your morning begins with a hike up Little Adam’s Peak for panoramic vistas of the Ella Gap. Afterward, you descend from the high mountains to the adventure hub of Belihul Oya, an area where three different eco-zones meet. You spend the afternoon on a Nature Walk along the riverbank, passing through paddy fields and forests.\n\nTo truly connect with the environment, you enjoy a traditional "River Bath" in the cool, rushing waters where the Belihul Oya and Galagama Oya rivers meet, followed by a quiet evening in an eco-retreat under a canopy of stars.',
 			},
 			{
 				day: 'Day 9',
-				title: 'Ella → Yala → Galle',
+				title: 'Belihul Oya - Kalawana (Sinharaja) - Galle',
 				description:
-					'Depart early for Yala National Park for an afternoon safari inside Sri Lanka’s most renowned wildlife sanctuary. With luck, spot elephants, crocodiles, and Yala’s famous leopards amidst their natural habitat. After your safari experience, continue to Galle for an evening at leisure.',
+					'You depart early for the ancient rainforests of Kalawana. At dawn, you enter the Sinharaja Rainforest, a UNESCO World Heritage site, for a guided trek. You’ll spot endemic birds like the Sri Lanka Blue Magpie and vibrant tree frogs hiding in the giant ferns.\n\nAfterward, you drive toward the coast, reaching the historic Galle Dutch Fort. You finish your final day on the coast with a "Heritage Walk" led by a local storyteller, who shares tales of spice traders and ancient shipwrecks as you walk the 400-year-old ramparts at sunset.',
 			},
 			{
 				day: 'Day 10',
 				title: 'Departure via Colombo',
 				description:
-					'After breakfast, proceed to Colombo for your onward departure. Your memorable wildlife expedition concludes as you are transferred to Bandaranaike International Airport.',
+					'Your journey concludes with a drive along the southern coast toward Colombo. You enjoy a final sensory exploration of the capital, visiting the colonial grandeur of the Fort district and the bustling Pettah Market for some last-minute gift shopping—perhaps some premium Ceylon tea or handcrafted local crafts.\n\nAfter taking in the skyline from the Lotus Tower, you are transferred to the airport via the expressway, carrying with you the wild spirit of Ceylon.',
 			},
 		],
 		duration: '10 Days',
 	},
 	{
 		id: 3,
-		title: 'Hill Country & Tea',
+		title: 'CEYLON FLAVOURS & TEA TRAILS',
 		category: 'Culture',
 		video: '/assets/hill.webm',
 		poster: '/assets/thumbnail-3.webp',
@@ -174,58 +195,58 @@ export const experiences: Tour[] = [
 		itinerary: [
 			{
 				day: 'Day 1',
-				title: 'Arrival & Colombo',
+				title: 'Arrival - Colombo',
 				description:
-					'Arrive in Colombo and transfer to your hotel to settle in after your journey. In the evening, embark on a vibrant street-food walk through the city, sampling authentic Sri Lankan flavours and local favourites. Enjoy the buzz of night-time Colombo as you taste your first culinary impressions of the island.',
+					'You arrive in the vibrant capital of Colombo and transfer to your hotel to settle in. In the evening, you embark on a vibrant street-food walk through Pettah and Galle Face Green, sampling authentic "Kottu Roti" and "Isso Wade" (shrimp cakes). To elevate your first night, you enjoy a private Arrack cocktail masterclass at a colonial-style bar, where a mixologist introduces you to Sri Lanka’s signature coconut spirit infused with local tropical fruits.',
 			},
 			{
 				day: 'Day 2',
-				title: 'Colombo → Kandy',
+				title: 'Colombo - Kandy',
 				description:
-					'After breakfast, travel to the cultural hill capital of Kandy. Visit the bustling local market with a vendor who will introduce you to fragrant spices, tropical produce and traditional ingredients. Later, enjoy a hands-on cooking class with a village family, learning to prepare an authentic Sri Lankan meal the traditional way.',
+					'After breakfast, you travel to the cultural hill capital of Kandy. You visit the bustling local market with a local chef who introduces you to fragrant spices and traditional ingredients like "Goraka" (garlic) and dried fish.\n\nLater, you enjoy a hands-on cooking class with a village family, learning to prepare a classic "Rice and Curry" feast over a wood-fired hearth. You finish the afternoon with a tasting of artisanal Buffalo Curd and Kithul treacle, a beloved local dessert sourced from the nearby foothills.',
 			},
 			{
 				day: 'Day 3',
-				title: 'Kandy → Nuwara Eliya',
+				title: 'Kandy - Nuwara Eliya',
 				description:
-					'Depart for the picturesque tea country, winding through lush valleys and mist-covered mountains. Visit a working tea plantation and factory to observe the complete process of Ceylon tea production. Experience tea plucking alongside estate workers and gain insight into the heritage of Sri Lankan tea culture.',
+					'You depart for the picturesque tea country, winding through lush valleys and mist-covered mountains. You visit a working tea factory to observe the complete process of Ceylon tea production and experience tea plucking alongside estate workers.\n\nTo deepen your connection to the land, you enjoy a Journey  in the heart of the estate, featuring recipes passed down through generations of tea plantation managers, served with a view of the rolling emerald hills.',
 			},
 			{
 				day: 'Day 4',
 				title: 'Nuwara Eliya Exploration',
 				description:
-					'Begin the day with a tea-tasting masterclass where you will learn to identify flavour notes, aroma profiles and tea grades. Explore the colonial landmarks of Nuwara Eliya, including the Post Office, Racecourse and British-era cottages. Conclude the day with an elegant high-tea experience in true hill-country style.',
+					'Begin the day with a tea-tasting masterclass where you learn to identify flavor notes and aroma profiles. You then explore the colonial landmarks of "Little England," including the historic Post Office and British-era cottages. Your day concludes with an elegant High-Tea experience at the Hill Club, where you are invited to visit the private herb and vegetable garden that provides the fresh ingredients for your evening’s gourmet meal.',
 			},
 			{
 				day: 'Day 5',
-				title: 'Nuwara Eliya → Ella',
+				title: 'Nuwara Eliya - Ella',
 				description:
-					'After breakfast, travel to Ella through scenic mountain roads lined with rolling tea gardens. Visit Ravana Falls and stop at picturesque viewpoints offering sweeping panoramas of valleys and escarpments. Spend the evening at leisure in the charming village of Ella.',
+					'After breakfast, you travel to Ella through scenic mountain roads lined with tea gardens. You visit Ravana Falls and stop at picturesque viewpoints offering sweeping panoramas. In the evening, you visit a boutique coffee roastery in Ella, discovering how the island’s burgeoning coffee scene is reclaiming its heritage.\n\nYou enjoy a tasting flight of locally grown beans, paired with handmade chocolate infused with Ceylon cinnamon.',
 			},
 			{
 				day: 'Day 6',
-				title: 'Ella → Galle',
+				title: 'Ella - Galle',
 				description:
-					'Proceed to the southern coast and arrive at the historic Galle Dutch Fort, a UNESCO World Heritage Site. Take a leisurely walk along its cobblestone streets filled with colonial architecture, art galleries and boutique cafés. If you wish, enjoy an optional cooking demonstration at a nearby spice estate.',
+					'You proceed toward the southern coast and the historic Galle Dutch Fort. After checking into your hotel, you take a leisurely walk along the cobblestone streets. To add a final culinary highlight, you participate in a "Fort Spice Walk" with a local historian, discovering how the spice trade shaped the architecture of the city, followed by a seafood dinner featuring giant lagoon crabs prepared with a secret family recipe.',
 			},
 			{
 				day: 'Day 7',
-				title: 'Galle → Colombo',
+				title: 'Galle - Colombo',
 				description:
-					'Enjoy a relaxed morning on the beach before departing for Colombo. Settle in at your hotel and spend the rest of the day at leisure—perfect for shopping or enjoying Colombo’s vibrant dining scene.',
+					'Enjoy a relaxed morning on the beach or a final stroll through the Fort’s boutiques before departing for Colombo. Once in the capital, you spend the afternoon at leisure. For your final evening, you are treated to a sensory "Tea-Infused Dinner," where each course is subtly enhanced by the different grades of tea you discovered in the highlands, providing a full-circle ending to your journey.',
 			},
 			{
 				day: 'Day 8',
 				title: 'Departure',
 				description:
-					'After breakfast, transfer to Bandaranaike International Airport for your departure, concluding your culinary and tea-country journey.',
+					'After a final breakfast of fresh tropical fruits and buffalo curd, you are transferred to the airport via the expressway, carrying the rich flavors and aromas of Ceylon home with you.',
 			},
 		],
 		duration: '8 Days',
 	},
 	{
 		id: 4,
-		title: 'Experiences',
+		title: 'ISLAND OF ADVENTURE',
 		category: 'Culture',
 		video: '/assets/experiences.webm',
 		poster: '/assets/thumbnail-5.webp',
@@ -236,64 +257,64 @@ export const experiences: Tour[] = [
 		itinerary: [
 			{
 				day: 'Day 1',
-				title: 'Arrival & Colombo',
+				title: 'Arrival - Colombo',
 				description:
-					'Arrive at Bandaranaike International Airport where your SLON Travels representative will greet you warmly. Transfer to your hotel in Colombo and settle in after your journey. In the evening, enjoy a guided walking tour or explore Colombo’s lively nightlife for a vibrant welcome to Sri Lanka.',
+					'You arrive at Bandaranaike International Airport and transfer to your hotel in Colombo. In the evening, you explore the city’s lively pulse with a "Tuk-Tuk Safari," weaving through the backstreets and hidden alleys to see the city from a local’s perspective.\n\nYou enjoy a sunset drink overlooking the Indian Ocean at Galle Face Green, where the sea spray and local energy provide a vibrant welcome to the island.',
 			},
 			{
 				day: 'Day 2',
-				title: 'Colombo → Kitulgala',
+				title: 'Colombo - Kitulgala',
 				description:
-					'Enjoy breakfast and proceed to Kitulgala, Sri Lanka’s adventure capital nestled amidst lush rainforests. Experience an exhilarating white-water rafting session followed by rock sliding and refreshing dips in natural pools. Later, enjoy a forest trek surrounded by tropical flora and river landscapes.',
+					'You proceed to Kitulgala, Sri Lanka’s adventure capital. You dive straight into the action with an exhilarating white-water rafting session on the Kelani River, followed by rock sliding and refreshing dips in natural pools. To make the experience truly wild, you join a nature naturalist for a "Rainforest Night Walk," searching for endemic amphibians and nocturnal birds that only emerge after the sun sets over the jungle canopy.',
 			},
 			{
 				day: 'Day 3',
-				title: 'Kitulgala → Knuckles Mountain Range',
+				title: 'Kitulgala - Knuckles Mountain Range',
 				description:
-					'After breakfast, travel to the Knuckles Mountain Range, known for its rugged trails and untouched wilderness. Begin a scenic trek through dense forests, mountain slopes and cascading streams. End the day at a campsite and enjoy a night under the stars.',
+					'After breakfast, you travel to the rugged Knuckles Mountain Range. You begin a scenic trek through dense forests and mountain slopes, reaching your remote campsite. As the stars come out, you enjoy a traditional "Campfire BBQ" with local mountain villagers, listening to folklore about the peaks while learning how to cook meat using ancient smoking techniques over an open flame.',
 			},
 			{
 				day: 'Day 4',
 				title: 'Knuckles Trek',
 				description:
-					'Start early for a full-day trekking adventure through the Knuckles highlands. Discover panoramic viewpoints, crystal-clear water streams and diverse wildlife as you journey through one of Sri Lanka’s richest biodiversity zones. Return to your camp for a peaceful evening amidst nature.',
+					'Start early for a full-day trekking adventure through the highlands. You discover panoramic viewpoints and crystal-clear streams. To add a layer of challenge, you participate in a "Survival Skills Workshop" led by your guide, learning how to identify medicinal plants and navigate the mist-heavy terrain using traditional landmarks before returning to your camp for a peaceful evening.',
 			},
 			{
 				day: 'Day 5',
-				title: 'Knuckles → Ella',
+				title: 'Knuckles - Ella',
 				description:
-					'Enjoy breakfast before departing for the charming mountain village of Ella. Upon arrival, experience an exciting ziplining adventure across lush valleys and dramatic landscapes. Later, visit the iconic Nine Arch Bridge, one of the most photogenic railway structures in Sri Lanka.',
+					'You depart for the charming mountain village of Ella. Upon arrival, you experience the Flying Ravana Zipline, soaring over the valleys at 80km/h. You then walk to the Nine Arch Bridge, but instead of just viewing it, you descend to the valley floor for a private "Tea and Turmeric" tasting at a small organic farm tucked away right beneath the bridge\'s towering arches.',
 			},
 			{
 				day: 'Day 6',
 				title: 'Ella Adventure Day',
 				description:
-					'Begin the day with a scenic hike up Little Adam’s Peak, a rewarding trail offering spectacular views. For more adventure, take an optional trek to Ella Rock—a challenging yet fulfilling climb for avid hikers. Spend the rest of the day exploring Ella’s cozy cafés and laid-back countryside charm.',
+					'Your morning begins with a hike up Little Adam’s Peak for spectacular views. For those seeking more, you can tackle the challenging trek to Ella Rock. After your descent, you soothe your muscles with a traditional Ayurvedic "Marma" massage, a deep-tissue treatment specifically designed for trekkers and athletes using herbal oils infused in the local village.',
 			},
 			{
 				day: 'Day 7',
-				title: 'Ella → Arugam Bay / Weligama',
+				title: 'Ella - Weligama',
 				description:
-					'Travel to a top surf beach—either Arugam Bay or Weligama. Enjoy a beginner or intermediate surfing lesson led by professional instructors. Relax by the shore and unwind to the rhythm of the waves.',
+					'You travel to the southern coast and the surfing hub of Weligama. You enjoy a beginner or intermediate surfing lesson led by professional instructors in the gentle bay. As the sun sets, you participate in a beachside "Sunset Yoga" session, allowing the rhythm of the waves to help you stretch and recover from your days in the mountains.',
 			},
 			{
 				day: 'Day 8',
 				title: 'Beach Day',
 				description:
-					'Start the morning with sunrise yoga to stretch and energize your body after adventure-packed days. Spend the rest of the day enjoying water sports such as paddle boarding, snorkeling or simply relaxing by the turquoise waters.',
+					'The morning is yours for water sports, whether it’s paddleboarding or snorkeling. To cap off your adventure, you embark on a "Sunset Catamaran Cruise," sailing along the coastline to search for dolphins. You enjoy a final seafood grill on the deck as the moon rises over the Indian Ocean, celebrating the end of your high-octane expedition.',
 			},
 			{
 				day: 'Day 9',
-				title: 'Colombo → Departure',
+				title: 'Weligama - Colombo - Departure',
 				description:
-					'After breakfast, return to Colombo for your transfer to Bandaranaike International Airport. Your thrilling island adventure concludes with unforgettable memories of Sri Lanka’s landscapes and adrenaline-filled experiences.',
+					'After a final breakfast by the ocean, you return to Colombo for your transfer to the airport. Your thrilling adventure concludes as you check in, carrying the adrenaline and spirit of the island with you.',
 			},
 		],
 		duration: '9 Days',
 	},
 	{
 		id: 5,
-		title: 'Wellness',
+		title: 'WELLNESS ESCAPE',
 		category: 'Culture',
 		video: '/assets/wellness.webm',
 		poster: '/assets/thumbnail-4.webp',
@@ -304,51 +325,51 @@ export const experiences: Tour[] = [
 		itinerary: [
 			{
 				day: 'Day 1',
-				title: 'Arrival & Negombo',
+				title: 'Arrival - Negombo',
 				description:
-					'Arrive at Bandaranaike International Airport where your Ceilão Travels representative will warmly welcome you. Transfer to your beachfront hotel in Negombo and unwind in a calming coastal atmosphere. End the day with a gentle sunset meditation session to begin your wellness retreat.',
+					'The moment you land, your journey toward inner peace begins. Your Ceilao Travel representative whisks you away to a quiet coastal sanctuary. You feel the soft sand between your toes as the sun begins to dip below the horizon.\n\nYou join your first Sunset Meditation session on the beach; you focus on the sound of the rhythmic waves, allowing the travel stress to melt away into the ocean breeze.',
 			},
 			{
 				day: 'Day 2',
-				title: 'Negombo → Kandy Wellness Retreat',
+				title: 'Negombo - Kandy',
 				description:
-					'After breakfast, begin your journey toward the serene hill-country of Kandy. Check in at your wellness retreat—Santani, Kandy Samadhi Centre, or similar—surrounded by lush forests and peaceful mountain air. Enjoy an evening yoga session followed by a soothing herbal tea ritual.',
+					'You travel toward the lush, green highlands of Kandy, the air becoming cooler and crisper with every mile. You check into your Wellness Retreat, a sanctuary designed to harmonize with nature.\n\nIn the late afternoon, you step onto a wooden yoga pavilion. As you move through your "Asanas," you look out over a canopy of trees and hidden valleys, ending the day with a warm herbal tea ritual that grounds your spirit.',
 			},
 			{
 				day: 'Day 3',
-				title: 'Wellness Day in Kandy',
+				title: 'Kandy',
 				description:
-					'Start your morning with sunrise yoga overlooking the misty hills. Meet your ayurvedic doctor for a personalized consultation and enjoy a rejuvenating spa therapy tailored to your body’s needs. In the evening, visit a nearby herbal garden and conclude your day with a mindfulness meditation guided by a Buddhist monk.',
+					'You wake up to the sound of tropical birds and the sight of mist rolling over the mountains. Today is dedicated to total rejuvenation.\n\nYou meet with an Ayurvedic Doctor who pulses your wrist to understand your "Dosha." You then surrender to a series of personalized treatments—warm oils, herbal pastes, and steam baths. In the evening, a Buddhist Monk leads you through a mindfulness session, teaching you the art of being present in the "Now."',
 			},
 			{
 				day: 'Day 4',
-				title: 'Kandy → Coastal Retreat',
+				title: 'Kandy - Southern Coast',
 				description:
-					'Enjoy breakfast before transferring from the hills to the tranquil southern coastline. Arrive at your beachfront wellness resort and savour an organic, wellness-focused lunch prepared with fresh local ingredients. Later, experience an authentic ayurvedic massage—such as Shirodhara—followed by a calming candlelit meditation by the ocean.',
+					'You leave the mountains and head toward the healing salt air of the South. Your new home is a Coastal Wellness Resort nestled among coconut palms. After a light, organic lunch, you experience the profound relaxation of Shirodhara.\n\nYou feel the steady, warm stream of herbal oil flowing onto your forehead, stilled by a deep sense of tranquility as your nervous system completely resets.',
 			},
 			{
 				day: 'Day 5',
-				title: 'Coastal Wellness Experience',
+				title: 'Southern Coast',
 				description:
-					'Begin the day with energising yoga on the beach as the sun rises over the shoreline. Enjoy herbal steam therapy and take part in a hands-on local wellness cooking demonstration with an expert chef. Spend the remainder of the day relaxing by the sea or enjoying spa facilities at leisure.',
+					'Sunrise finds you on the beach, moving through a Vinyasa Flow as the first light hits the water. Your day is filled with "Living Wellness." You join the resort chef for a Healing Food Workshop, learning how to use turmeric and gotu-kola to nourish your body.\n\nThe afternoon is spent in a Herbal Steam Room, where the scent of lemongrass and sandalwood opens your senses and cleanses your skin.',
 			},
 			{
 				day: 'Day 6',
-				title: 'Galle Exploration',
+				title: 'Southern Coast - Galle - Southern Coast',
 				description:
-					'After breakfast, travel to the historic Galle Dutch Fort for a leisurely exploration. Experience a guided storytelling walk through its cobblestone streets, colonial architecture and charming boutiques. Return to the resort for free time—ideal for a spa session or a refreshing swim.',
+					'Today is a "Mindful Excursion." You visit the Galle Dutch Fort, but instead of a rushed tour, you engage in a Senses Walk. You focus on the vibrant colors of the colonial doors, the smell of cinnamon in the air, and the feeling of the sea spray on your skin.\n\nYou return to your resort for a final evening of "Trataka" (candle-gazing meditation) under a blanket of stars.',
 			},
 			{
 				day: 'Day 7',
-				title: 'Colombo',
+				title: 'Southern Coast - Colombo',
 				description:
-					'Enjoy a gentle morning meditation session before departing for Colombo. On arrival, take a light city tour covering cultural landmarks, seaside viewpoints and boutique shopping stops.',
+					'You begin your final full day with a gentle "Metta" (loving-kindness) meditation. You then travel to Colombo for a refined city experience. You visit the tranquil Seema Malaka temple on the lake, designed by Geoffrey Bawa, and enjoy a farewell dinner of Ayurvedic-inspired cuisine, celebrating the vibrant spices of the island in their healthiest, most delicious form.',
 			},
 			{
 				day: 'Day 8',
-				title: 'Departure',
+				title: 'Colombo - Airport - Departure',
 				description:
-					'After breakfast, proceed to Bandaranaike International Airport for your departure, ending your wellness journey feeling refreshed and rebalanced.',
+					'You wake up feeling lighter, clearer, and deeply rested. After a final nourishing meal, you are transferred to the airport.\n\nYou depart Sri Lanka not just with photographs, but with a renewed sense of balance and a toolkit of mindfulness to take back into your daily life.',
 			},
 		],
 		duration: '8 Days',

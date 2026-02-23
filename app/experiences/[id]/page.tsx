@@ -101,6 +101,45 @@ export default async function ExperiencePage({ params }: Props) {
 						</div>
 					</div>
 
+					{/* Pricing */}
+					{tour.pricing && tour.pricing.length > 0 && (
+						<div className='mb-16'>
+							<h2 className='text-3xl font-playfair text-[#1f2b44] mb-8 text-center md:text-left'>
+								Pricing
+							</h2>
+							<div className='bg-white rounded-2xl shadow-sm border border-slate-100 p-6 md:p-8'>
+								{tour.pricingNote && (
+									<p className='text-sm text-accent uppercase tracking-wider font-bold mb-6 text-center md:text-left'>
+										{tour.pricingNote}
+									</p>
+								)}
+								<div className='space-y-4'>
+									{tour.pricing.map((option, index) => (
+										<div
+											key={index}
+											className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b border-slate-100 last:border-0 last:pb-0'
+										>
+											<div className='font-medium text-[#1f2b44] mb-3 md:mb-0 text-lg'>
+												{option.title}
+											</div>
+											<div className='flex flex-row gap-3 items-center whitespace-nowrap bg-background px-4 py-2 rounded-lg border border-slate-50'>
+												<span className='text-lg font-bold text-accent'>
+													LKR {option.lkr}
+												</span>
+												<span className='text-slate-300'>
+													|
+												</span>
+												<span className='text-lg font-bold text-accent'>
+													USD {option.usd}
+												</span>
+											</div>
+										</div>
+									))}
+								</div>
+							</div>
+						</div>
+					)}
+
 					{/* CTA */}
 					<div className='text-center p-8 md:p-12 bg-transparent rounded-2xl text-[#1f2b44] border-accent border-2 md:w-xl md:mx-auto'>
 						<p className='mb-8 max-w-lg mx-auto text-lg'>
