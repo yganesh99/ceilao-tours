@@ -33,8 +33,7 @@ export default function TailorMadePage() {
 								To explore the possibilities of the island or
 								for refined inquiries and collaborations, we
 								invite you to engage with our curators for
-								immediate guidance to start planning your
-								adventure.
+								immediate guidance.
 							</p>
 						</div>
 						<Button size='lg'>
