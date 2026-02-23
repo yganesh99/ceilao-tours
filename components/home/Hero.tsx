@@ -38,7 +38,7 @@ export function Hero() {
 
 				{/* Desktop (16:9) */}
 				<video
-					className='absolute inset-0 w-full h-full object-cover hidden md:block'
+					className='absolute inset-0 w-full h-[3/4] object-cover hidden md:block'
 					autoPlay
 					muted
 					loop
