@@ -33,7 +33,7 @@ export default function About() {
 	return (
 		<Section
 			id='about'
-			className='bg-white py-16 md:py-24'
+			className='bg-white py-12 md:py-24'
 		>
 			<div className='flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-6xl mx-auto'>
 				{/* Logo Side */}
@@ -91,7 +91,7 @@ export default function About() {
 					className='w-full md:w-2/3 text-center md:text-left space-y-8'
 				>
 					<div className='space-y-4'>
-						<h1 className='mt-4 text-2xl md:text-4xl lg:text-5xl font-serif text-[#1f2b44]'>
+						<h1 className='mt-2 text-2xl md:text-4xl lg:text-5xl font-serif text-[#1f2b44]'>
 							Our Story
 						</h1>
 						<div className='w-24 h-px bg-accent mt-6 mx-auto md:mx-0' />
