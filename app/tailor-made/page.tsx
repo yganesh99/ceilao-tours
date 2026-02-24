@@ -15,10 +15,11 @@ export default function TailorMadePage() {
 		<>
 			<section className='relative h-fit w-full flex items-center justify-center overflow-hidden mt-32'>
 				{/* Content */}
-				<div className='relative z-10 text-center px-4 max-w-4xl mx-auto border-accent border py-2'>
+				<div className='relative z-10 text-center px-4 max-w-4xl mx-auto py-2'>
 					<h1 className='text-4xl md:text-5xl lg:text-6xl font-playfair text-[#1f2b44] tracking-wide'>
 						Contact
 					</h1>
+					<div className='w-24 h-0.5 bg-accent mx-auto mt-6' />
 				</div>
 			</section>
 			<Section className='bg-background'>

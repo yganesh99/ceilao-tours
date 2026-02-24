@@ -1,5 +1,9 @@
+'use client';
+
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import { MuteToggleButton } from '@/components/ui/MuteToggleButton';
 
 interface PageHeaderProps {
 	title?: string;
@@ -18,6 +22,8 @@ export function PageHeader({
 	isVideo = false,
 	videoSrc,
 }: PageHeaderProps) {
+	const [isMuted, setIsMuted] = useState(true);
+
 	return (
 		<section
 			className={cn(
@@ -37,9 +43,9 @@ export function PageHeader({
 				)}
 				{videoSrc && (
 					<video
-						className='absolute inset-0 w-full h-full object-cover bg-black'
+						className='absolute inset-0 w-full h-full object-contain md:object-cover object-[20%_100%] bg-black'
 						autoPlay
-						muted
+						muted={isMuted}
 						loop
 						playsInline
 						preload='metadata'
@@ -70,6 +76,15 @@ export function PageHeader({
 					</div>
 				)}
 				<div className='absolute inset-0 bg-black/40' />
+
+				{/* Sound Control for direct videos */}
+				{videoSrc && (
+					<MuteToggleButton
+						isMuted={isMuted}
+						onClick={() => setIsMuted((prev) => !prev)}
+						className='bottom-8 right-8'
+					/>
+				)}
 			</div>
 
 			<div className='relative z-10 text-center text-white px-4 space-y-4 mt-20 animate-in fade-in slide-in-from-bottom-8 duration-700'>
@@ -78,7 +93,7 @@ export function PageHeader({
 						{subtitle}
 					</span>
 				)}
-				<h1 className='text-2xl md:text-6xl font-bold font-playfair'>
+				<h1 className='text-lg md:text-6xl font-bold font-playfair'>
 					{title}
 				</h1>
 			</div>

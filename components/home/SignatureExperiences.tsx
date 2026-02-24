@@ -13,6 +13,8 @@ import { experiences } from '@/lib/data';
 import { useRef, useEffect, useState } from 'react';
 import { useInView } from 'framer-motion';
 
+import { MuteToggleButton } from '@/components/ui/MuteToggleButton';
+
 function ExperienceCard({
 	exp,
 	index,
@@ -23,6 +25,7 @@ function ExperienceCard({
 	shouldPlay: boolean;
 }) {
 	const videoRef = useRef<HTMLVideoElement>(null);
+	const [isMuted, setIsMuted] = useState(true);
 
 	useEffect(() => {
 		let timeoutId: NodeJS.Timeout;
@@ -30,9 +33,8 @@ function ExperienceCard({
 		if (shouldPlay) {
 			timeoutId = setTimeout(() => {
 				if (videoRef.current) {
-					videoRef.current.muted = true; // Ensure muted for autoplay
 					videoRef.current.play().catch(() => {
-						// Autoplay might be blocked
+						// Autoplay might be blocked if unmuted without interaction
 					});
 				}
 			}, 500);
@@ -60,7 +62,7 @@ function ExperienceCard({
 				<div className='absolute inset-0 md:relative h-full md:h-[500px] lg:h-[700px] w-full overflow-hidden mb-0 md:mb-6 rounded-none md:rounded-lg shadow-sm bg-neutral-900'>
 					<video
 						ref={videoRef}
-						muted
+						muted={isMuted}
 						loop
 						playsInline
 						preload='none'
@@ -75,20 +77,27 @@ function ExperienceCard({
 					<div className='absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 pointer-events-none' />
 					{/* Mobile Overlay Gradient */}
 					<div className='absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent md:hidden pointer-events-none' />
+
+					{/* Sound Control */}
+					<MuteToggleButton
+						isMuted={isMuted}
+						onClick={() => setIsMuted((prev) => !prev)}
+						className='bottom-24 left-8 md:bottom-8 md:left-auto md:right-8'
+					/>
 				</div>
-				<div className='absolute bottom-0 left-0 w-full p-8 md:p-0 z-20 md:static space-y-2 text-left'>
+				<div className='absolute bottom-0 left-0 w-full p-8 md:p-0 z-20 md:static space-y-2 text-left pointer-events-none'>
 					{/* <span className='text-xs font-bold uppercase tracking-widest text-accent'>
 						{exp.category}
 					</span> */}
-					<h3 className='text-3xl font-playfair text-accent'>
+					<h3 className='text-3xl font-playfair text-accent pointer-events-auto'>
 						{exp.title}
 					</h3>
-					<p className='text-gray-200 md:text-[#1f2b44] text-sm leading-relaxed max-w-md'>
+					<p className='text-gray-200 md:text-[#1f2b44] text-sm leading-relaxed max-w-md pointer-events-auto'>
 						{exp.description}
 					</p>
 					<Link
 						href={`/experiences/${exp.id}`}
-						className='inline-flex items-center gap-2 text-accent uppercase tracking-widest text-xs font-bold pt-4 hover:translate-x-2 transition-transform duration-300'
+						className='inline-flex items-center gap-2 text-accent uppercase tracking-widest text-xs font-bold pt-4 hover:translate-x-2 transition-transform duration-300 pointer-events-auto'
 					>
 						View Itinerary <ArrowRight className='w-4 h-4' />
 					</Link>

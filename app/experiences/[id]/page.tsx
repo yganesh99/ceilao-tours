@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { ItineraryAccordion } from '@/components/ui/ItineraryAccordion';
+import { AnimatedHeading } from '@/components/ui/AnimatedHeading';
 
 type Props = {
 	params: Promise<{ id: string }>;
@@ -54,9 +55,9 @@ export default async function ExperiencePage({ params }: Props) {
 				<div className='max-w-4xl mx-auto'>
 					{/* Overview */}
 					<div className='mb-12 text-center md:text-left'>
-						<h2 className='text-3xl font-playfair text-[#1f2b44] mb-6'>
+						<AnimatedHeading className='text-3xl font-playfair text-[#1f2b44] mb-6'>
 							Overview
-						</h2>
+						</AnimatedHeading>
 						<p className='text-muted-foreground text-lg leading-relaxed'>
 							{tour.overview}
 						</p>
@@ -71,28 +72,28 @@ export default async function ExperiencePage({ params }: Props) {
 
 					{/* Itinerary */}
 					<div className='mb-16'>
-						<h2 className='text-3xl font-playfair text-[#1f2b44] mb-8 text-center md:text-left'>
+						<AnimatedHeading className='text-3xl font-playfair text-[#1f2b44] mb-6 text-center md:text-left'>
 							Itinerary
-						</h2>
+						</AnimatedHeading>
 						<ItineraryAccordion itinerary={tour.itinerary} />
 					</div>
 
 					{/* Excursions */}
 					{tour.excursions && tour.excursions.items.length > 0 && (
 						<div className='mb-16'>
-							<h2 className='text-3xl font-playfair text-[#1f2b44] mb-6 text-center md:text-left'>
-								Excursions
-							</h2>
-							{tour.excursions.theme && (
+							<AnimatedHeading className='text-3xl font-playfair text-[#1f2b44] mb-6 text-center md:text-left'>
+								Add-On Excursions
+							</AnimatedHeading>
+							{/* {tour.excursions.theme && (
 								<p className='text-accent font-semibold text-lg mb-8 text-center md:text-left'>
 									Theme: {tour.excursions.theme}
 								</p>
-							)}
+							)} */}
 							<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 								{tour.excursions.items.map((item, index) => (
 									<div
 										key={index}
-										className='bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:border-accent/30 hover:shadow-md transition-all duration-300'
+										className='bg-white p-6 rounded-2xl shadow-sm border border-accent hover:shadow-md transition-all duration-300'
 									>
 										<div className='flex items-start gap-4'>
 											<div className='shrink-0 w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-sm'>

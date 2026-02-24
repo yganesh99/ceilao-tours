@@ -266,7 +266,7 @@ export const experiences: Tour[] = [
 	{
 		id: 3,
 		title: 'CEYLON FLAVOURS & TEA TRAILS',
-		category: 'Culture',
+		category: 'Hill Country',
 		video: '/assets/hill-small.mp4',
 		poster: '/assets/thumbnail-3.webp',
 		description:
@@ -348,7 +348,7 @@ export const experiences: Tour[] = [
 	{
 		id: 4,
 		title: 'ISLAND OF ADVENTURE',
-		category: 'Culture',
+		category: 'Experiences',
 		video: '/assets/experiences-small.mp4',
 		poster: '/assets/thumbnail-5.webp',
 		description:
@@ -451,7 +451,7 @@ export const experiences: Tour[] = [
 	{
 		id: 5,
 		title: 'WELLNESS ESCAPE',
-		category: 'Culture',
+		category: 'Well-being',
 		video: '/assets/wellness-small.mp4',
 		poster: '/assets/thumbnail-4.webp',
 		description:

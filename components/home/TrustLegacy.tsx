@@ -9,7 +9,7 @@ const features = [
 		icon: Star,
 		title: 'Refined Curation',
 		description:
-			'A lifetime of island secrets, edited for the exceptional.',
+			'A lifetime of island secrets, revealed for the exceptional.',
 	},
 	{
 		icon: ShieldCheck,

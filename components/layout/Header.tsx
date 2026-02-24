@@ -47,19 +47,20 @@ export function Header() {
 				className={cn(
 					'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
 					isScrolled
-						? 'bg-background/70 backdrop-blur-lg shadow-md border-primary/20'
+						? // ? 'bg-background/70 backdrop-blur-lg shadow-md border-primary/20'
+							'bg-transparent backdrop-blur-lg shadow-md border-primary/20'
 						: 'bg-background/95 backdrop-blur-sm shadow-none border-primary/10 py-3',
 				)}
 			>
 				<div className='relative pl-0 pr-4 md:pl-0 md:pr-6 flex items-center justify-between'>
 					{/* Logo */}
-					<div className='relative h-16 md:h-18 lg:h-20 aspect-2/1'>
+					<div className='relative h-12 md:h-14 lg:h-16 aspect-2/1 m-2'>
 						<Link href='/'>
 							<Image
-								src='/assets/ceilao-tours-logo.webp'
+								src='/assets/logo.webp'
 								alt='Ceilão Travel'
 								fill
-								className='object-cover'
+								className='object-contain'
 								priority
 							/>
 						</Link>

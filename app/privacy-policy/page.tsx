@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage() {
 			className='bg-background min-h-screen'
 		>
 			<div className='container mx-auto px-4 md:px-6 py-16 md:py-24 mt-20'>
-				<div className='relative z-10 text-center px-4 max-w-4xl mx-auto border-accent border mb-12'>
+				<div className='relative z-10 text-center px-4 max-w-4xl mx-auto mb-12'>
 					<motion.h1
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -54,11 +54,12 @@ export default function PrivacyPolicyPage() {
 					>
 						Privacy Policy
 					</motion.h1>
+					<div className='w-24 h-0.5 bg-accent mx-auto mt-4' />
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ delay: 0.5, duration: 1 }}
-						className='mt-2 text-[#1f2b44]/60 text-xs font-inter'
+						className='mt-4 text-[#1f2b44]/60 text-xs font-inter uppercase tracking-widest'
 					>
 						Last Updated: February 2026
 					</motion.div>
@@ -142,9 +143,9 @@ export default function PrivacyPolicyPage() {
 								<InfoCard
 									title='Regulatory'
 									items={[
-										'Passport Info',
+										'Passport Information',
 										'Health Status',
-										'Passenger Info',
+										'Passenger Information',
 									]}
 								/>
 								<InfoCard
@@ -342,8 +343,9 @@ export default function PrivacyPolicyPage() {
 										<div className='flex items-start gap-4'>
 											<MapPin className='w-5 h-5 text-accent mt-1' />
 											<span>
-												No 40, Park Road, Colombo 05,
-												Sri Lanka
+												No 40, 1st Cross Street,
+												Dippitigoda Road, Dalugama,
+												Kelaniya, Sri Lanka
 											</span>
 										</div>
 									</div>

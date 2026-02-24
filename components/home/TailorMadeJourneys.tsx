@@ -65,11 +65,11 @@ export function TailorMadeJourneys() {
 								},
 								{
 									title: 'Anticipatory Concierge',
-									desc: 'Discrete, 24/7 support for a truly effortless journey.',
+									desc: 'Discreet, 24/7 support for a truly effortless journey.',
 								},
 								{
 									title: 'Exclusive Access',
-									desc: 'Private "key-holder" entry to Sri Lanka’s most storied hidden gems.',
+									desc: 'Private "key-holder" access to Sri Lanka’s most storied hidden gems.',
 								},
 							].map((item, index) => (
 								<li
