@@ -94,7 +94,7 @@ function ExperienceCard({
 				<div className='absolute bottom-0 left-0 w-full p-8 md:p-0 z-20 md:static space-y-2 text-left pointer-events-none'>
 					{/* <span className='text-xs font-bold uppercase tracking-widest text-accent'>
 						{exp.category}
-					</span> */}
+					</span>  */}
 					<h3 className='text-3xl font-playfair text-accent pointer-events-auto'>
 						{exp.title}
 					</h3>
