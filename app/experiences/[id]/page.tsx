@@ -8,9 +8,17 @@ import { Metadata } from 'next';
 import { ItineraryAccordion } from '@/components/ui/ItineraryAccordion';
 import { AnimatedHeading } from '@/components/ui/AnimatedHeading';
 
+import { experiences } from '@/lib/data';
+
 type Props = {
 	params: Promise<{ id: string }>;
 };
+
+export async function generateStaticParams() {
+	return experiences.map((exp) => ({
+		id: exp.id.toString(),
+	}));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { id } = await params;

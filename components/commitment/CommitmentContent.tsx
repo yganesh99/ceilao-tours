@@ -128,10 +128,10 @@ export function CommitmentContent() {
 							{/* Text Section */}
 							<div className={`flex-1 md:mx-auto text-left`}>
 								<h2 className='text-3xl font-playfair text-[#1f2b44]'>
-									The &quot;Ceylon Collection&quot; Standard
+									{section.title}
 								</h2>
 								<div
-									className={`w-20 h-0.5 bg-accent mb-6`}
+									className={`w-20 h-0.5 bg-accent mb-6 mt-6`}
 								></div>
 								<div className='text-sm md:text-lg text-foreground/80 leading-relaxed font-light font-inter'>
 									{section.content}

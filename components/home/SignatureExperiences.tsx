@@ -2,7 +2,6 @@
 
 import { Section } from '@/components/ui/Section';
 import { Button } from '@/components/ui/Button';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
@@ -18,40 +17,43 @@ import { MuteToggleButton } from '@/components/ui/MuteToggleButton';
 function ExperienceCard({
 	exp,
 	index,
-	shouldPlay,
 	isMuted,
 	onToggleMute,
 }: {
 	exp: (typeof experiences)[0];
 	index: number;
-	shouldPlay: boolean;
 	isMuted: boolean;
 	onToggleMute: (id: string | number | null) => void;
 }) {
 	const videoRef = useRef<HTMLVideoElement>(null);
+	// Triggers when 40% of the video container is visible in the viewport
+	const shouldPlay = useInView(videoRef, { amount: 0.4 });
 
 	useEffect(() => {
-		let timeoutId: NodeJS.Timeout;
-
 		if (shouldPlay) {
-			timeoutId = setTimeout(() => {
-				if (videoRef.current) {
-					videoRef.current.play().catch(() => {
-						// Autoplay might be blocked if unmuted without interaction
-					});
-				}
-			}, 500);
+			if (videoRef.current) {
+				videoRef.current.play().catch(() => {
+					// Autoplay might be blocked if unmuted without interaction
+				});
+			}
 		} else {
 			videoRef.current?.pause();
-			if (!isMuted) {
-				onToggleMute(null);
-			}
 		}
+	}, [shouldPlay]);
 
-		return () => {
-			clearTimeout(timeoutId);
-		};
-	}, [shouldPlay, isMuted, onToggleMute, exp.id]);
+	// Sync mute state completely independently
+	useEffect(() => {
+		if (videoRef.current) {
+			videoRef.current.muted = isMuted;
+		}
+	}, [isMuted]);
+
+	// Handle auto-muting when scrolled out of view
+	useEffect(() => {
+		if (!shouldPlay && !isMuted) {
+			onToggleMute(null);
+		}
+	}, [shouldPlay, isMuted, onToggleMute]);
 
 	return (
 		<motion.div
@@ -77,7 +79,7 @@ function ExperienceCard({
 					>
 						<source
 							src={exp.video}
-							type='video/webm'
+							type='video/mp4'
 						/>
 					</video>
 					<div className='absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500 pointer-events-none' />
@@ -103,6 +105,7 @@ function ExperienceCard({
 					</p>
 					<Link
 						href={`/experiences/${exp.id}`}
+						prefetch={true}
 						className='inline-flex items-center gap-2 text-accent uppercase tracking-widest text-xs font-bold pt-4 hover:translate-x-2 transition-transform duration-300 pointer-events-auto'
 					>
 						View Itinerary <ArrowRight className='w-4 h-4' />
@@ -120,36 +123,7 @@ export function SignatureExperiences() {
 		dragFree: true,
 	});
 
-	const [visibleIndices, setVisibleIndices] = useState<number[]>([]);
 	const [unmutedId, setUnmutedId] = useState<string | number | null>(null);
-
-	const onScroll = useCallback(() => {
-		if (!emblaApi) return;
-		const slidesInView = emblaApi.slidesInView();
-		setVisibleIndices(slidesInView);
-	}, [emblaApi]);
-
-	const onInit = useCallback(() => {
-		if (!emblaApi) return;
-		const slidesInView = emblaApi.slidesInView();
-		setVisibleIndices(slidesInView);
-	}, [emblaApi]);
-
-	useEffect(() => {
-		if (!emblaApi) return;
-
-		emblaApi.on('init', onInit);
-		emblaApi.on('reInit', onInit);
-		emblaApi.on('select', onScroll);
-		emblaApi.on('scroll', onScroll);
-
-		return () => {
-			emblaApi.off('init', onInit);
-			emblaApi.off('reInit', onInit);
-			emblaApi.off('select', onScroll);
-			emblaApi.off('scroll', onScroll);
-		};
-	}, [emblaApi, onScroll, onInit]);
 
 	const scrollPrev = useCallback(() => {
 		if (emblaApi) emblaApi.scrollPrev();
@@ -158,12 +132,6 @@ export function SignatureExperiences() {
 	const scrollNext = useCallback(() => {
 		if (emblaApi) emblaApi.scrollNext();
 	}, [emblaApi]);
-
-	const sectionRef = useRef(null);
-	// Always use 0.2 as per user adjustment
-	const triggerAmount = 0.2;
-
-	const isSectionInView = useInView(sectionRef, { amount: triggerAmount });
 
 	return (
 		<>
@@ -185,11 +153,7 @@ export function SignatureExperiences() {
 				className='bg-white pt-0 md:pt-16 -mt-8 md:py-0 py-0'
 				containerClassName='px-0 md:px-6 lg:px-8'
 			>
-				<div
-					className='relative group h-[75vh] md:h-auto'
-					ref={sectionRef}
-					key={triggerAmount} // Force re-mount to update observer options
-				>
+				<div className='relative group h-[75vh] md:h-auto'>
 					<div
 						className='overflow-hidden h-full'
 						ref={emblaRef}
@@ -200,10 +164,6 @@ export function SignatureExperiences() {
 									key={exp.id}
 									exp={exp}
 									index={index}
-									shouldPlay={
-										isSectionInView &&
-										visibleIndices.includes(index)
-									}
 									isMuted={unmutedId !== exp.id}
 									onToggleMute={setUnmutedId}
 								/>

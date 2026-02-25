@@ -90,7 +90,7 @@ export function Footer() {
 				{/* Copyright */}
 				<div className='text-[10px] text-[#1f2b44]/50 uppercase tracking-wider text-center'>
 					<p className='mt-2'>
-						Ceilão Travel & Tours (Private) Limited:- PV 00349070 |
+						Ceilão Travel & Tours (Private) Limited - PV 00349070 |
 						Registered in Sri Lanka.
 					</p>
 					<p>

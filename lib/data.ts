@@ -162,8 +162,7 @@ export const experiences: Tour[] = [
 		poster: '/assets/thumbnail-2.webp',
 		description:
 			'Venture where the wild still reigns. Encounter leopards and untamed peaks from the refined comfort of a luxury tented lodge.',
-		overview:
-			'Discover Sri Lanka’s untamed beauty across vast national parks, misty mountains, and lush rainforests. Encounter leopards in Yala, explore Wilpattu’s wilderness, and trek through the Knuckles mountain range. A perfect expedition for nature lovers seeking adventure, biodiversity, and authentic wildlife encounters.',
+		overview: `Discover Sri Lanka's untamed beauty across vast national parks, misty mountains, and lush rainforests. Encounter leopards and explore the wilderness in Wilpattu and trek through the Knuckles mountain range.`,
 		itinerary: [
 			{
 				day: 'Day 1',
