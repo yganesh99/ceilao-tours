@@ -1,13 +1,25 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { MuteToggleButton } from '@/components/ui/MuteToggleButton';
+import { useInView } from 'framer-motion';
 
 export function Hero() {
 	const [isMuted, setIsMuted] = useState(true);
+	const sectionRef = useRef(null);
+	const isInView = useInView(sectionRef, { amount: 0.1 });
+
+	useEffect(() => {
+		if (!isInView) {
+			setIsMuted(true);
+		}
+	}, [isInView]);
 
 	return (
-		<section className='relative w-full h-[36vh] lg:h-screen overflow-hidden'>
+		<section
+			ref={sectionRef}
+			className='relative w-full h-[36vh] lg:h-screen overflow-hidden'
+		>
 			<div className='absolute inset-0 overflow-hidden'>
 				{/* Mobile (9:16) */}
 				<video

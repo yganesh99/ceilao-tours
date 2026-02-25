@@ -19,13 +19,16 @@ function ExperienceCard({
 	exp,
 	index,
 	shouldPlay,
+	isMuted,
+	onToggleMute,
 }: {
 	exp: (typeof experiences)[0];
 	index: number;
 	shouldPlay: boolean;
+	isMuted: boolean;
+	onToggleMute: (id: string | number | null) => void;
 }) {
 	const videoRef = useRef<HTMLVideoElement>(null);
-	const [isMuted, setIsMuted] = useState(true);
 
 	useEffect(() => {
 		let timeoutId: NodeJS.Timeout;
@@ -40,12 +43,15 @@ function ExperienceCard({
 			}, 500);
 		} else {
 			videoRef.current?.pause();
+			if (!isMuted) {
+				onToggleMute(null);
+			}
 		}
 
 		return () => {
 			clearTimeout(timeoutId);
 		};
-	}, [shouldPlay]);
+	}, [shouldPlay, isMuted, onToggleMute, exp.id]);
 
 	return (
 		<motion.div
@@ -81,7 +87,7 @@ function ExperienceCard({
 					{/* Sound Control */}
 					<MuteToggleButton
 						isMuted={isMuted}
-						onClick={() => setIsMuted((prev) => !prev)}
+						onClick={() => onToggleMute(isMuted ? exp.id : null)}
 						className='bottom-24 left-8 md:bottom-8 md:left-auto md:right-8'
 					/>
 				</div>
@@ -115,6 +121,7 @@ export function SignatureExperiences() {
 	});
 
 	const [visibleIndices, setVisibleIndices] = useState<number[]>([]);
+	const [unmutedId, setUnmutedId] = useState<string | number | null>(null);
 
 	const onScroll = useCallback(() => {
 		if (!emblaApi) return;
@@ -190,6 +197,8 @@ export function SignatureExperiences() {
 										isSectionInView &&
 										visibleIndices.includes(index)
 									}
+									isMuted={unmutedId !== exp.id}
+									onToggleMute={setUnmutedId}
 								/>
 							))}
 						</div>

@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { MuteToggleButton } from '@/components/ui/MuteToggleButton';
+import { useInView } from 'framer-motion';
 
 interface PageHeaderProps {
 	title?: string;
@@ -23,9 +24,18 @@ export function PageHeader({
 	videoSrc,
 }: PageHeaderProps) {
 	const [isMuted, setIsMuted] = useState(true);
+	const sectionRef = useRef(null);
+	const isInView = useInView(sectionRef, { amount: 0.1 });
+
+	useEffect(() => {
+		if (!isInView) {
+			setIsMuted(true);
+		}
+	}, [isInView]);
 
 	return (
 		<section
+			ref={sectionRef}
 			className={cn(
 				'relative h-[90vh] min-h-[400px] w-full flex items-center justify-center overflow-hidden',
 				className,
