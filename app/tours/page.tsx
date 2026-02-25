@@ -13,6 +13,18 @@ export default function ToursPage() {
 			/>
 
 			<Section className='bg-background'>
+				<div className='absolute inset-0 z-10 bg-black/40' />
+				<div className='relative z-20 text-center text-white px-4 space-y-4 max-w-4xl mx-auto'>
+					<h1 className='text-5xl md:text-7xl font-playfair font-bold text-white mb-6'>
+						The Island&apos;s Finest Journeys
+					</h1>
+					<p className='text-lg md:text-xl text-gray-200'>
+						Carefully crafted itineraries for the discerning
+						traveler
+					</p>
+				</div>
+			</Section>
+			<Section className='bg-background'>
 				<div className='container mx-auto px-6'>
 					<div className='max-w-3xl mx-auto text-center'>
 						<h2 className='text-3xl font-playfair text-primary mb-6'>
@@ -22,8 +34,8 @@ export default function ToursPage() {
 							At Ceilão Travel & Tours, we believe in travel that
 							honors the places we visit. Our commitment goes
 							beyond providing exceptional experiences; we strive
-							to protect Sri Lanka's natural beauty and uplift its
-							local communities.
+							to protect Sri Lanka&apos;s natural beauty and
+							uplift its local communities.
 						</p>
 						<p className='text-muted-foreground leading-relaxed'>
 							Every journey with us supports local artisans,

@@ -206,7 +206,7 @@ export default function TermsAndConditionsPage() {
 										<li>
 											15 to 28 days prior to arrival: 50%
 											cancellation fee or the equivalent
-											of the first two days' charges.
+											of the first two days&apos; charges.
 										</li>
 										<li>
 											29 days or more prior to arrival: No
@@ -224,7 +224,7 @@ export default function TermsAndConditionsPage() {
 									Customers cancelling through the company
 									(rather than the hotel directly) may receive
 									a cancellation confirmation code to avoid
-									"No-Show" charges from hotels.
+									&quot;No-Show&quot; charges from hotels.
 								</li>
 								<li>
 									<strong className='text-[#1f2b44]'>
@@ -257,10 +257,10 @@ export default function TermsAndConditionsPage() {
 									</strong>{' '}
 									Ceilão Travel & Tours shall not be liable
 									for any failure to perform its obligations
-									where such failure results from "Acts of
-									God" (including floods or monsoons), war,
-									strikes, pandemics, or government-imposed
-									lockdowns.
+									where such failure results from &quot;Acts
+									of God&quot; (including floods or monsoons),
+									war, strikes, pandemics, or
+									government-imposed lockdowns.
 								</li>
 								<li>
 									<strong className='text-[#1f2b44]'>
@@ -279,9 +279,9 @@ export default function TermsAndConditionsPage() {
 									</strong>{' '}
 									Visits to wildlife parks and participation
 									in safari tours are undertaken at the
-									client's own risk. Safari vehicles typically
-									provide only basic insurance coverage as per
-									local regulations.
+									client&apos;s own risk. Safari vehicles
+									typically provide only basic insurance
+									coverage as per local regulations.
 								</li>
 							</ul>
 						</Section>

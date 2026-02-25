@@ -81,7 +81,7 @@ export function ItineraryAccordion({
 												ease: 'easeInOut',
 											}}
 										>
-											<div className='px-4 pb-4 md:px-5 md:pb-5 text-muted-foreground leading-relaxed pt-2 border-t border-slate-50'>
+											<div className='px-4 pb-4 md:px-5 md:pb-5 text-muted-foreground text-sm sm:text-lg leading-relaxed pt-2 border-t border-slate-50'>
 												<p>{item.description}</p>
 											</div>
 										</motion.div>

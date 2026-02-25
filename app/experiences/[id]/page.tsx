@@ -48,7 +48,7 @@ export default async function ExperiencePage({ params }: Props) {
 				subtitle={tour.subtitle || tour.category || 'Experience'}
 				image={headerImage}
 				videoSrc={tour.video}
-				className='h-[36vh] min-h-0 lg:h-screen lg:min-h-screen'
+				className='h-[70vw] xs:h-[65vw] sm:h-[75vw] lg:h-screen overflow-hidden'
 			/>
 
 			<Section className='bg-background'>
@@ -58,7 +58,7 @@ export default async function ExperiencePage({ params }: Props) {
 						<AnimatedHeading className='text-3xl font-playfair text-[#1f2b44] mb-6'>
 							Overview
 						</AnimatedHeading>
-						<p className='text-muted-foreground text-lg leading-relaxed'>
+						<p className='text-muted-foreground text-sm sm:text-lg leading-relaxed'>
 							{tour.overview}
 						</p>
 						<div className='flex flex-wrap gap-4 mt-6 justify-center md:justify-start'>
@@ -135,7 +135,7 @@ export default async function ExperiencePage({ params }: Props) {
 											key={index}
 											className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b border-slate-100 last:border-0 last:pb-0'
 										>
-											<div className='font-medium text-[#1f2b44] mb-3 md:mb-0 text-lg'>
+											<div className='font-bold text-[#1f2b44] mb-3 md:mb-0 text-lg'>
 												{option.title}
 											</div>
 											<div className='flex flex-row gap-3 items-center whitespace-nowrap bg-background px-4 py-2 rounded-lg border border-slate-50'>

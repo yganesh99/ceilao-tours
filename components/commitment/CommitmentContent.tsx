@@ -78,8 +78,8 @@ const sections = [
 					<li>
 						<strong>Ethical Tourism:</strong> Partnering only with
 						operators who adhere to strict animal welfare standards
-						and promoting "Travel Kindly" principles that respect
-						local traditions and biodiversity.
+						and promoting &quot;Travel Kindly&quot; principles that
+						respect local traditions and biodiversity.
 					</li>
 				</ul>
 			</>
@@ -127,8 +127,8 @@ export function CommitmentContent() {
 						>
 							{/* Text Section */}
 							<div className={`flex-1 md:mx-auto text-left`}>
-								<h2 className='text-2xl md:text-4xl font-playfair text-[#1f2b44] mb-6'>
-									{section.title}
+								<h2 className='text-3xl font-playfair text-[#1f2b44]'>
+									The &quot;Ceylon Collection&quot; Standard
 								</h2>
 								<div
 									className={`w-20 h-0.5 bg-accent mb-6`}

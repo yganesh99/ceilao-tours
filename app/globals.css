@@ -17,6 +17,8 @@
 
 	--color-accent: var(--accent);
 	--color-accent-foreground: var(--accent-foreground);
+
+	--breakpoint-xs: 575px;
 }
 
 :root {

@@ -129,20 +129,27 @@ export function SignatureExperiences() {
 		setVisibleIndices(slidesInView);
 	}, [emblaApi]);
 
+	const onInit = useCallback(() => {
+		if (!emblaApi) return;
+		const slidesInView = emblaApi.slidesInView();
+		setVisibleIndices(slidesInView);
+	}, [emblaApi]);
+
 	useEffect(() => {
 		if (!emblaApi) return;
 
-		onScroll();
+		emblaApi.on('init', onInit);
+		emblaApi.on('reInit', onInit);
 		emblaApi.on('select', onScroll);
 		emblaApi.on('scroll', onScroll);
-		emblaApi.on('reInit', onScroll);
 
 		return () => {
+			emblaApi.off('init', onInit);
+			emblaApi.off('reInit', onInit);
 			emblaApi.off('select', onScroll);
 			emblaApi.off('scroll', onScroll);
-			emblaApi.off('reInit', onScroll);
 		};
-	}, [emblaApi, onScroll]);
+	}, [emblaApi, onScroll, onInit]);
 
 	const scrollPrev = useCallback(() => {
 		if (emblaApi) emblaApi.scrollPrev();

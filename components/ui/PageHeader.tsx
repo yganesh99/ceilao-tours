@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { MuteToggleButton } from '@/components/ui/MuteToggleButton';
@@ -23,21 +23,22 @@ export function PageHeader({
 	isVideo = false,
 	videoSrc,
 }: PageHeaderProps) {
-	const [isMuted, setIsMuted] = useState(true);
+	const [isMutedState, setIsMutedState] = useState(true);
 	const sectionRef = useRef(null);
 	const isInView = useInView(sectionRef, { amount: 0.1 });
 
-	useEffect(() => {
-		if (!isInView) {
-			setIsMuted(true);
-		}
-	}, [isInView]);
+	// Always mute when out of view, otherwise respect user's explicit choice
+	const isMuted = !isInView || isMutedState;
+
+	const toggleMute = () => {
+		setIsMutedState(!isMuted);
+	};
 
 	return (
 		<section
 			ref={sectionRef}
 			className={cn(
-				'relative h-[90vh] min-h-[400px] w-full flex items-center justify-center overflow-hidden',
+				'relative w-full flex items-center justify-center overflow-hidden',
 				className,
 			)}
 		>
@@ -53,7 +54,7 @@ export function PageHeader({
 				)}
 				{videoSrc && (
 					<video
-						className='absolute inset-0 w-full h-full object-contain md:object-cover object-[20%_100%] bg-black'
+						className='absolute inset-0 w-full h-full object-contain object-[20%_100%] sm:object-cover bg-black'
 						autoPlay
 						muted={isMuted}
 						loop
@@ -91,7 +92,7 @@ export function PageHeader({
 				{videoSrc && (
 					<MuteToggleButton
 						isMuted={isMuted}
-						onClick={() => setIsMuted((prev) => !prev)}
+						onClick={toggleMute}
 						className='bottom-8 right-8'
 					/>
 				)}

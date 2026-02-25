@@ -18,12 +18,12 @@ export function Hero() {
 	return (
 		<section
 			ref={sectionRef}
-			className='relative w-full h-[36vh] lg:h-screen overflow-hidden'
+			className='relative w-full h-[75vw] xs:h-[65vw] sm:h-[75vw] lg:h-screen overflow-hidden'
 		>
 			<div className='absolute inset-0 overflow-hidden'>
 				{/* Mobile (9:16) */}
 				<video
-					className='absolute inset-0 w-full h-full object-contain object-[20%_100%] sm:hidden bg-black'
+					className='absolute inset-0 w-full h-full object-contain object-[20%_100%] xs:hidden bg-black'
 					autoPlay
 					muted={isMuted}
 					loop
@@ -39,7 +39,7 @@ export function Hero() {
 
 				{/* Tablet (3:4) */}
 				<video
-					className='absolute inset-0 w-full h-full object-cover hidden sm:block md:hidden'
+					className='absolute inset-0 w-full h-full object-contain object-[20%_100%] hidden xs:block sm:hidden'
 					autoPlay
 					muted={isMuted}
 					loop
@@ -55,7 +55,7 @@ export function Hero() {
 
 				{/* Desktop (16:9) */}
 				<video
-					className='absolute inset-0 w-full h-[3/4] object-cover hidden md:block'
+					className='absolute inset-0 w-full h-full object-cover hidden sm:block'
 					autoPlay
 					muted={isMuted}
 					loop
