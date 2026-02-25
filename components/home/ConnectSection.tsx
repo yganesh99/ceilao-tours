@@ -7,12 +7,12 @@ import Link from 'next/link';
 const socialLinks = [
 	{
 		name: 'Instagram',
-		href: '#',
+		href: 'https://www.instagram.com/ceilao.travels?igsh=NHR2eHZmdDhsaDY=',
 		icon: Instagram,
 	},
 	{
 		name: 'Facebook',
-		href: '#',
+		href: 'https://www.facebook.com/share/18869zyGwa/?mibextid=wwXIfr',
 		icon: Facebook,
 	},
 	{

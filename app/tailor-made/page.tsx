@@ -104,8 +104,8 @@ export default function TailorMadePage() {
 
 								<div className='space-y-4'>
 									<a
-										// href='https://instagram.com/ceilao.travels'
-										onClick={() => setIsModalOpen(true)}
+										href='https://www.instagram.com/ceilao.travels?igsh=NHR2eHZmdDhsaDY='
+										// onClick={() => setIsModalOpen(true)}
 										target='_blank'
 										rel='noopener noreferrer'
 										className='flex items-center gap-4 group'
@@ -119,8 +119,8 @@ export default function TailorMadePage() {
 									</a>
 
 									<a
-										// href='https://tiktok.com/@ceilao.travels'
-										onClick={() => setIsModalOpen(true)}
+										href='https://www.tiktok.com/@ceilao.travels?_r=1&_t=ZS-94CF0CH815A'
+										// onClick={() => setIsModalOpen(true)}
 										target='_blank'
 										rel='noopener noreferrer'
 										className='flex items-center gap-4 group'
@@ -134,8 +134,8 @@ export default function TailorMadePage() {
 									</a>
 
 									<a
-										// href='https://facebook.com/CeilaoTravelAndTours'
-										onClick={() => setIsModalOpen(true)}
+										href='https://www.facebook.com/share/18869zyGwa/?mibextid=wwXIfr'
+										// onClick={() => setIsModalOpen(true)}
 										target='_blank'
 										rel='noopener noreferrer'
 										className='flex items-center gap-4 group'
