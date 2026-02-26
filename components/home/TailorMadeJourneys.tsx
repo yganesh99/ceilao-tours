@@ -89,7 +89,7 @@ export function TailorMadeJourneys() {
 						</ul>
 						<div className='pt-6'>
 							<Link
-								href={`https://wa.me/94777123456?text=Hi, I am interested in booking the ${''} package.`}
+								href={`https://wa.me/94771319489?text=Hi, I am interested in booking the ${''} package.`}
 								target='_blank'
 								rel='noopener noreferrer'
 							>
