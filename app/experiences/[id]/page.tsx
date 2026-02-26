@@ -63,9 +63,10 @@ export default async function ExperiencePage({ params }: Props) {
 				<div className='max-w-4xl mx-auto'>
 					{/* Overview */}
 					<div className='mb-12 text-center md:text-left'>
-						<AnimatedHeading className='text-3xl font-playfair text-[#1f2b44] mb-6'>
+						<AnimatedHeading className='text-3xl font-playfair text-[#1f2b44] mb-4'>
 							Overview
 						</AnimatedHeading>
+						<div className='w-20 h-0.5 bg-accent mx-auto mb-4' />
 						<p className='text-muted-foreground text-sm sm:text-lg leading-relaxed'>
 							{tour.overview}
 						</p>
@@ -80,18 +81,20 @@ export default async function ExperiencePage({ params }: Props) {
 
 					{/* Itinerary */}
 					<div className='mb-16'>
-						<AnimatedHeading className='text-3xl font-playfair text-[#1f2b44] mb-6 text-center md:text-left'>
+						<AnimatedHeading className='text-3xl font-playfair text-[#1f2b44] mb-4 text-center md:text-left'>
 							Itinerary
 						</AnimatedHeading>
+						<div className='w-18 h-0.5 bg-accent mx-auto mb-4' />
 						<ItineraryAccordion itinerary={tour.itinerary} />
 					</div>
 
 					{/* Excursions */}
 					{tour.excursions && tour.excursions.items.length > 0 && (
 						<div className='mb-16'>
-							<AnimatedHeading className='text-3xl font-playfair text-[#1f2b44] mb-6 text-center md:text-left'>
+							<AnimatedHeading className='text-3xl font-playfair text-[#1f2b44] mb-4 text-center md:text-left'>
 								Add-On Excursions
 							</AnimatedHeading>
+							<div className='w-32 h-0.5 bg-accent mx-auto mb-4' />
 							{/* {tour.excursions.theme && (
 								<p className='text-accent font-semibold text-lg mb-8 text-center md:text-left'>
 									Theme: {tour.excursions.theme}
@@ -128,9 +131,10 @@ export default async function ExperiencePage({ params }: Props) {
 					{/* Pricing */}
 					{tour.pricing && tour.pricing.length > 0 && (
 						<div className='mb-16'>
-							<h2 className='text-3xl font-playfair text-[#1f2b44] mb-8 text-center md:text-left'>
+							<AnimatedHeading className='text-3xl font-playfair text-[#1f2b44] mb-4 text-center md:text-left'>
 								Pricing
-							</h2>
+							</AnimatedHeading>
+							<div className='w-16 h-0.5 bg-accent mx-auto mb-4' />
 							<div className='bg-white rounded-2xl shadow-sm border border-slate-100 p-6 md:p-8'>
 								{tour.pricingNote && (
 									<p className='text-sm text-accent uppercase tracking-wider font-bold mb-6 text-center md:text-left'>
@@ -172,7 +176,7 @@ export default async function ExperiencePage({ params }: Props) {
 							tailor this journey to your rhythm.
 						</p>
 						<Link
-							href={`https://wa.me/94777123456?text=Hi, I am interested in booking the ${tour.title} package.`}
+							href={`https://wa.me/94771319589?text=Hi, I am interested in booking the ${tour.title} package.`}
 							target='_blank'
 							rel='noopener noreferrer'
 						>

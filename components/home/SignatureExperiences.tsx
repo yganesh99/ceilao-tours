@@ -90,14 +90,14 @@ function ExperienceCard({
 					<MuteToggleButton
 						isMuted={isMuted}
 						onClick={() => onToggleMute(isMuted ? exp.id : null)}
-						className='bottom-24 left-8 md:bottom-8 md:left-auto md:right-8'
+						className='bottom-8 right-8 md:bottom-8 md:left-auto md:right-8'
 					/>
 				</div>
 				<div className='absolute bottom-0 left-0 w-full p-8 md:p-0 z-20 md:static space-y-2 text-left pointer-events-none'>
 					{/* <span className='text-xs font-bold uppercase tracking-widest text-accent'>
 						{exp.category}
 					</span>  */}
-					<h3 className='text-3xl font-playfair text-accent pointer-events-auto'>
+					<h3 className='text-lg xs:text-xl sm:text-2xl font-playfair text-accent pointer-events-auto'>
 						{exp.title}
 					</h3>
 					<p className='text-gray-200 md:text-[#1f2b44] text-sm leading-relaxed max-w-md pointer-events-auto'>

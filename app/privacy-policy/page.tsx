@@ -338,7 +338,7 @@ export default function PrivacyPolicyPage() {
 											className='flex items-center gap-4 hover:text-accent transition-colors'
 										>
 											<Phone className='w-5 h-5 text-accent' />
-											<span>+94 77 131 9489</span>
+											<span>+94 77 131 9589</span>
 										</a>
 										<div className='flex items-start gap-4'>
 											<MapPin className='w-5 h-5 text-accent mt-1' />

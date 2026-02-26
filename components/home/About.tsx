@@ -33,7 +33,7 @@ export default function About() {
 	return (
 		<Section
 			id='about'
-			className='bg-white py-12 md:py-24'
+			className='bg-white py-8 md:py-24'
 		>
 			<div className='flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-6xl mx-auto'>
 				{/* Logo Side */}
@@ -42,16 +42,16 @@ export default function About() {
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.6 }}
 					viewport={{ once: true }}
-					className='w-full md:w-1/3 flex flex-row md:flex-col items-center justify-center gap-8'
+					className='w-full md:w-1/3 flex flex-row md:flex-col items-center justify-center md:gap-8'
 				>
-					<div className='w-20 md:w-28'>
+					<div className='flex-1 md:flex-none flex justify-end md:justify-center pr-10 md:pr-0 md:w-28'>
 						<Image
 							src='https://ceilao-travel.b-cdn.net/collection-logo.webp'
 							alt='Ceilão Collection Logo'
 							width={0}
 							height={0}
 							sizes='100vw'
-							className='w-full h-auto mt-4 md:mt-0'
+							className='w-20 md:w-full h-auto mt-4 md:mt-0'
 						/>
 					</div>
 					{/* Separator */}
@@ -60,16 +60,16 @@ export default function About() {
 						whileInView={{ opacity: 1, scaleY: 1 }}
 						transition={{ duration: 0.6, delay: 0.1 }}
 						viewport={{ once: true }}
-						className='md:hidden w-px h-24 bg-[#cea263]/60'
+						className='md:hidden shrink-0 w-px h-24 bg-[#cea263]/60'
 					/>
-					<div className='w-32 md:w-64'>
+					<div className='flex-1 md:flex-none flex justify-start md:justify-center pl-8 md:pl-0 md:w-64 mt-2'>
 						<Image
 							src='https://ceilao-travel.b-cdn.net/logo.webp'
 							alt='Ceilão Logo'
 							width={0}
 							height={0}
 							sizes='100vw'
-							className='w-full h-auto'
+							className='w-32 md:w-full h-auto'
 						/>
 					</div>
 				</m.div>
@@ -99,7 +99,7 @@ export default function About() {
 					className='w-full md:w-2/3 text-center md:text-left space-y-8'
 				>
 					<div className='space-y-4'>
-						<h1 className='mt-2 text-2xl md:text-4xl lg:text-5xl font-serif text-[#1f2b44]'>
+						<h1 className='mt-0 text-2xl md:text-4xl lg:text-5xl font-serif text-[#1f2b44]'>
 							Our Story
 						</h1>
 						<div className='w-24 h-px bg-accent mt-4 mx-auto md:mx-0' />
@@ -136,13 +136,15 @@ export default function About() {
 						<div className='flex items-center gap-4'>
 							{socialLinks.map((social, index) => (
 								<Fragment key={social.name}>
-									<button
-										onClick={() => setIsModalOpen(true)}
-										className='text-primary/60 hover:text-accent transition-colors duration-300 transform hover:scale-110'
+									<a
+										href={social.href}
+										target='_blank'
+										rel='noopener noreferrer'
+										className='text-primary/60 hover:text-accent transition-colors duration-300 transform hover:scale-110 flex items-center justify-center p-1'
 										aria-label={`Follow us on ${social.name}`}
 									>
 										<social.icon className='w-5 h-5 md:w-6 md:h-6' />
-									</button>
+									</a>
 									{index < socialLinks.length - 1 && (
 										<div className='w-px h-4 bg-[#cea263]' />
 									)}

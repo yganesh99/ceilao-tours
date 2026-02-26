@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { MuteToggleButton } from '@/components/ui/MuteToggleButton';
-import { useInView } from 'framer-motion';
+import { useInView, motion } from 'framer-motion';
 
 interface PageHeaderProps {
 	title?: string;
@@ -98,7 +98,12 @@ export function PageHeader({
 				)}
 			</div>
 
-			<div className='relative z-10 text-center text-white px-4 space-y-4 mt-20 animate-in fade-in slide-in-from-bottom-8 duration-700'>
+			<motion.div
+				initial={{ opacity: 1 }}
+				animate={{ opacity: 0 }}
+				transition={{ duration: 3, delay: 2, ease: 'easeInOut' }}
+				className='relative z-10 text-center text-white px-4 space-y-4 mt-20'
+			>
 				{subtitle && (
 					<span className='block text-accent text-xs md:text-base font-medium uppercase tracking-[0.2em] mb-2'>
 						{subtitle}
@@ -107,7 +112,7 @@ export function PageHeader({
 				<h1 className='text-lg md:text-6xl font-bold font-playfair'>
 					{title}
 				</h1>
-			</div>
+			</motion.div>
 		</section>
 	);
 }
