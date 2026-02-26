@@ -3,8 +3,13 @@
 import { useState, useRef, useEffect } from 'react';
 import { MuteToggleButton } from '@/components/ui/MuteToggleButton';
 import { useInView } from 'framer-motion';
+import { preload } from 'react-dom';
 
 export function Hero() {
+	preload('https://ceilao-travel.b-cdn.net/assets/hero-poster.jpg', {
+		as: 'image',
+		fetchPriority: 'high',
+	});
 	const [isMuted, setIsMuted] = useState(true);
 	const sectionRef = useRef(null);
 	const isInView = useInView(sectionRef, { amount: 0.1 });
@@ -29,10 +34,12 @@ export function Hero() {
 					loop
 					playsInline
 					preload='metadata'
-					// poster='/assets/hero-m-poster.jpg'
+					// @ts-expect-error React 19 supports fetchpriority but types might not
+					fetchPriority='high'
+					poster='https://ceilao-travel.b-cdn.net/assets/hero-poster.jpg'
 				>
 					<source
-						src='/assets/hero-s.mp4'
+						src='https://ceilao-travel.b-cdn.net/assets/hero-s.mp4'
 						type='video/mp4'
 					/>
 				</video>
@@ -45,10 +52,12 @@ export function Hero() {
 					loop
 					playsInline
 					preload='metadata'
-					// poster='/assets/hero-t-poster.jpg'
+					// @ts-expect-error React 19 supports fetchpriority but types might not
+					fetchPriority='high'
+					poster='https://ceilao-travel.b-cdn.net/assets/hero-poster.jpg'
 				>
 					<source
-						src='/assets/hero-s.mp4'
+						src='https://ceilao-travel.b-cdn.net/assets/hero-s.mp4'
 						type='video/mp4'
 					/>
 				</video>
@@ -61,10 +70,12 @@ export function Hero() {
 					loop
 					playsInline
 					preload='metadata'
-					// poster='/assets/hero-d-poster.jpg'
+					// @ts-expect-error React 19 supports fetchpriority but types might not
+					fetchPriority='high'
+					poster='https://ceilao-travel.b-cdn.net/assets/hero-poster.jpg'
 				>
 					<source
-						src='/assets/hero-s.mp4'
+						src='https://ceilao-travel.b-cdn.net/assets/hero-s.mp4'
 						type='video/mp4'
 					/>
 				</video>

@@ -46,7 +46,7 @@ export default function About() {
 				>
 					<div className='w-20 md:w-28'>
 						<Image
-							src='/assets/collection-logo.webp'
+							src='https://ceilao-travel.b-cdn.net/assets/collection-logo.webp'
 							alt='Ceilão Collection Logo'
 							width={0}
 							height={0}
@@ -56,7 +56,7 @@ export default function About() {
 					</div>
 					<div className='w-32 md:w-64'>
 						<Image
-							src='/assets/logo.webp'
+							src='https://ceilao-travel.b-cdn.net/assets/logo.webp'
 							alt='Ceilão Logo'
 							width={0}
 							height={0}

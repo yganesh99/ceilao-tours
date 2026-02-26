@@ -15,13 +15,12 @@ export function TailorMadeJourneys() {
 			<div className='grid grid-cols-1 md:grid-cols-2 min-h-[600px] border-accent border-2'>
 				{/* Image Side */}
 				{/* Image Side */}
-				<div className='relative w-full md:h-full'>
+				<div className='relative w-full aspect-square md:aspect-auto md:h-[600px]'>
 					<Image
-						src='/assets/map.webp'
-						alt='Tailor Made Journey'
-						width={200}
-						height={200}
-						className='w-full h-auto md:h-full object-cover lg:object-contain'
+						src='https://ceilao-travel.b-cdn.net/assets/map.webp'
+						alt='Sri Lanka Map'
+						fill
+						className='object-contain lg:object-cover sm:ml-4 lg:ml-8 pl-10 md:-ml-8 opacity-40 mix-blend-screen z-0'
 					/>
 				</div>
 
@@ -37,7 +36,7 @@ export function TailorMadeJourneys() {
 						<span className='text-accent text-sm font-medium uppercase tracking-widest'>
 							Bespoke Travel
 						</span>
-						<h2 className='text-4xl md:text-5xl font-[family-name:var(--font-playfair)] text-[#1f2b44]'>
+						<h2 className='text-3xl md:text-5xl lg:text-5xl font-playfair font-bold text-[#1f2b44]'>
 							Crafting Your <br />
 							Perfect Escape
 						</h2>

@@ -17,10 +17,10 @@ export function Footer() {
 				<div className='relative w-40 h-20 mb-8 opacity-90 hover:opacity-100 transition-opacity'>
 					<Link href='/'>
 						<Image
-							src='/assets/ceilao-tours-logo.webp'
-							alt='Ceilao Travel'
+							src='https://ceilao-travel.b-cdn.net/assets/ceilao-tours-logo.webp'
+							alt='Ceilão Travel Logo'
 							fill
-							className='object-cover'
+							className='object-contain'
 							priority
 						/>
 					</Link>

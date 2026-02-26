@@ -23,6 +23,12 @@ const nextConfig: NextConfig = {
 				port: '',
 				pathname: '/**',
 			},
+			{
+				protocol: 'https',
+				hostname: 'ceilao-travel.b-cdn.net',
+				port: '',
+				pathname: '/**',
+			},
 		],
 	},
 };

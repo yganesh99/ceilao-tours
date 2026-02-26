@@ -1,10 +1,25 @@
 import { Hero } from '@/components/home/Hero';
-import { ConnectSection } from '@/components/home/ConnectSection';
-import { FoundationSection } from '@/components/home/FoundationSection';
-import { SignatureExperiences } from '@/components/home/SignatureExperiences';
-import { TailorMadeJourneys } from '@/components/home/TailorMadeJourneys';
-import { TrustLegacy } from '@/components/home/TrustLegacy';
-import About from '@/components/home/About';
+import dynamic from 'next/dynamic';
+
+const About = dynamic(() => import('@/components/home/About'));
+const SignatureExperiences = dynamic(() =>
+	import('@/components/home/SignatureExperiences').then(
+		(mod) => mod.SignatureExperiences,
+	),
+);
+const TailorMadeJourneys = dynamic(() =>
+	import('@/components/home/TailorMadeJourneys').then(
+		(mod) => mod.TailorMadeJourneys,
+	),
+);
+const TrustLegacy = dynamic(() =>
+	import('@/components/home/TrustLegacy').then((mod) => mod.TrustLegacy),
+);
+const FoundationSection = dynamic(() =>
+	import('@/components/home/FoundationSection').then(
+		(mod) => mod.FoundationSection,
+	),
+);
 
 export default function Home() {
 	return (
