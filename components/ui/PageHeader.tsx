@@ -54,7 +54,7 @@ export function PageHeader({
 				)}
 				{videoSrc && (
 					<video
-						className='absolute inset-0 w-full h-full object-contain object-[20%_100%] sm:object-cover bg-black'
+						className='absolute inset-0 w-full h-full object-contain object-[20%_100%] sm:object-cover sm:object-[0%_0%] bg-black'
 						autoPlay
 						muted={isMuted}
 						loop
