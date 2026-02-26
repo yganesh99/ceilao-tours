@@ -42,8 +42,8 @@ export const experiences: Tour[] = [
 		id: 1,
 		title: 'SOUL OF CEYLON',
 		category: 'Culture & Heritage',
-		video: 'https://ceilao-travel.b-cdn.net/assets/culture-small.mp4',
-		poster: 'https://ceilao-travel.b-cdn.net/assets/thumbnail-1.webp',
+		video: 'https://ceilao-travel.b-cdn.net/culture-small.mp4',
+		poster: 'https://ceilao-travel.b-cdn.net/thumbnail-1.webp',
 		description:
 			'Trace 2,600 years of history through ancient kingdoms and mist-veiled hills. A journey into the timeless rhythm and colonial grace of our island home.',
 		overview:
@@ -158,8 +158,8 @@ export const experiences: Tour[] = [
 		id: 2,
 		title: 'WILD CEYLON',
 		category: 'Wildlife',
-		video: 'https://ceilao-travel.b-cdn.net/assets/nature-small.mp4',
-		poster: 'https://ceilao-travel.b-cdn.net/assets/thumbnail-2.webp',
+		video: 'https://ceilao-travel.b-cdn.net/nature-small.mp4',
+		poster: 'https://ceilao-travel.b-cdn.net/thumbnail-2.webp',
 		description:
 			'Venture where the wild still reigns. Encounter leopards and untamed peaks from the refined comfort of a luxury tented lodge.',
 		overview: `Discover Sri Lanka's untamed beauty across vast national parks, misty mountains, and lush rainforests. Encounter leopards and explore the wilderness in Wilpattu and trek through the Knuckles mountain range.`,
@@ -266,8 +266,8 @@ export const experiences: Tour[] = [
 		id: 3,
 		title: 'CEYLON FLAVOURS & TEA TRAILS',
 		category: 'Hill Country',
-		video: 'https://ceilao-travel.b-cdn.net/assets/hill-small.mp4',
-		poster: 'https://ceilao-travel.b-cdn.net/assets/thumbnail-3.webp',
+		video: 'https://ceilao-travel.b-cdn.net/hill-small.mp4',
+		poster: 'https://ceilao-travel.b-cdn.net/thumbnail-3.webp',
 		description:
 			'An odyssey of scent and taste. Reside in colonial bungalows amidst emerald plantations while discovering the rich culinary traditions of our heritage.',
 		overview:
@@ -348,8 +348,8 @@ export const experiences: Tour[] = [
 		id: 4,
 		title: 'ISLAND OF ADVENTURE',
 		category: 'Experiences',
-		video: 'https://ceilao-travel.b-cdn.net/assets/experiences-small.mp4',
-		poster: 'https://ceilao-travel.b-cdn.net/assets/thumbnail-5.webp',
+		video: 'https://ceilao-travel.b-cdn.net/experiences-small.mp4',
+		poster: 'https://ceilao-travel.b-cdn.net/thumbnail-5.webp',
 		description:
 			'Beyond the map lies a world of motion. From hidden waterfalls to mountain summits, embrace the pulse of Sri Lanka’s most thrilling landscapes.',
 		overview:
@@ -451,8 +451,8 @@ export const experiences: Tour[] = [
 		id: 5,
 		title: 'WELLNESS ESCAPE',
 		category: 'Well-being',
-		video: 'https://ceilao-travel.b-cdn.net/assets/wellness-small.mp4',
-		poster: 'https://ceilao-travel.b-cdn.net/assets/thumbnail-4.webp',
+		video: 'https://ceilao-travel.b-cdn.net/wellness-small.mp4',
+		poster: 'https://ceilao-travel.b-cdn.net/thumbnail-4.webp',
 		description:
 			'A sanctuary for the senses. Reconnect through the wisdom of Ayurveda and coastal stillness in a journey designed to align body, mind, and soul.',
 		overview:

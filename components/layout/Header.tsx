@@ -57,7 +57,7 @@ export function Header() {
 					<div className='relative h-12 md:h-14 lg:h-16 aspect-2/1 m-2'>
 						<Link href='/'>
 							<Image
-								src='https://ceilao-travel.b-cdn.net/assets/logo.webp'
+								src='https://ceilao-travel.b-cdn.net/logo.webp'
 								alt='Ceilão Travel'
 								fill
 								className='object-contain'

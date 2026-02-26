@@ -6,7 +6,7 @@ import { useInView } from 'framer-motion';
 import { preload } from 'react-dom';
 
 export function Hero() {
-	preload('https://ceilao-travel.b-cdn.net/assets/hero-poster.jpg', {
+	preload('https://ceilao-travel.b-cdn.net/hero-poster.jpg', {
 		as: 'image',
 		fetchPriority: 'high',
 	});
@@ -36,10 +36,10 @@ export function Hero() {
 					preload='metadata'
 					// @ts-expect-error React 19 supports fetchpriority but types might not
 					fetchPriority='high'
-					poster='https://ceilao-travel.b-cdn.net/assets/hero-poster.jpg'
+					poster='https://ceilao-travel.b-cdn.net/hero-poster.jpg'
 				>
 					<source
-						src='https://ceilao-travel.b-cdn.net/assets/hero-s.mp4'
+						src='https://ceilao-travel.b-cdn.net/hero-s.mp4'
 						type='video/mp4'
 					/>
 				</video>
@@ -54,10 +54,10 @@ export function Hero() {
 					preload='metadata'
 					// @ts-expect-error React 19 supports fetchpriority but types might not
 					fetchPriority='high'
-					poster='https://ceilao-travel.b-cdn.net/assets/hero-poster.jpg'
+					poster='https://ceilao-travel.b-cdn.net/hero-poster.jpg'
 				>
 					<source
-						src='https://ceilao-travel.b-cdn.net/assets/hero-s.mp4'
+						src='https://ceilao-travel.b-cdn.net/hero-s.mp4'
 						type='video/mp4'
 					/>
 				</video>
@@ -72,10 +72,10 @@ export function Hero() {
 					preload='metadata'
 					// @ts-expect-error React 19 supports fetchpriority but types might not
 					fetchPriority='high'
-					poster='https://ceilao-travel.b-cdn.net/assets/hero-poster.jpg'
+					poster='https://ceilao-travel.b-cdn.net/hero-poster.jpg'
 				>
 					<source
-						src='https://ceilao-travel.b-cdn.net/assets/hero-s.mp4'
+						src='https://ceilao-travel.b-cdn.net/hero-s.mp4'
 						type='video/mp4'
 					/>
 				</video>

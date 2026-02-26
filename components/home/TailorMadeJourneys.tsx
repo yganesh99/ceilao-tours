@@ -17,7 +17,7 @@ export function TailorMadeJourneys() {
 				{/* Image Side */}
 				<div className='relative w-full aspect-square md:aspect-auto md:h-[600px]'>
 					<Image
-						src='https://ceilao-travel.b-cdn.net/assets/map.webp'
+						src='https://ceilao-travel.b-cdn.net/map.webp'
 						alt='Sri Lanka Map'
 						fill
 						className='object-contain lg:object-cover sm:ml-4 lg:ml-8 pl-10 md:-ml-8 opacity-40 mix-blend-screen z-0'
