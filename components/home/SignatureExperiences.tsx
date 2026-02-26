@@ -120,7 +120,7 @@ export function SignatureExperiences() {
 	const [emblaRef, emblaApi] = useEmblaCarousel({
 		align: 'start',
 		loop: false,
-		dragFree: true,
+		dragFree: false,
 	});
 
 	const [unmutedId, setUnmutedId] = useState<string | number | null>(null);
