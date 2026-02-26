@@ -15,17 +15,17 @@ export default function About() {
 	const socialLinks = [
 		{
 			name: 'Instagram',
-			href: 'https://www.instagram.com/ceilao.travels?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
+			href: 'https://www.instagram.com/ceilao.travels?igsh=NHR2eHZmdDhsaDY=',
 			icon: Instagram,
 		},
 		{
 			name: 'Facebook',
-			href: '#',
+			href: 'https://www.facebook.com/share/18869zyGwa/?mibextid=wwXIfr',
 			icon: Facebook,
 		},
 		{
 			name: 'TikTok',
-			href: '#',
+			href: 'https://www.tiktok.com/@ceilao.travels?_r=1&_t=ZS-94CF0CH815A',
 			icon: TikTokIcon,
 		},
 	];
@@ -54,6 +54,14 @@ export default function About() {
 							className='w-full h-auto mt-4 md:mt-0'
 						/>
 					</div>
+					{/* Separator */}
+					<m.div
+						initial={{ opacity: 0, scaleY: 0 }}
+						whileInView={{ opacity: 1, scaleY: 1 }}
+						transition={{ duration: 0.6, delay: 0.1 }}
+						viewport={{ once: true }}
+						className='md:hidden w-px h-24 bg-[#cea263]/60'
+					/>
 					<div className='w-32 md:w-64'>
 						<Image
 							src='https://ceilao-travel.b-cdn.net/logo.webp'
@@ -72,7 +80,7 @@ export default function About() {
 					whileInView={{ opacity: 1, scaleY: 1 }}
 					transition={{ duration: 0.6, delay: 0.1 }}
 					viewport={{ once: true }}
-					className='hidden md:block w-px h-96 bg-[#cea263]/40'
+					className='hidden md:block w-px h-96 bg-[#cea263]/60'
 				/>
 				{/* <m.div
 					initial={{ opacity: 0, scaleX: 0 }}
@@ -94,7 +102,7 @@ export default function About() {
 						<h1 className='mt-2 text-2xl md:text-4xl lg:text-5xl font-serif text-[#1f2b44]'>
 							Our Story
 						</h1>
-						<div className='w-24 h-px bg-accent mt-6 mx-auto md:mx-0' />
+						<div className='w-24 h-px bg-accent mt-4 mx-auto md:mx-0' />
 						<p className='text-black/80 text-sm lg:text-lg leading-relaxed font-light'>
 							Ceilão Travel &amp; Tours was founded on the belief
 							that the true essence of Sri Lanka lies beyond the

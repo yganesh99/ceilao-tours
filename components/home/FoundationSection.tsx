@@ -36,7 +36,7 @@ export function FoundationSection() {
 					whileInView={{ opacity: 1, scaleY: 1 }}
 					transition={{ duration: 0.6, delay: 0.1 }}
 					viewport={{ once: true }}
-					className='hidden md:block w-px h-48 bg-[#cea263]/40'
+					className='hidden md:block w-px h-48 bg-[#cea263]/60'
 				/>
 
 				{/* Text Side */}

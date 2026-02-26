@@ -140,7 +140,8 @@ export const experiences: Tour[] = [
 			],
 		},
 		duration: '9 Days',
-		pricingNote: 'TOTAL PER PERSON (with a 10% markup)',
+		// pricingNote: 'TOTAL PER PERSON (with a 10% markup)',
+		pricingNote: 'TOTAL PER PERSON',
 		pricing: [
 			{
 				title: 'Luxury Car + English Guide',

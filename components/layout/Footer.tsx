@@ -14,7 +14,7 @@ export function Footer() {
 		>
 			<div className='container mx-auto px-6 flex flex-col items-center'>
 				{/* Logo */}
-				<div className='relative w-40 h-20 mb-8 opacity-90 hover:opacity-100 transition-opacity'>
+				<div className='relative w-40 h-40 opacity-80 hover:opacity-100 transition-opacity'>
 					<Link href='/'>
 						<Image
 							src='https://ceilao-travel.b-cdn.net/ceilao-tours-logo.webp'
