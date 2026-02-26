@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { ReactNode } from 'react';
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 
 export function AnimatedHeading({ children, className = '' }: Props) {
 	return (
-		<motion.h2
+		<m.h2
 			className={className}
 			style={{
 				backgroundImage:
@@ -28,6 +28,6 @@ export function AnimatedHeading({ children, className = '' }: Props) {
 			transition={{ duration: 5, ease: 'linear' }}
 		>
 			{children}
-		</motion.h2>
+		</m.h2>
 	);
 }

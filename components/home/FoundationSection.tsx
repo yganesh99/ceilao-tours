@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import { Section } from '@/components/ui/Section';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Button } from '../ui/Button';
 import ImpactStoryModal from '../ui/ImpactStoryModal';
 
@@ -13,7 +13,7 @@ export function FoundationSection() {
 		<Section className='bg-white py-16 md:py-24'>
 			<div className='flex flex-col md:flex-row items-center gap-x-8 gap-y-2 md:gap-12 max-w-6xl mx-auto'>
 				{/* Logo Side */}
-				<motion.div
+				<m.div
 					initial={{ opacity: 0, x: -20 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.6 }}
@@ -28,10 +28,10 @@ export function FoundationSection() {
 							className='object-contain'
 						/>
 					</div>
-				</motion.div>
+				</m.div>
 
 				{/* Separator */}
-				<motion.div
+				<m.div
 					initial={{ opacity: 0, scaleY: 0 }}
 					whileInView={{ opacity: 1, scaleY: 1 }}
 					transition={{ duration: 0.6, delay: 0.1 }}
@@ -40,7 +40,7 @@ export function FoundationSection() {
 				/>
 
 				{/* Text Side */}
-				<motion.div
+				<m.div
 					initial={{ opacity: 0, x: 20 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.6, delay: 0.2 }}
@@ -62,7 +62,7 @@ export function FoundationSection() {
 					>
 						Explore the Impact
 					</Button>
-				</motion.div>
+				</m.div>
 			</div>
 			<ImpactStoryModal
 				isOpen={isModalOpen}

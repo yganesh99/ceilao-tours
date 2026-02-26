@@ -26,10 +26,14 @@ export function Header() {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setIsScrolled(window.scrollY > 50);
+			setIsScrolled((prev) => {
+				const isNowScrolled = window.scrollY > 50;
+				if (prev === isNowScrolled) return prev;
+				return isNowScrolled;
+			});
 		};
 
-		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('scroll', handleScroll, { passive: true });
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
@@ -62,6 +66,7 @@ export function Header() {
 								fill
 								className='object-contain'
 								priority
+								fetchPriority='high'
 							/>
 						</Link>
 					</div>

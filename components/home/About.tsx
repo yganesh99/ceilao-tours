@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, Fragment } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Image from 'next/image';
 import { Instagram, Facebook } from 'lucide-react';
 import { TikTokIcon } from '@/components/ui/TikTokIcon';
@@ -37,7 +37,7 @@ export default function About() {
 		>
 			<div className='flex flex-col md:flex-row items-center gap-8 md:gap-12 max-w-6xl mx-auto'>
 				{/* Logo Side */}
-				<motion.div
+				<m.div
 					initial={{ opacity: 0, x: -20 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.6 }}
@@ -64,17 +64,17 @@ export default function About() {
 							className='w-full h-auto'
 						/>
 					</div>
-				</motion.div>
+				</m.div>
 
 				{/* Separator */}
-				<motion.div
+				<m.div
 					initial={{ opacity: 0, scaleY: 0 }}
 					whileInView={{ opacity: 1, scaleY: 1 }}
 					transition={{ duration: 0.6, delay: 0.1 }}
 					viewport={{ once: true }}
 					className='hidden md:block w-px h-96 bg-[#cea263]/40'
 				/>
-				{/* <motion.div
+				{/* <m.div
 					initial={{ opacity: 0, scaleX: 0 }}
 					whileInView={{ opacity: 1, scaleX: 1 }}
 					transition={{ duration: 0.6, delay: 0.1 }}
@@ -83,7 +83,7 @@ export default function About() {
 				/> */}
 
 				{/* Text Side */}
-				<motion.div
+				<m.div
 					initial={{ opacity: 0, x: 20 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.6, delay: 0.2 }}
@@ -142,7 +142,7 @@ export default function About() {
 							))}
 						</div>
 					</div>
-				</motion.div>
+				</m.div>
 			</div>
 
 			<LaunchingSoonModal

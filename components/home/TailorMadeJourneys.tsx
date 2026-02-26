@@ -3,7 +3,7 @@
 import { Section } from '@/components/ui/Section';
 import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Link from 'next/link';
 
 export function TailorMadeJourneys() {
@@ -14,19 +14,19 @@ export function TailorMadeJourneys() {
 		>
 			<div className='grid grid-cols-1 md:grid-cols-2 min-h-[600px] border-accent border-2'>
 				{/* Image Side */}
-				{/* Image Side */}
-				<div className='relative w-full aspect-square md:aspect-auto md:h-[600px]'>
+				<div className='relative w-full md:h-full'>
 					<Image
 						src='https://ceilao-travel.b-cdn.net/map.webp'
-						alt='Sri Lanka Map'
-						fill
-						className='object-contain lg:object-cover sm:ml-4 lg:ml-8 pl-10 md:-ml-8 opacity-40 mix-blend-screen z-0'
+						alt='Tailor Made Journey'
+						width={200}
+						height={200}
+						className='w-full h-auto md:h-full object-cover lg:object-contain'
 					/>
 				</div>
 
 				{/* Content Side */}
 				<div className='flex flex-col justify-center px-8 md:px-20 py-16 bg-[#d0d8c3] text-black'>
-					<motion.div
+					<m.div
 						initial={{ opacity: 0, x: 20 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.6 }}
@@ -96,7 +96,7 @@ export function TailorMadeJourneys() {
 								<Button size='lg'>Begin Your Curation</Button>
 							</Link>
 						</div>
-					</motion.div>
+					</m.div>
 				</div>
 			</div>
 		</Section>

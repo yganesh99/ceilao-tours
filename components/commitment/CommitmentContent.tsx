@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Image from 'next/image';
 
 const sections = [
@@ -117,7 +117,7 @@ export function CommitmentContent() {
 			<div className='container mx-auto px-4 md:px-6'>
 				<div className='flex flex-col space-y-20 md:space-y-32'>
 					{sections.map((section, index) => (
-						<motion.div
+						<m.div
 							key={index}
 							initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -137,7 +137,7 @@ export function CommitmentContent() {
 									{section.content}
 								</div>
 							</div>
-						</motion.div>
+						</m.div>
 					))}
 				</div>
 			</div>

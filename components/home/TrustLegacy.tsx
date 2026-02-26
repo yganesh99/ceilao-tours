@@ -2,7 +2,7 @@
 
 import { Section } from '@/components/ui/Section';
 import { ShieldCheck, Leaf, Star, HeartHandshake } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const features = [
 	{
@@ -47,7 +47,7 @@ export function TrustLegacy() {
 
 			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
 				{features.map((feature, index) => (
-					<motion.div
+					<m.div
 						key={feature.title}
 						initial={{ opacity: 0, scale: 0.95 }}
 						whileInView={{ opacity: 1, scale: 1 }}
@@ -64,7 +64,7 @@ export function TrustLegacy() {
 						<p className='text-sm text-[#1f2b44] leading-relaxed'>
 							{feature.description}
 						</p>
-					</motion.div>
+					</m.div>
 				))}
 			</div>
 		</Section>

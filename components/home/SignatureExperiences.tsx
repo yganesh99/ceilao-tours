@@ -2,7 +2,7 @@
 
 import { Section } from '@/components/ui/Section';
 import { Button } from '@/components/ui/Button';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -56,7 +56,7 @@ function ExperienceCard({
 	}, [shouldPlay, isMuted, onToggleMute]);
 
 	return (
-		<motion.div
+		<m.div
 			initial={{ opacity: 0, y: 20 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			transition={{
@@ -112,7 +112,7 @@ function ExperienceCard({
 					</Link>
 				</div>
 			</div>
-		</motion.div>
+		</m.div>
 	);
 }
 

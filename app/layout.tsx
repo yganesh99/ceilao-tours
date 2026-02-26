@@ -3,6 +3,7 @@ import { Playfair_Display, Inter, Poiret_One } from 'next/font/google';
 import localFont from 'next/font/local';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { FramerProvider } from '@/components/layout/FramerProvider';
 import './globals.css';
 
 const playfair = Playfair_Display({
@@ -47,7 +48,9 @@ export default function RootLayout({
 				className={`${playfair.variable} ${inter.variable} ${poiretOne.variable} ${bilgie.variable} antialiased bg-background text-foreground`}
 			>
 				<Header />
-				<main className='min-h-fit'>{children}</main>
+				<FramerProvider>
+					<main className='min-h-fit'>{children}</main>
+				</FramerProvider>
 				<Footer />
 			</body>
 		</html>

@@ -1,24 +1,34 @@
+'use client';
+
 import { Hero } from '@/components/home/Hero';
 import dynamic from 'next/dynamic';
 
 const About = dynamic(() => import('@/components/home/About'));
-const SignatureExperiences = dynamic(() =>
-	import('@/components/home/SignatureExperiences').then(
-		(mod) => mod.SignatureExperiences,
-	),
+const SignatureExperiences = dynamic(
+	() =>
+		import('@/components/home/SignatureExperiences').then(
+			(mod) => mod.SignatureExperiences,
+		),
+	{ ssr: false },
 );
-const TailorMadeJourneys = dynamic(() =>
-	import('@/components/home/TailorMadeJourneys').then(
-		(mod) => mod.TailorMadeJourneys,
-	),
+const TailorMadeJourneys = dynamic(
+	() =>
+		import('@/components/home/TailorMadeJourneys').then(
+			(mod) => mod.TailorMadeJourneys,
+		),
+	{ ssr: false },
 );
-const TrustLegacy = dynamic(() =>
-	import('@/components/home/TrustLegacy').then((mod) => mod.TrustLegacy),
+const TrustLegacy = dynamic(
+	() =>
+		import('@/components/home/TrustLegacy').then((mod) => mod.TrustLegacy),
+	{ ssr: false },
 );
-const FoundationSection = dynamic(() =>
-	import('@/components/home/FoundationSection').then(
-		(mod) => mod.FoundationSection,
-	),
+const FoundationSection = dynamic(
+	() =>
+		import('@/components/home/FoundationSection').then(
+			(mod) => mod.FoundationSection,
+		),
+	{ ssr: false },
 );
 
 export default function Home() {

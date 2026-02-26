@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 export function MissionVision() {
 	return (
@@ -8,7 +8,7 @@ export function MissionVision() {
 			<div className='container mx-auto px-4 md:px-6'>
 				<div className='grid md:grid-cols-2 gap-12 md:gap-20 items-stretch'>
 					{/* Mission Statement */}
-					<motion.div
+					<m.div
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
@@ -28,10 +28,10 @@ export function MissionVision() {
 							memories that last a lifetime and a connection to
 							our home that is not just seen, but truly felt.
 						</p>
-					</motion.div>
+					</m.div>
 
 					{/* Vision Statement */}
-					<motion.div
+					<m.div
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
@@ -51,7 +51,7 @@ export function MissionVision() {
 							impact—sharing an island that is not just seen, but
 							truly felt, with the world.
 						</p>
-					</motion.div>
+					</m.div>
 				</div>
 			</div>
 		</section>
