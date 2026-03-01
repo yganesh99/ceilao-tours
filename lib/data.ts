@@ -71,7 +71,7 @@ export const experiences: Tour[] = [
 				day: 'Day 4',
 				title: 'Sigiriya - Polonnaruwa - Sigiriya',
 				description:
-					'At dawn, you begin your ascent of the Sigiriya Rock Fortress, passing between the massive stone Lion’s Paws and the vibrant frescoes. In the afternoon, you explore the medieval capital of Polonnaruwa by bicycle.\n\nAs night falls, you embark on the highlight of the day: The Sigiriya Night Tour under the Full Moon. Guided by a naturalist, you trek through the moonlit jungle trails at the base of the fortress, searching for the reflective eyes of the elusive Gray Slender Loris. The sight of the massive Lion Rock silhouetted against a bright, silver sky is a hauntingly beautiful experience that few travelers ever witness.',
+					'In the morning, you explore the medieval capital of Polonnaruwa by bicycle. As night falls, you embark on the highlight of the day: The Sigiriya Night Tour under the Full Moon. Guided by a naturalist, you trek through the moonlit jungle trails at the base of the fortress, searching for the reflective eyes of the elusive Gray Slender Loris. The sight of the massive Lion Rock silhouetted against a bright, silver sky is a hauntingly beautiful experience that few travelers ever witness.',
 			},
 			{
 				day: 'Day 5',
@@ -187,7 +187,7 @@ export const experiences: Tour[] = [
 				day: 'Day 4',
 				title: 'Sigiriya Exploration',
 				description:
-					'At dawn, you ascend the Sigiriya Rock Fortress, passing the massive Lion’s Paws and the vibrant "Cloud Maiden" frescoes. From the summit, you look out over a sea of green forest as the sun rises. In the afternoon, you immerse yourself in rural life at Hiriwadunna, enjoying a "Kamatha" lunch cooked over an open fire.\n\nAs night falls, you embark on the highlight of your stay: the Sigiriya Night Trek under the Full Moon, searching for the reflective eyes of the Red Slender Loris in the forest canopy. The sight of the massive rock bathed in silver moonlight creates a hauntingly beautiful silhouette you will never forget.',
+					'Today, you immerse yourself in rural life at Hiriwadunna, enjoying a "Kamatha" lunch cooked over an open fire. As night falls, you embark on the highlight of your stay: the Sigiriya Night Trek under the Full Moon, searching for the reflective eyes of the Red Slender Loris in the forest canopy. The sight of the massive rock bathed in silver moonlight creates a hauntingly beautiful silhouette you will never forget.',
 			},
 			{
 				day: 'Day 5',
@@ -215,9 +215,9 @@ export const experiences: Tour[] = [
 			},
 			{
 				day: 'Day 9',
-				title: 'Belihul Oya - Kalawana (Sinharaja) - Galle',
+				title: 'Belihul Oya – Galle',
 				description:
-					'You depart early for the ancient rainforests of Kalawana. At dawn, you enter the Sinharaja Rainforest, a UNESCO World Heritage site, for a guided trek. You’ll spot endemic birds like the Sri Lanka Blue Magpie and vibrant tree frogs hiding in the giant ferns.\n\nAfterward, you drive toward the coast, reaching the historic Galle Dutch Fort. You finish your final day on the coast with a "Heritage Walk" led by a local storyteller, who shares tales of spice traders and ancient shipwrecks as you walk the 400-year-old ramparts at sunset.',
+					'Today, you drive toward the coast, reaching the historic Galle Dutch Fort. You finish your final day on the coast with a "Heritage Walk" led by a local storyteller, who shares tales of spice traders and ancient shipwrecks as you walk the 400-year-old ramparts at sunset.',
 			},
 			{
 				day: 'Day 10',

@@ -63,7 +63,7 @@ export default async function ExperiencePage({ params }: Props) {
 				<div className='max-w-4xl mx-auto'>
 					{/* Overview */}
 					<div className='mb-12 text-center md:text-left'>
-						<AnimatedHeading className='text-3xl font-playfair text-[#1f2b44] mb-4'>
+						<AnimatedHeading className='text-3xl text-center font-playfair text-[#1f2b44] mb-4'>
 							Overview
 						</AnimatedHeading>
 						<div className='w-20 h-0.5 bg-accent mx-auto mb-4' />
