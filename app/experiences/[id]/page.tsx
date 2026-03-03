@@ -176,7 +176,9 @@ export default async function ExperiencePage({ params }: Props) {
 							tailor this journey to your rhythm.
 						</p>
 						<Link
-							href={`https://wa.me/94771319589?text=Hi, I am interested in booking the ${tour.title} package.`}
+							href={`https://wa.me/94771319589?text=${encodeURIComponent(
+								`Hello Ceilão Travel & Tours! I am interested in booking the ${tour.category + ' | ' + tour.title} experience.\n\nMy name:\n\nMessage:`,
+							)}`}
 							target='_blank'
 							rel='noopener noreferrer'
 						>

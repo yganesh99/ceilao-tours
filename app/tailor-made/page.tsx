@@ -37,9 +37,14 @@ export default function TailorMadePage() {
 								immediate guidance.
 							</p>
 						</div>
-						<Button size='lg'>
+						<Button
+							size='lg'
+							asChild
+						>
 							<a
-								href='https://wa.me/94771319589'
+								href={`https://wa.me/94771319589?text=${encodeURIComponent(
+									'Hello Ceilão Travel & Tours! I’m reaching out through the website.\n\nMy name:\n\nMessage:',
+								)}`}
 								target='_blank'
 								rel='noopener noreferrer'
 							>
@@ -64,7 +69,7 @@ export default function TailorMadePage() {
 											Email
 										</p>
 										<a
-											href='mailto:connect@ceilaotravel.com'
+											href='mailto:connect@ceilaotravel.com?subject=A%20welcome%20from%20Ceil%C3%A3o%20Travel%20%26%20Tours'
 											className='text-lg font-medium text-primary hover:text-accent transition-colors'
 										>
 											connect@ceilaotravel.com

@@ -89,7 +89,9 @@ export function TailorMadeJourneys() {
 						</ul>
 						<div className='pt-6'>
 							<Link
-								href={`https://wa.me/94771319489?text=Hi, I am interested in booking the ${''} package.`}
+								href={`https://wa.me/94771319589?text=${encodeURIComponent(
+									'Hello Ceilão Travel & Tours! I would like to discuss a Bespoke Journey.\n\nMy name:\n\nMessage:',
+								)}`}
 								target='_blank'
 								rel='noopener noreferrer'
 							>
