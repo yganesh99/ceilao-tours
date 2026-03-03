@@ -173,49 +173,49 @@ export const experiences: Tour[] = [
 			},
 			{
 				day: 'Day 2',
-				title: 'Negombo - Wilpattu',
+				title: 'Negombo - Sigiriya',
 				description:
-					'The journey north begins after breakfast, heading toward Wilpattu National Park, the island\'s largest and most mysterious wilderness. In the evening, you embark on your first safari, weaving through the "Willus" (natural lakes) in search of the elusive Sri Lankan leopard and the shaggy-coated sloth bear.\n\nYour experience is elevated by a private "Bush Sundowner" at a secluded clearing inside the park, where you can sip a chilled drink while listening to the evening chorus of the jungle before returning to your safari lodge.',
+					'Today you drive toward the heart of the Cultural Triangle. Along the way, you stop to witness the Avukana Buddha, a magnificent 12-meter statue carved from a single rock face in the 5th century, which remains one of the finest examples of ancient standing sculpture.\n\nYou arrive in Sigiriya by late afternoon, just as the evening light begins to soften the landscape around the massive monolith.',
 			},
 			{
 				day: 'Day 3',
-				title: 'Wilpattu - Sigiriya',
-				description:
-					'After a final sunrise safari in Wilpattu, you drive toward the heart of the Cultural Triangle. Along the way, you stop to witness the Avukana Buddha, a magnificent 12-meter statue carved from a single rock face in the 5th century, which remains one of the finest examples of ancient standing sculpture.\n\nYou arrive in Sigiriya by late afternoon, just as the evening light begins to soften the landscape around the massive monolith.',
-			},
-			{
-				day: 'Day 4',
 				title: 'Sigiriya Exploration',
 				description:
 					'Today, you immerse yourself in rural life at Hiriwadunna, enjoying a "Kamatha" lunch cooked over an open fire. As night falls, you embark on the highlight of your stay: the Sigiriya Night Trek under the Full Moon, searching for the reflective eyes of the Red Slender Loris in the forest canopy. The sight of the massive rock bathed in silver moonlight creates a hauntingly beautiful silhouette you will never forget.',
 			},
 			{
-				day: 'Day 5',
+				day: 'Day 4',
 				title: 'Sigiriya - Riverston',
 				description:
 					'Today you head into the "Mist-Clad Mountains" of Riverston. The drive takes you through winding roads where the air grows noticeably cooler. You hike to the Pitawala Pathana plains, a unique montane grassland that ends abruptly at a sheer cliff known as "Mini World’s End."\n\nTo fully embrace the wilderness, you enjoy a refreshing dip in the crystal-clear Thelgamu Oya, a natural river pool surrounded by dense forest, before settling into your eco-lodge for a quiet evening in the mountains.',
 			},
 			{
-				day: 'Day 6',
+				day: 'Day 5',
 				title: 'Riverston - Kandy',
 				description:
 					'After a misty morning walk through the Knuckles foothills, you descend toward the hill capital of Kandy. You stop at a fragrant Spice Garden in Matale to see how Ceylon cinnamon and vanilla are grown. In Kandy, you visit the Temple of the Sacred Tooth Relic during the evening "Pooja." To see a different side of the city\'s heritage, you attend a private performance of Kandyan Drumming, where you meet the musicians afterward to learn about the rhythmic traditions that have echoed through these hills for centuries.',
 			},
 			{
-				day: 'Day 7',
+				day: 'Day 6',
 				title: 'Kandy - Ella',
 				description:
 					'Today, you embark on a breathtaking scenic drive toward Ella. You have the freedom to stop at Ramboda Falls and panoramic viewpoints overlooking the tea country. As you wind through the mountains, the landscape transforms into endless carpets of emerald-green tea estates. You arrive in Ella and walk across the architectural marvel of the Nine Arch Bridge just as the mist begins to roll in. For a unique touch, you participate in a "Tea Leaf to Cup" experience at a small-hold plantation, plucking your own leaves before seeing them withered and dried.',
 			},
 			{
-				day: 'Day 8',
+				day: 'Day 7',
 				title: 'Ella - Belihul Oya',
 				description:
 					'Your morning begins with a hike up Little Adam’s Peak for panoramic vistas of the Ella Gap. Afterward, you descend from the high mountains to the adventure hub of Belihul Oya, an area where three different eco-zones meet. You spend the afternoon on a Nature Walk along the riverbank, passing through paddy fields and forests.\n\nTo truly connect with the environment, you enjoy a traditional "River Bath" in the cool, rushing waters where the Belihul Oya and Galagama Oya rivers meet, followed by a quiet evening in an eco-retreat under a canopy of stars.',
 			},
 			{
+				day: 'Day 8',
+				title: 'Belihul Oya - Yala',
+				description:
+					'Today you arrive at Yala National Park, Sri Lanka’s most famous wildlife sanctuary, known for its rich biodiversity and diverse natural landscapes. Embark on an exciting jeep safari through forests, grasslands, lagoons, and coastal areas while keeping an eye out for wildlife such as elephants, sloth bears, crocodiles, and the elusive Sri Lankan leopard. Yala is considered one of the best places in the world to spot these majestic big cats, offering an unforgettable wildlife experience for nature lovers',
+			},
+			{
 				day: 'Day 9',
-				title: 'Belihul Oya – Galle',
+				title: 'Yala - Galle',
 				description:
 					'Today, you drive toward the coast, reaching the historic Galle Dutch Fort. You finish your final day on the coast with a "Heritage Walk" led by a local storyteller, who shares tales of spice traders and ancient shipwrecks as you walk the 400-year-old ramparts at sunset.',
 			},
