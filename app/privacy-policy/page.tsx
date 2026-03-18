@@ -325,7 +325,7 @@ export default function PrivacyPolicyPage() {
 									</p>
 									<div className='space-y-4'>
 										<a
-											href='mailto:connect@ceilaotravel.com'
+											href='mailto:connect@ceilaotravel.com?subject=Connecting%20with%20Ceilao%20Travels%20%26%20Tours'
 											className='flex items-center gap-4 hover:text-accent transition-colors'
 										>
 											<Mail className='w-5 h-5 text-accent' />

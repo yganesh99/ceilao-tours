@@ -69,7 +69,7 @@ export default function TailorMadePage() {
 											Email
 										</p>
 										<a
-											href='mailto:connect@ceilaotravel.com?subject=A%20welcome%20from%20Ceil%C3%A3o%20Travel%20%26%20Tours'
+											href='mailto:connect@ceilaotravel.com?subject=Connecting%20with%20Ceilao%20Travels%20%26%20Tours'
 											className='text-lg font-medium text-primary hover:text-accent transition-colors'
 										>
 											connect@ceilaotravel.com

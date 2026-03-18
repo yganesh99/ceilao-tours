@@ -32,9 +32,9 @@ const bilgie = localFont({
 });
 
 export const metadata: Metadata = {
-	title: 'Ceilão Travel & Tours',
+	title: 'Ceilão Travel & Tours | Curated Journeys. Heartfelt Experiences.',
 	description:
-		'Experience the timeless elegance of Sri Lanka with Ceilão Travel. Curated bespoke journeys, signature experiences, and unparalleled luxury.',
+		'Bespoke journeys for the discerning traveler. Discover the Soul of Sri Lanka through refined hospitality where every journey carries purpose.',
 };
 
 export default function RootLayout({
