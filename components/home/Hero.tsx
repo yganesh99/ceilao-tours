@@ -41,7 +41,7 @@ export function Hero() {
 				</video>
 
 				{/* Optional overlays */}
-				<div className='absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent pointer-events-none' />
+				{/* <div className='absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent pointer-events-none' /> */}
 
 				{/* Sound Control */}
 				<MuteToggleButton
