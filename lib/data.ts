@@ -141,19 +141,19 @@ export const experiences: Tour[] = [
 		},
 		duration: '9 Days',
 		// pricingNote: 'TOTAL PER PERSON (with a 10% markup)',
-		pricingNote: 'TOTAL PER PERSON',
-		pricing: [
-			{
-				title: 'Luxury Car + English Guide',
-				lkr: '602,113',
-				usd: '1945',
-			},
-			{
-				title: 'Luxury SUV + English Guide',
-				lkr: '703,862.50',
-				usd: '2275',
-			},
-		],
+		// pricingNote: 'TOTAL PER PERSON',
+		// pricing: [
+		// 	{
+		// 		title: 'Luxury Car + English Guide',
+		// 		lkr: '602,113',
+		// 		usd: '1945',
+		// 	},
+		// 	{
+		// 		title: 'Luxury SUV + English Guide',
+		// 		lkr: '703,862.50',
+		// 		usd: '2275',
+		// 	},
+		// ],
 	},
 	{
 		id: 2,
