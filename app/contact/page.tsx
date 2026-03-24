@@ -39,7 +39,7 @@ export default function TailorMadePage() {
 						</div>
 						<Button
 							size='lg'
-							asChild
+							// asChild
 						>
 							<a
 								href={`https://wa.me/94771319589?text=${encodeURIComponent(
@@ -69,7 +69,7 @@ export default function TailorMadePage() {
 											Email
 										</p>
 										<a
-											href='mailto:connect@ceilaotravel.com?subject=Connecting%20with%20Ceilão%20Travels%20%26%20Tours'
+											href='mailto:connect@ceilaotravel.com?subject=Connecting%20with%20Ceilão%20Travel%20%26%20Tours'
 											className='text-lg font-medium text-primary hover:text-accent transition-colors'
 										>
 											connect@ceilaotravel.com

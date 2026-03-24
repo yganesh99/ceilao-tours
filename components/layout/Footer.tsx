@@ -57,8 +57,14 @@ export function Footer() {
 								About Us
 							</Link>
 							<Link
-								href='/tailor-made'
-								className='hover:text-accent transition-colors'
+								href='/faq'
+								className='hover:text-accent transition-colors uppercase tracking-widest'
+							>
+								FAQ
+							</Link>
+							<Link
+								href='/contact'
+								className='hover:text-accent transition-colors uppercase tracking-widest'
 							>
 								Contact
 							</Link>
